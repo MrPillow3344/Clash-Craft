@@ -1,0 +1,40 @@
+{
+  "has_precipitation": true,
+  "temperature": 1,
+  "downfall": 0.5,
+  "effects": {
+    "foliage_color": -16711936,
+    "grass_color": -13382656,
+    "sky_color": 7972607,
+    "fog_color": 12638463,
+    "water_color": -16724737,
+    "water_fog_color": -6684673
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "clash_craft:training_camp_tree"
+    ],
+    []
+  ]
+}

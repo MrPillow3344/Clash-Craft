@@ -1,11 +1,42 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "TrainingCamp",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "training_camp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/configured_feature/training_camp_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json"
+        ]
+      }
+    },
+    {
+      "name": "Target",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "target",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/target.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "biome.clash_craft.training_camp": "Training Camp"
+    }
   },
   "foldersRoot": {
     "name": "~",
