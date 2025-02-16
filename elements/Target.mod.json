@@ -3,7 +3,7 @@
   "_type": "structure",
   "definition": {
     "structure": "target",
-    "projection": "terrain_matching",
+    "projection": "rigid",
     "ignoredBlocks": [
       {
         "value": "Blocks.STRUCTURE_BLOCK"
