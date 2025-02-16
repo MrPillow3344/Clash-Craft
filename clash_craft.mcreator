@@ -14,8 +14,8 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "1.0.0",
-    "author": "amiri, MCreator",
+    "version": "0.0.160225a",
+    "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
     "serverSideOnly": false,
@@ -24,6 +24,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.clashcraft"
   },
   "mcreatorVersion": 202400452410

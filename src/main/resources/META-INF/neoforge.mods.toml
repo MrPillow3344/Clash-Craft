@@ -4,11 +4,11 @@ license="Not specified"
 
 [[mods]]
 modId="clash_craft"
-version="1.0.0"
+version="0.0.160225"
 displayName="Clash Craft"
 displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="amiri, MCreator"
+authors="MrPillow3344, MRshoony"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
