@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "clash_craft:block/clash_dimension_portal_ew"
+    },
+    "axis=x": {
+      "model": "clash_craft:block/clash_dimension_portal_ns"
+    }
+  }
+}

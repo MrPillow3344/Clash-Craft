@@ -1,0 +1,30 @@
+{
+  "_fv": 73,
+  "_type": "structure",
+  "definition": {
+    "structure": "king_tower",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 12,
+    "separation": 8,
+    "restrictionBiomes": [
+      {
+        "value": "#minecraft:is_overworld"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": true,
+    "startHeightProviderType": "BIASED_TO_BOTTOM",
+    "startHeightMin": 63,
+    "startHeightMax": 100,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}

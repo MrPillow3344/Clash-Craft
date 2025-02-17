@@ -8,11 +8,12 @@
       "registry_name": "training_camp",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json",
           "src/main/resources/data/clash_craft/worldgen/configured_feature/training_camp_tree.json",
-          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json"
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json"
         ]
-      }
+      },
+      "path": "~/TrainingCamp"
     },
     {
       "name": "Target",
@@ -26,12 +27,54 @@
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
         ]
-      }
+      },
+      "path": "~/TrainingCamp"
+    },
+    {
+      "name": "ClashDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clash_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mcreator/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
+          "src/main/java/net/mcreator/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/java/net/mcreator/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
+        ]
+      },
+      "path": "~/ClashDimension"
+    },
+    {
+      "name": "KingTower",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "king_tower",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/template_pool/king_tower.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json"
+        ]
+      },
+      "path": "~/ClashDimension"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0",
+      "~Blocks.DIRT#0",
+      "~Blocks.GRASS"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
@@ -40,7 +83,16 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "TrainingCamp",
+        "children": []
+      },
+      {
+        "name": "ClashDimension",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "clash_craft",
