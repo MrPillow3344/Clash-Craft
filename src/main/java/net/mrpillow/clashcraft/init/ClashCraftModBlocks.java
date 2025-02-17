@@ -2,15 +2,15 @@
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
-package net.mcreator.clashcraft.init;
+package net.mrpillow.clashcraft.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import net.minecraft.world.level.block.Block;
+import net.mrpillow.clashcraft.block.ClashDimensionPortalBlock;
+import net.mrpillow.clashcraft.ClashCraftMod;
 
-import net.mcreator.clashcraft.block.ClashDimensionPortalBlock;
-import net.mcreator.clashcraft.ClashCraftMod;
+import net.minecraft.world.level.block.Block;
 
 public class ClashCraftModBlocks {
 	public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(ClashCraftMod.MODID);

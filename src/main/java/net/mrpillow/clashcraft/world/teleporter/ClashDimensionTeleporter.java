@@ -1,9 +1,11 @@
 
-package net.mcreator.clashcraft.world.teleporter;
+package net.mrpillow.clashcraft.world.teleporter;
 
 import net.neoforged.neoforge.registries.RegisterEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+
+import net.mrpillow.clashcraft.init.ClashCraftModBlocks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.border.WorldBorder;
@@ -24,8 +26,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.BlockUtil;
-
-import net.mcreator.clashcraft.init.ClashCraftModBlocks;
 
 import java.util.Optional;
 import java.util.Comparator;

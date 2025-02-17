@@ -1,5 +1,7 @@
 
-package net.mcreator.clashcraft.world.teleporter;
+package net.mrpillow.clashcraft.world.teleporter;
+
+import net.mrpillow.clashcraft.init.ClashCraftModBlocks;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -17,8 +19,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.BlockUtil;
-
-import net.mcreator.clashcraft.init.ClashCraftModBlocks;
 
 import javax.annotation.Nullable;
 

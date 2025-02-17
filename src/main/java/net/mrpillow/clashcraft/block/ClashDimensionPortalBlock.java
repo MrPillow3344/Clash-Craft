@@ -1,5 +1,5 @@
 
-package net.mcreator.clashcraft.block;
+package net.mrpillow.clashcraft.block;
 
 import org.slf4j.Logger;
 
@@ -7,6 +7,9 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
+
+import net.mrpillow.clashcraft.world.teleporter.ClashDimensionTeleporter;
+import net.mrpillow.clashcraft.world.teleporter.ClashDimensionPortalShape;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.portal.DimensionTransition;
@@ -33,9 +36,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.BlockUtil;
-
-import net.mcreator.clashcraft.world.teleporter.ClashDimensionTeleporter;
-import net.mcreator.clashcraft.world.teleporter.ClashDimensionPortalShape;
 
 import javax.annotation.Nullable;
 

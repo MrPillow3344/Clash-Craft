@@ -23,9 +23,9 @@
       "registry_name": "target",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -38,11 +38,11 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
-          "src/main/java/net/mcreator/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
-          "src/main/java/net/mcreator/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/java/net/mcreator/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
           "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
@@ -97,10 +97,10 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.160225a",
+    "version": "0.0.170225a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
@@ -108,7 +108,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.mcreator.clashcraft"
+    "modElementsPackage": "net.mrpillow.clashcraft"
   },
   "mcreatorVersion": 202400452410
 }
