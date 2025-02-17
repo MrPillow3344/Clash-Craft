@@ -20,7 +20,7 @@
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": true,
-    "startHeightProviderType": "BIASED_TO_BOTTOM",
+    "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
     "startHeightMin": 63,
     "startHeightMax": 100,
     "size": 1,
