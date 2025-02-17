@@ -1,3 +1,5 @@
 {
-  "biome.clash_craft.training_camp": "Training Camp"
+  "biome.clash_craft.training_camp": "Training Camp",
+  "entity.clash_craft.giant": "Giant",
+  "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg"
 }

@@ -64,6 +64,22 @@
         ]
       },
       "path": "~/ClashDimension"
+    },
+    {
+      "name": "Giant",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
     }
   ],
   "variable_elements": [],
@@ -78,7 +94,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "biome.clash_craft.training_camp": "Training Camp"
+      "biome.clash_craft.training_camp": "Training Camp",
+      "entity.clash_craft.giant": "Giant",
+      "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg"
     }
   },
   "foldersRoot": {
@@ -86,7 +104,12 @@
     "children": [
       {
         "name": "TrainingCamp",
-        "children": []
+        "children": [
+          {
+            "name": "Giant",
+            "children": []
+          }
+        ]
       },
       {
         "name": "ClashDimension",
@@ -97,7 +120,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.170225a",
+    "version": "0.0.170225b",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
@@ -105,7 +128,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mrpillow.clashcraft"
