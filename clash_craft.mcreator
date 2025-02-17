@@ -68,7 +68,7 @@
     {
       "name": "Giant",
       "type": "animatedentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "giant",
       "metadata": {
