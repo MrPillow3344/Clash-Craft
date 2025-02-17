@@ -28,6 +28,12 @@ authors="MrPillow3344, MRshoony"
     side="BOTH"
 
 
+[[dependencies.clash_craft]]
+    modId="geckolib"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration
