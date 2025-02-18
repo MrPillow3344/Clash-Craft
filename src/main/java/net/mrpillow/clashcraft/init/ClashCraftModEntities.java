@@ -23,9 +23,9 @@ import net.minecraft.core.registries.Registries;
 public class ClashCraftModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, ClashCraftMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<GiantEntity>> GIANT = register("giant",
-			EntityType.Builder.<GiantEntity>of(GiantEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<GiantEntity>of(GiantEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3)
 
-					.sized(2f, 4.5f));
+					.sized(1.9f, 4.3f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
