@@ -51,8 +51,8 @@
     "portalSound": {
       "value": ""
     },
-    "enableIgniter": false,
-    "igniterName": "Clash Dimension Portal Igniter",
+    "enableIgniter": true,
+    "igniterName": "Clash Ticket",
     "igniterRarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
@@ -62,8 +62,8 @@
         "value": "TOOLS"
       }
     ],
-    "texture": "",
-    "portalTexture": "clash_dimension_portal",
+    "texture": "clash_ticket",
+    "portalTexture": "clash_portal",
     "enablePortal": true
   }
 }

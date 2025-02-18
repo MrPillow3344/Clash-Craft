@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "clash_craft:block/clash_dimension_portal",
-    "portal": "clash_craft:block/clash_dimension_portal"
+    "particle": "clash_craft:block/clash_portal",
+    "portal": "clash_craft:block/clash_portal"
   },
   "elements": [
     {
