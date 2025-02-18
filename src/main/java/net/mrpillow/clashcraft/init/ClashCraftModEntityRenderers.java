@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
 import net.mrpillow.clashcraft.client.renderer.GiantRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -16,5 +17,6 @@ public class ClashCraftModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ClashCraftModEntities.GIANT.get(), GiantRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.KNIGHT.get(), KnightRenderer::new);
 	}
 }

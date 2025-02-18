@@ -106,6 +106,23 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Knight",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/KnightModel.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java"
+        ]
+      },
+      "path": "~/TrainingCamp"
     }
   ],
   "variable_elements": [],
@@ -121,7 +138,9 @@
   "language_map": {
     "en_us": {
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
+      "entity.clash_craft.knight": "Knight",
       "biome.clash_craft.training_camp": "Training Camp",
+      "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "entity.clash_craft.giant": "Giant",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg"
