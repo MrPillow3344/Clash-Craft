@@ -18,7 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class GiantRenderer extends GeoEntityRenderer<GiantEntity> {
 	public GiantRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new GiantModel());
-		this.shadowRadius = 2f;
+		this.shadowRadius = 1.1f;
 	}
 
 	@Override
