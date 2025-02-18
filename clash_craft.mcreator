@@ -33,7 +33,7 @@
     {
       "name": "ClashDimension",
       "type": "dimension",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "clash_dimension",
       "metadata": {
@@ -76,7 +76,8 @@
           "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java"
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json"
         ]
       },
       "path": "~/TrainingCamp/Giant"
