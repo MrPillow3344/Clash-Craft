@@ -25,7 +25,7 @@ public class ClashCraftModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<GiantEntity>> GIANT = register("giant",
 			EntityType.Builder.<GiantEntity>of(GiantEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(2f, 4.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

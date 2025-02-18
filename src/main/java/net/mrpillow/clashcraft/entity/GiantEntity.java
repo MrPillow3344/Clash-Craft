@@ -14,6 +14,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
@@ -26,11 +27,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
@@ -41,7 +42,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-public class GiantEntity extends PathfinderMob implements GeoEntity {
+public class GiantEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GiantEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GiantEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GiantEntity.class, EntityDataSerializers.STRING);
@@ -89,6 +90,11 @@ public class GiantEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
+	protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float f) {
+		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, 4f, 0);
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
 	}
@@ -122,12 +128,6 @@ public class GiantEntity extends PathfinderMob implements GeoEntity {
 		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		event.register(ClashCraftModEntities.GIANT.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
@@ -147,6 +147,11 @@ public class GiantEntity extends PathfinderMob implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
+
+			) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.giant.walk"));
+			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.giant.idle"));
 		}
 		return PlayState.STOP;

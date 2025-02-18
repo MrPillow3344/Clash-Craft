@@ -68,12 +68,13 @@
     {
       "name": "Giant",
       "type": "animatedentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "giant",
       "metadata": {
         "files": [
           "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
@@ -120,7 +121,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.170225b",
+    "version": "0.0.180225a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
