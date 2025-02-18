@@ -8,9 +8,9 @@
       "registry_name": "training_camp",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json",
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json",
           "src/main/resources/data/clash_craft/worldgen/configured_feature/training_camp_tree.json",
-          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json"
+          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -75,11 +75,11 @@
       "registry_name": "giant",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json"
         ]
       },
       "path": "~/TrainingCamp/Giant"
