@@ -33,7 +33,7 @@
     {
       "name": "ClashDimension",
       "type": "dimension",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "clash_dimension",
       "metadata": {
