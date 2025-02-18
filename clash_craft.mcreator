@@ -8,9 +8,9 @@
       "registry_name": "training_camp",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json",
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json",
           "src/main/resources/data/clash_craft/worldgen/configured_feature/training_camp_tree.json",
-          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json"
+          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -23,9 +23,9 @@
       "registry_name": "target",
       "metadata": {
         "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json"
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -38,13 +38,13 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
           "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
           "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
         ]
       },
@@ -58,9 +58,9 @@
       "registry_name": "king_tower",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/template_pool/king_tower.json",
           "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json"
+          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/king_tower.json"
         ]
       },
       "path": "~/ClashDimension"
