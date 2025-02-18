@@ -13,6 +13,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
+import net.mrpillow.clashcraft.init.ClashCraftModTabs;
 import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 import net.mrpillow.clashcraft.init.ClashCraftModBlocks;
@@ -44,6 +45,7 @@ public class ClashCraftMod {
 
 		ClashCraftModItems.REGISTRY.register(modEventBus);
 		ClashCraftModEntities.REGISTRY.register(modEventBus);
+		ClashCraftModTabs.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

@@ -20,14 +20,18 @@
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10079488,
+      "value": -13434880,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
       "value": -26368,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -54,7 +58,7 @@
     "attackStrength": 6,
     "attackKnockback": 0.5,
     "knockbackResistance": 0.4,
-    "movementSpeed": 0.3,
+    "movementSpeed": 0.1,
     "armorBaseValue": 3.0,
     "trackingRange": 48,
     "followRange": 32,
