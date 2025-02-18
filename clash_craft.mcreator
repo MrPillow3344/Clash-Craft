@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
         ]
       },
       "path": "~/ClashDimension"
@@ -96,6 +96,16 @@
         ]
       },
       "path": "~/ClashDimension"
+    },
+    {
+      "name": "ClashCraftSpawnEggs",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clash_craft_spawn_eggs",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -110,6 +120,7 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "entity.clash_craft.giant": "Giant",
