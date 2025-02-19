@@ -15,7 +15,7 @@ import net.minecraft.core.BlockPos;
 
 public class ClashDimensionItem extends Item {
 	public ClashDimensionItem() {
-		super(new Item.Properties().rarity(Rarity.COMMON).durability(64));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON).durability(64));
 	}
 
 	@Override

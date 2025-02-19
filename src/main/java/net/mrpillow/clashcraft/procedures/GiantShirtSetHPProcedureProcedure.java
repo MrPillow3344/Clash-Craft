@@ -1,6 +1,19 @@
 package net.mrpillow.clashcraft.procedures;
 
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
+
+import net.mrpillow.clashcraft.init.ClashCraftModItems;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+
+import javax.annotation.Nullable;
 
 @EventBusSubscriber
 public class GiantShirtSetHPProcedureProcedure {
@@ -23,7 +36,7 @@ public class GiantShirtSetHPProcedureProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(102, entity)).getItem() == ClashCraftModItems.DELETED_MOD_ELEMENT_CHESTPLATE.get()) {
+		}.getItemStack(102, entity)).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth(50);
 		}

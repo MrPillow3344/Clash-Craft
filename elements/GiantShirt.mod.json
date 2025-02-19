@@ -12,7 +12,7 @@
     "textureBoots": "",
     "creativeTabs": [
       {
-        "value": "COMBAT"
+        "value": "CUSTOM:ClashCraftItems"
       }
     ],
     "armorTextureFile": "blank_shirt",
@@ -84,7 +84,7 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 15,
+    "maxDamage": 0,
     "damageValueHelmet": 0,
     "damageValueBody": 4,
     "damageValueLeggings": 0,

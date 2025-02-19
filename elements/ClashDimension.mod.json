@@ -53,13 +53,13 @@
     },
     "enableIgniter": true,
     "igniterName": "Clash Ticket",
-    "igniterRarity": "COMMON",
+    "igniterRarity": "UNCOMMON",
     "specialInformation": {
       "fixedValue": []
     },
     "creativeTabs": [
       {
-        "value": "TOOLS"
+        "value": "CUSTOM:ClashCraftItems"
       }
     ],
     "texture": "clash_ticket",

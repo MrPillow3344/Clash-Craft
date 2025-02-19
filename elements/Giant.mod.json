@@ -15,7 +15,7 @@
     "entityDataEntries": [],
     "modelWidth": 1.9000000000000001,
     "modelHeight": 4.300000000000001,
-    "modelShadowSize": 2.0,
+    "modelShadowSize": 1.0,
     "mountedYOffset": 4.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
