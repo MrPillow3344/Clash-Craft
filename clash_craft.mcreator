@@ -106,11 +106,47 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "GiantShirt",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_shirt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "GiantShirtSetHPProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_shirt_set_hp_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtSetHPProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:GiantShirt.body"
+    ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
@@ -120,6 +156,7 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.clash_dimension": "Clash Ticket",
@@ -148,7 +185,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.180225c",
+    "version": "0.0.190225a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

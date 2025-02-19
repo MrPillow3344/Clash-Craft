@@ -30,6 +30,8 @@ public class ClashCraftModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(ClashCraftModItems.CLASH_DIMENSION.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+			tabData.accept(ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get());
 		}
 	}
 }

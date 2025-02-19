@@ -62,7 +62,7 @@
     "armorBaseValue": 3.0,
     "trackingRange": 48,
     "followRange": 32,
-    "health": 25,
+    "health": 50,
     "xpAmount": 12,
     "waterMob": false,
     "flyingMob": false,
@@ -89,7 +89,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:GiantShirt.body"
     },
     "livingSound": {
       "value": ""
