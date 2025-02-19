@@ -38,14 +38,14 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "isFood": false,
+    "isFood": true,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
       "value": ""
     },
-    "isMeat": false,
-    "isAlwaysEdible": false,
+    "isMeat": true,
+    "isAlwaysEdible": true,
     "animation": "none",
     "normal": "knight's_sword.geo.json",
     "armPoseList": [],

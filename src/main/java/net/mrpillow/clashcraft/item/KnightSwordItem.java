@@ -14,9 +14,11 @@ import software.bernie.geckolib.animatable.GeoItem;
 import net.mrpillow.clashcraft.item.renderer.KnightSwordItemRenderer;
 
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
@@ -30,7 +32,7 @@ public class KnightSwordItem extends Item implements GeoItem {
 	public String animationprocedure = "empty";
 
 	public KnightSwordItem() {
-		super(new Item.Properties().durability(1000).rarity(Rarity.COMMON)
+		super(new Item.Properties().durability(1000).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationModifier(0.3f).alwaysEdible().build())
 				.attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, -1, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
 						.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.4, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 	}
@@ -92,6 +94,11 @@ public class KnightSwordItem extends Item implements GeoItem {
 	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.NONE;
 	}
 
 	@Override

@@ -35,14 +35,10 @@ public class ModelGiantShirt<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Shirt = partdefinition.addOrReplaceChild("Shirt",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, 0.0F, 2.05F, 8.0F, 12.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(0, 12).addBox(-4.0F, 0.0F, -2.05F, 8.0F, 12.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(16, 4)
-						.addBox(4.05F, 0.0F, -2.0F, 0.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(16, 20).addBox(-4.05F, 0.0F, -2.0F, 0.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(16, 0)
-						.addBox(-4.0F, -0.05F, -2.0F, 8.0F, 0.0F, 4.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Shirt = partdefinition.addOrReplaceChild("Shirt", CubeListBuilder.create().texOffs(0, 0).addBox(-4.5F, 0.0F, -2.5F, 9.0F, 12.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition HandRight = partdefinition.addOrReplaceChild("HandRight", CubeListBuilder.create(), PartPose.offset(-5.0F, 2.0F, 0.0F));
 		PartDefinition HandLeft = partdefinition.addOrReplaceChild("HandLeft", CubeListBuilder.create(), PartPose.offset(5.0F, 2.0F, 0.0F));
-		return LayerDefinition.create(meshdefinition, 64, 64);
+		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override

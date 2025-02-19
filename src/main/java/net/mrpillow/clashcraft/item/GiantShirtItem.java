@@ -63,8 +63,8 @@ public abstract class GiantShirtItem extends ArmorItem {
 			@OnlyIn(Dist.CLIENT)
 			public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 				HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new ModelGiantShirt(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGiantShirt.LAYER_LOCATION)).Shirt, "left_arm",
-						new ModelGiantShirt(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGiantShirt.LAYER_LOCATION)).HandLeft, "right_arm",
-						new ModelGiantShirt(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGiantShirt.LAYER_LOCATION)).HandRight, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+						new ModelGiantShirt(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGiantShirt.LAYER_LOCATION)).Shirt, "right_arm",
+						new ModelGiantShirt(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGiantShirt.LAYER_LOCATION)).Shirt, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 						new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 				armorModel.crouching = living.isShiftKeyDown();
 				armorModel.riding = defaultModel.riding;

@@ -175,10 +175,10 @@
       "registry_name": "knight_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/model/KnightSwordItemModel.java",
+          "src/main/java/net/mrpillow/clashcraft/item/KnightSwordItem.java",
           "src/main/java/net/mrpillow/clashcraft/item/renderer/KnightSwordItemRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/knight_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/KnightSwordItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/model/KnightSwordItemModel.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -187,6 +187,9 @@
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:minecraft:wolf_food": [
+      "~CUSTOM:KnightSword"
+    ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GiantShirt.body"
     ],
