@@ -19,6 +19,7 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> CLASH_DIMENSION = REGISTRY.register("clash_dimension", ClashDimensionItem::new);
 	public static final DeferredItem<Item> GIANT_SPAWN_EGG = REGISTRY.register("giant_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GIANT, -10079488, -26368, new Item.Properties()));
 	public static final DeferredItem<Item> GIANT_SHIRT_CHESTPLATE = REGISTRY.register("giant_shirt_chestplate", GiantShirtItem.Chestplate::new);
+	public static final DeferredItem<Item> KNIGHT_SPAWN_EGG = REGISTRY.register("knight_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.KNIGHT, -3355444, -256, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

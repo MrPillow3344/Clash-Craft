@@ -24,6 +24,7 @@ public class ClashCraftModTabs {
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CLASH_CRAFT_SPAWN_EGGS = REGISTRY.register("clash_craft_spawn_eggs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.clash_craft.clash_craft_spawn_eggs")).icon(() -> new ItemStack(ClashCraftModItems.GIANT_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(ClashCraftModItems.GIANT_SPAWN_EGG.get());
+				tabData.accept(ClashCraftModItems.KNIGHT_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent

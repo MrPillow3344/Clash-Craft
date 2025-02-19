@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Giant",
+    "mobName": "Knight",
     "mobLabel": "",
-    "mobModelTexture": "giant.png",
+    "mobModelTexture": "knight.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,18 +13,18 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 1.9000000000000001,
-    "modelHeight": 4.300000000000001,
-    "modelShadowSize": 2.0,
-    "mountedYOffset": 4.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10079488,
+      "value": -3355444,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -26368,
+      "value": -256,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -53,17 +53,17 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 6,
-    "attackKnockback": 0.5,
-    "knockbackResistance": 0.4,
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 3.0,
-    "trackingRange": 48,
-    "followRange": 32,
-    "health": 50,
-    "xpAmount": 12,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 20,
+    "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -89,7 +89,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:GiantShirt.body"
+      "value": ""
     },
     "livingSound": {
       "value": ""
@@ -108,13 +108,13 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "giant.geo.json",
-    "groupName": "Head",
-    "animation1": "animation.giant.idle",
-    "animation2": "animation.giant.walk",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "knight.geo.json",
+    "groupName": "",
+    "animation1": "Idle",
+    "animation2": "Walk",
     "animation3": "",
-    "animation4": "",
+    "animation4": "Attack",
     "animation5": "",
     "animation6": "",
     "animation7": "",
@@ -123,7 +123,7 @@
     "animation10": "",
     "enable2": true,
     "enable3": false,
-    "enable4": false,
+    "enable4": true,
     "enable5": false,
     "enable6": false,
     "enable7": false,
@@ -133,7 +133,7 @@
     "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,
-    "headMovement": true,
+    "headMovement": false,
     "eyeHeight": true,
     "breedTriggerItems": [],
     "ranged": false,
@@ -143,7 +143,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 4.1,
+    "height": 2.0,
     "attackRate": 7,
     "raidSpawnsCount": [
       4,
@@ -159,7 +159,7 @@
     "spawningProbability": 20,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:TrainingCamp"

@@ -108,20 +108,6 @@
       }
     },
     {
-      "name": "GiantShirt",
-      "type": "armor",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_shirt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java",
-          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json"
-        ]
-      },
-      "path": "~/TrainingCamp/Giant"
-    },
-    {
       "name": "GiantShirtSetHPProcedure",
       "type": "procedure",
       "compiles": true,
@@ -139,6 +125,37 @@
         ]
       },
       "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "GiantShirt",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_shirt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "Knight",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/model/KnightModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
+          "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java"
+        ]
+      },
+      "path": "~/TrainingCamp"
     }
   ],
   "variable_elements": [],
@@ -156,7 +173,6 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.clash_dimension": "Clash Ticket",
@@ -185,7 +201,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.190225a",
+    "version": "0.0.180225c",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
