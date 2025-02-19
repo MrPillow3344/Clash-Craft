@@ -34,8 +34,8 @@ public class ClashCraftModTabs {
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
-			tabData.accept(ClashCraftModItems.KNIGHT_SWORD.get());
+		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+			tabData.accept(ClashCraftModItems.KNIGHTS_SWORD.get());
 		}
 	}
 }

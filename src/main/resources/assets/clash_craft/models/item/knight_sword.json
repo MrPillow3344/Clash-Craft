@@ -1,6 +1,0 @@
-{
-  "parent": "clash_craft:displaysettings/knight's_sword.display",
-  "textures": {
-    "layer0": "clash_craft:item/knights_sword"
-  }
-}
