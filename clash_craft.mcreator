@@ -148,11 +148,11 @@
       "registry_name": "knight",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/model/KnightModel.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
           "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -236,7 +236,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.190225c",
+    "version": "0.0.190225d",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
