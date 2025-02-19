@@ -1,12 +1,31 @@
 
 package net.mrpillow.clashcraft.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-
-import javax.annotation.Nullable;
-
-import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.client.GeoRenderProvider;
+import software.bernie.geckolib.animatable.GeoItem;
+
+import net.mrpillow.clashcraft.item.renderer.KnightSwordItemRenderer;
+
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+
+import java.util.function.Consumer;
 
 public class KnightSwordItem extends Item implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -92,5 +111,4 @@ public class KnightSwordItem extends Item implements GeoItem {
 		itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
 		return true;
 	}
-
 }

@@ -1,6 +1,14 @@
 
 package net.mrpillow.clashcraft.item;
 
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+
 public class KnightsSwordItem extends SwordItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

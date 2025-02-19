@@ -1,5 +1,23 @@
 package net.mrpillow.clashcraft.item.renderer;
 
+import software.bernie.geckolib.renderer.GeoItemRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.mrpillow.clashcraft.item.model.KnightSwordItemModel;
+import net.mrpillow.clashcraft.item.KnightSwordItem;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import java.util.Set;
+import java.util.HashSet;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class KnightSwordItemRenderer extends GeoItemRenderer<KnightSwordItem> {
 	public KnightSwordItemRenderer() {
 		super(new KnightSwordItemModel());
@@ -41,5 +59,4 @@ public class KnightSwordItemRenderer extends GeoItemRenderer<KnightSwordItem> {
 	public ResourceLocation getTextureLocation(KnightSwordItem instance) {
 		return super.getTextureLocation(instance);
 	}
-
 }
