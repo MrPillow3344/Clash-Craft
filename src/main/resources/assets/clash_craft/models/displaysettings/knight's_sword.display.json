@@ -1,0 +1,77 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    32,
+    32
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        -66.45,
+        1,
+        89.25
+      ],
+      "translation": [
+        0.25,
+        4.25,
+        3.25
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        -63,
+        0.44,
+        93.11
+      ],
+      "translation": [
+        0.25,
+        3.75,
+        2.75
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -87.44,
+        4.66,
+        -100.24
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -90.12,
+        -2.21,
+        85.24
+      ]
+    },
+    "ground": {
+      "rotation": [
+        90,
+        0,
+        90
+      ],
+      "translation": [
+        0,
+        -5.5,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        -78.36,
+        -44.69,
+        8.23
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        -45,
+        0
+      ]
+    }
+  },
+  "textures": {
+    "particle": "item/Knight's sword"
+  }
+}
