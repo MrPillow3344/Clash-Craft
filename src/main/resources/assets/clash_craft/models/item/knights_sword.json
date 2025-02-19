@@ -1,0 +1,7 @@
+{
+  "parent": "clash_craft:custom/knights_sword.model",
+  "textures": {
+    "0": "minecraft:block/black_glazed_terracotta",
+    "particle": "clash_craft:item/knights_sword"
+  }
+}

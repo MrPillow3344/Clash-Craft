@@ -1,11 +1,5 @@
 package net.mrpillow.clashcraft.item.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.mrpillow.clashcraft.item.KnightSwordItem;
-
-import net.minecraft.resources.ResourceLocation;
-
 public class KnightSwordItemModel extends GeoModel<KnightSwordItem> {
 	@Override
 	public ResourceLocation getAnimationResource(KnightSwordItem animatable) {

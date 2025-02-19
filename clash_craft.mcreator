@@ -182,6 +182,20 @@
         ]
       },
       "path": "~/TrainingCamp/Knight"
+    },
+    {
+      "name": "KnightsSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knights_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Knight"
     }
   ],
   "variable_elements": [],
@@ -192,6 +206,9 @@
     ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GiantShirt.body"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:KnightsSword"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.STONE#0",

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "minecraft:black_glazed_terracotta"
+      },
+      "name": "default"
+    }
+  }
+}
