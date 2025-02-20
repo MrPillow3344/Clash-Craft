@@ -188,7 +188,12 @@
         "files": [
           "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtChestplateSetHPProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/TrainingCamp/Giant"
     }
