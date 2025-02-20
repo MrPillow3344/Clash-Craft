@@ -85,7 +85,7 @@ public abstract class GiantShirtItem extends ArmorItem {
 
 	public static class Chestplate extends GiantShirtItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(0)));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(500)));
 		}
 
 		@Override
