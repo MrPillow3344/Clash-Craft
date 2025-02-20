@@ -1,7 +1,7 @@
 package net.mrpillow.clashcraft.procedures;
 
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @EventBusSubscriber
 public class GiantShirtSetHPProcedureProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		execute(event, event.getEntity());
 	}
 
@@ -38,7 +38,10 @@ public class GiantShirtSetHPProcedureProcedure {
 			}
 		}.getItemStack(102, entity)).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth(50);
+				_entity.setHealth(24);
+		} else {
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth(20);
 		}
 	}
 }
