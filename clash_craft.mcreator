@@ -108,25 +108,6 @@
       }
     },
     {
-      "name": "GiantShirtSetHPProcedure",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_shirt_set_hp_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtSetHPProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Giant"
-    },
-    {
       "name": "GiantShirt",
       "type": "armor",
       "compiles": true,
@@ -196,6 +177,20 @@
         ]
       },
       "path": "~/TrainingCamp/Knight"
+    },
+    {
+      "name": "GiantShirtChestplateSetHP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_shirt_chestplate_set_hp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtChestplateSetHPProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/TrainingCamp/Giant"
     }
   ],
   "variable_elements": [],
