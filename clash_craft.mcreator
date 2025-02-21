@@ -149,22 +149,6 @@
       }
     },
     {
-      "name": "KnightSword",
-      "type": "animateditem",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "knight_sword",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/KnightSwordItem.java",
-          "src/main/java/net/mrpillow/clashcraft/item/renderer/KnightSwordItemRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/knight_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/model/KnightSwordItemModel.java"
-        ]
-      },
-      "path": "~/TrainingCamp/Knight"
-    },
-    {
       "name": "KnightsSword",
       "type": "tool",
       "compiles": true,
@@ -214,9 +198,6 @@
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:minecraft:wolf_food": [
-      "~CUSTOM:KnightSword"
-    ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GiantShirt.body"
     ],
@@ -239,7 +220,6 @@
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
-      "item.clash_craft.knight_sword": "Knight\u0027s Sword",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "entity.clash_craft.giant": "Giant",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg"
@@ -252,7 +232,6 @@
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.knights_sword": "חרב האביר",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
-      "item.clash_craft.knight_sword": "חרב האביר",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "entity.clash_craft.giant": "ענק",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק"
