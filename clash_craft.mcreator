@@ -193,6 +193,19 @@
         ]
       },
       "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "KnightKill",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight_kill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/knight.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Knight"
     }
   ],
   "variable_elements": [],
