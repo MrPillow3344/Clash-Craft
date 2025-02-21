@@ -10,7 +10,6 @@ public class GiantShirtChestplateSetHPProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(
-					new MobEffectInstance(MobEffects.ABSORPTION, 20, (int) (1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.ABSORPTION) ? _livEnt.getEffect(MobEffects.ABSORPTION).getAmplifier() : 0)), false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 20, 1, false, false));
 	}
 }

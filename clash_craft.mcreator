@@ -110,7 +110,7 @@
     {
       "name": "GiantShirt",
       "type": "armor",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "giant_shirt",
       "metadata": {
@@ -193,6 +193,19 @@
             "name": "entity",
             "type": "entity"
           }
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "GiantKill",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_kill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/giant.json"
         ]
       },
       "path": "~/TrainingCamp/Giant"
