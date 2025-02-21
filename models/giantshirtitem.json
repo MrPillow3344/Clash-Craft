@@ -1,22 +1,21 @@
 {
 	"credit": "Made with Blockbench",
-	"texture_size": [32, 32],
 	"textures": {
 		"0": "giant_shirt",
 		"particle": "giant_shirt"
 	},
 	"elements": [
 		{
-			"from": [3.5, 0, 5.5],
-			"to": [12.5, 12, 10.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 9]},
+			"from": [4, 0, 6],
+			"to": [12, 12, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 6]},
 			"faces": {
 				"north": {"uv": [2.5, 2.5, 7, 8.5], "texture": "#0"},
 				"east": {"uv": [0, 2.5, 2.5, 8.5], "texture": "#0"},
 				"south": {"uv": [9.5, 2.5, 14, 8.5], "texture": "#0"},
 				"west": {"uv": [7, 2.5, 9.5, 8.5], "texture": "#0"},
-				"up": {"uv": [7, 2.5, 2.5, 0], "texture": "#0"},
-				"down": {"uv": [11.5, 0, 7, 2.5], "texture": "#0"}
+				"up": {"uv": [2.5, 0, 7, 2.5], "texture": "#0"},
+				"down": {"uv": [8, 8.5, 13, 10.75], "texture": "#0"}
 			}
 		}
 	],
@@ -52,13 +51,5 @@
 		"fixed": {
 			"translation": [0, 1.25, 0]
 		}
-	},
-	"groups": [
-		{
-			"name": "Shirt",
-			"origin": [8, 24, 8],
-			"color": 0,
-			"children": [0]
-		}
-	]
+	}
 }
