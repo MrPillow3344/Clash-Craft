@@ -1,0 +1,118 @@
+{
+  "credit": "Made with Blockbench",
+  "texture_size": [
+    32,
+    32
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        -170.32,
+        31.64,
+        172.48
+      ],
+      "translation": [
+        0,
+        5.5,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        -170.32,
+        31.64,
+        172.48
+      ],
+      "translation": [
+        0,
+        5.5,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        144.13,
+        16.05,
+        171.22
+      ],
+      "translation": [
+        0,
+        0.75,
+        1.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        144.13,
+        16.05,
+        171.22
+      ],
+      "translation": [
+        0,
+        0.75,
+        1.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2.75,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        1.75,
+        0
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        4.25,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        1.75,
+        0
+      ]
+    }
+  },
+  "textures": {
+    "particle": "item/giant_shirt_item"
+  }
+}
