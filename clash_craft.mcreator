@@ -75,11 +75,11 @@
       "registry_name": "giant",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
         ]
       },
       "path": "~/TrainingCamp/Giant"
@@ -378,6 +378,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
+    },
+    {
+      "name": "hasGiantShirt",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
