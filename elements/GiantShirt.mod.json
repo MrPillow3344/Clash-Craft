@@ -5,11 +5,14 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "giant_shirt",
+    "textureBody": "giant_shirt_item",
     "enableLeggings": false,
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
+    "onBodyTick": {
+      "name": "GiantShirtChestplateSetHP"
+    },
     "creativeTabs": [
       {
         "value": "CUSTOM:ClashCraftItems"
@@ -50,8 +53,8 @@
     "bootsModelTexture": "From armor",
     "helmetItemRenderType": 0,
     "helmetItemCustomModelName": "Normal",
-    "bodyItemRenderType": 1,
-    "bodyItemCustomModelName": "giantshirtitem:default",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
     "leggingsItemRenderType": 0,
     "leggingsItemCustomModelName": "Normal",
     "bootsItemRenderType": 0,
@@ -84,7 +87,7 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 0,
+    "maxDamage": 500,
     "damageValueHelmet": 0,
     "damageValueBody": 4,
     "damageValueLeggings": 0,

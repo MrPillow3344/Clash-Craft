@@ -108,25 +108,6 @@
       }
     },
     {
-      "name": "GiantShirtSetHPProcedure",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_shirt_set_hp_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtSetHPProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Giant"
-    },
-    {
       "name": "GiantShirt",
       "type": "armor",
       "compiles": true,
@@ -175,8 +156,53 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Knight"
+    },
+    {
+      "name": "GiantShirtChestplateSetHP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_shirt_chestplate_set_hp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtChestplateSetHPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "GiantKill",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_kill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/giant.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "KnightKill",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight_kill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/knight.json"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -205,11 +231,23 @@
       "entity.clash_craft.knight": "Knight",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "biome.clash_craft.training_camp": "Training Camp",
-      "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
+      "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "entity.clash_craft.giant": "Giant",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg"
+    },
+    "he_il": {
+      "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
+      "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
+      "entity.clash_craft.knight": "אביר",
+      "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
+      "biome.clash_craft.training_camp": "מחנה אימונים",
+      "item.clash_craft.knights_sword": "חרב האביר",
+      "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
+      "item.clash_craft.clash_dimension": "כרטיס קלאש",
+      "entity.clash_craft.giant": "ענק",
+      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק"
     }
   },
   "foldersRoot": {
@@ -237,7 +275,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.190225d",
+    "version": "0.0.210225c",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

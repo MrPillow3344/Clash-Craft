@@ -1,7 +1,6 @@
 {
-  "parent": "clash_craft:custom/giantshirtitem",
+  "parent": "item/generated",
   "textures": {
-    "0": "clash_craft:block/",
-    "particle": "clash_craft:item/giant_shirt"
+    "layer0": "clash_craft:item/giant_shirt_item"
   }
 }
