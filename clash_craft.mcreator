@@ -334,21 +334,6 @@
       "path": "~/TrainingCamp/Fireball"
     },
     {
-      "name": "RandomSpell",
-      "type": "structure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "random_spell",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/clash_craft/worldgen/template_pool/random_spell.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/random_spell.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/random_spell.json"
-        ]
-      },
-      "path": "~/TrainingCamp"
-    },
-    {
       "name": "ShirtFix",
       "type": "procedure",
       "compiles": true,
@@ -477,7 +462,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.210225c",
+    "version": "0.0.220225a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
