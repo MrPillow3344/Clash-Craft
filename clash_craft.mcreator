@@ -370,6 +370,21 @@
         ]
       },
       "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "FireballChest",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/fireball_chest.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/fireball_chest.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fireball_chest.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Fireball"
     }
   ],
   "variable_elements": [
