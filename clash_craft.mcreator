@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
         ]
       },
       "path": "~/TrainingCamp/Knight"

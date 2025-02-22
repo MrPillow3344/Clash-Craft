@@ -30,7 +30,7 @@
             "item": {
               "value": "Blocks.AIR"
             },
-            "weight": 80,
+            "weight": 30,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
