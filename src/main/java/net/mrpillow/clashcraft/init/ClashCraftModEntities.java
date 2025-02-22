@@ -11,10 +11,11 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
-import net.mrpillow.clashcraft.entity.MinionEntityProjectile;
+import net.mrpillow.clashcraft.entity.MinionsIronBallEntity;
 import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
+import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
 import net.minecraft.world.entity.MobCategory;
@@ -37,8 +38,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<MinionEntity>of(MinionEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<MinionEntityProjectile>> MINION_PROJECTILE = register("projectile_minion",
-			EntityType.Builder.<MinionEntityProjectile>of(MinionEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MinionsIronBallEntity>> MINIONS_IRON_BALL = register("minions_iron_ball",
+			EntityType.Builder.<MinionsIronBallEntity>of(MinionsIronBallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FireballProjectileEntity>> FIREBALL_PROJECTILE = register("fireball_projectile",
+			EntityType.Builder.<FireballProjectileEntity>of(FireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

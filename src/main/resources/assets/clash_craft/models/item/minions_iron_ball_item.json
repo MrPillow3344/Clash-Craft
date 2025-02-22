@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "clash_craft:item/minions_iron_ball"
+  }
+}

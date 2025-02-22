@@ -8,8 +8,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
+import net.mrpillow.clashcraft.item.MinionsIronBallItemItem;
 import net.mrpillow.clashcraft.item.KnightsSwordItem;
 import net.mrpillow.clashcraft.item.GiantShirtItem;
+import net.mrpillow.clashcraft.item.FireballItemItem;
 import net.mrpillow.clashcraft.item.ClashDimensionItem;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
@@ -23,6 +25,8 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> KNIGHT_SPAWN_EGG = REGISTRY.register("knight_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.KNIGHT, -3355444, -256, new Item.Properties()));
 	public static final DeferredItem<Item> KNIGHTS_SWORD = REGISTRY.register("knights_sword", KnightsSwordItem::new);
 	public static final DeferredItem<Item> MINION_SPAWN_EGG = REGISTRY.register("minion_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.MINION, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> MINIONS_IRON_BALL_ITEM = REGISTRY.register("minions_iron_ball_item", MinionsIronBallItemItem::new);
+	public static final DeferredItem<Item> FIREBALL_ITEM = REGISTRY.register("fireball_item", FireballItemItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

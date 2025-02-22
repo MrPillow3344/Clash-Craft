@@ -85,7 +85,7 @@ public abstract class GiantShirtItem extends ArmorItem {
 
 	public static class Chestplate extends GiantShirtItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(500)));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(31)));
 		}
 
 		@Override
@@ -97,7 +97,7 @@ public abstract class GiantShirtItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				GiantShirtChestplateSetHPProcedure.execute(entity);
+				GiantShirtChestplateSetHPProcedure.execute(world, entity);
 			}
 		}
 	}
