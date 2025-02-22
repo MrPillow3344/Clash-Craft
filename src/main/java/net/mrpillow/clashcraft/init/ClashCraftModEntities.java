@@ -11,6 +11,8 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
+import net.mrpillow.clashcraft.entity.MinionEntityProjectile;
+import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.ClashCraftMod;
@@ -31,6 +33,12 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<KnightEntity>of(KnightEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MinionEntity>> MINION = register("minion",
+			EntityType.Builder.<MinionEntity>of(MinionEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MinionEntityProjectile>> MINION_PROJECTILE = register("projectile_minion",
+			EntityType.Builder.<MinionEntityProjectile>of(MinionEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -42,11 +50,13 @@ public class ClashCraftModEntities {
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		GiantEntity.init(event);
 		KnightEntity.init(event);
+		MinionEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(GIANT.get(), GiantEntity.createAttributes().build());
 		event.put(KNIGHT.get(), KnightEntity.createAttributes().build());
+		event.put(MINION.get(), MinionEntity.createAttributes().build());
 	}
 }

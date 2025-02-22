@@ -126,6 +126,15 @@
         "maxGroup": 1,
         "weight": 20,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Minion"
+        },
+        "minGroup": 3,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "creature"
       }
     ]
   }

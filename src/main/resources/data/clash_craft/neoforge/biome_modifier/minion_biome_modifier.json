@@ -2,9 +2,9 @@
   "type": "neoforge:add_spawns",
   "biomes": "clash_craft:training_camp",
   "spawners": {
-    "type": "clash_craft:knight",
+    "type": "clash_craft:minion",
     "weight": 20,
-    "minCount": 1,
-    "maxCount": 1
+    "minCount": 3,
+    "maxCount": 3
   }
 }

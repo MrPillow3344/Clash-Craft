@@ -24,6 +24,12 @@
         "weight": 20,
         "minCount": 1,
         "maxCount": 1
+      },
+      {
+        "type": "clash_craft:minion",
+        "weight": 20,
+        "minCount": 3,
+        "maxCount": 3
       }
     ],
     "ambient": [],
