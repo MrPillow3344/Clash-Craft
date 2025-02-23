@@ -453,9 +453,8 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.230225b",
-    "author": "MrPillow3344, MRshoony",
-    "websiteURL": "https://mcreator.net",
+    "version": "0.0.230225c",
+    "author": "MrPillow3344, MRshoony, snapyboi111",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],
@@ -465,7 +464,7 @@
       "geckolib"
     ],
     "currentGenerator": "neoforge-1.21.1",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Created using MCreator by MrPillow3344, MRshoony with the models of MrPillow3344, MRshoony, snapyboi111",
     "modElementsPackage": "net.mrpillow.clashcraft"
   },
   "mcreatorVersion": 202400452410
