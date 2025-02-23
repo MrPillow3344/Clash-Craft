@@ -33,10 +33,10 @@ public class ShirtVarUpdateProcedure {
 			return;
 		boolean giantShirt = false;
 		giantShirt = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get();
-		if (giantShirt && entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).giantShirtSwitch) {
+		if (giantShirt && !entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).giantShirtSwitch) {
 			{
 				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.giantShirtSwitch = !entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).giantShirtSwitch;
+				_vars.giantShirtSwitch = true;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
