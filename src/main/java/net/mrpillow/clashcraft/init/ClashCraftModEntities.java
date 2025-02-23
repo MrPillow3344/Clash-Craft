@@ -37,7 +37,7 @@ public class ClashCraftModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<MinionEntity>> MINION = register("minion",
 			EntityType.Builder.<MinionEntity>of(MinionEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.2f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MinionsIronBallEntity>> MINIONS_IRON_BALL = register("minions_iron_ball",
 			EntityType.Builder.<MinionsIronBallEntity>of(MinionsIronBallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FireballProjectileEntity>> FIREBALL_PROJECTILE = register("fireball_projectile",

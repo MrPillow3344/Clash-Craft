@@ -14,12 +14,12 @@ import net.minecraft.resources.ResourceLocation;
 public class MinionModel extends GeoModel<MinionEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(MinionEntity entity) {
-		return ResourceLocation.parse("clash_craft:animations/giant.animation.json");
+		return ResourceLocation.parse("clash_craft:animations/minion.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(MinionEntity entity) {
-		return ResourceLocation.parse("clash_craft:geo/giant.geo.json");
+		return ResourceLocation.parse("clash_craft:geo/minion.geo.json");
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class MinionModel extends GeoModel<MinionEntity> {
 
 	@Override
 	public void setCustomAnimations(MinionEntity animatable, long instanceId, AnimationState animationState) {
-		GeoBone head = getAnimationProcessor().getBone("Head");
+		GeoBone head = getAnimationProcessor().getBone("head");
 		if (head != null) {
 			EntityModelData entityData = (EntityModelData) animationState.getData(DataTickets.ENTITY_MODEL_DATA);
 			head.setRotX(entityData.headPitch() * Mth.DEG_TO_RAD);

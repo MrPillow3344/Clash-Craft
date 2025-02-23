@@ -219,12 +219,11 @@
       "registry_name": "minion",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/layer/MinionLayer.java",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
           "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java"
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -370,6 +369,19 @@
         ]
       },
       "path": "~/TrainingCamp/Fireball"
+    },
+    {
+      "name": "MinionKill",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_kill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/minion.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Minion"
     }
   ],
   "variable_elements": [

@@ -5,7 +5,6 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 
 import net.mrpillow.clashcraft.entity.model.MinionModel;
-import net.mrpillow.clashcraft.entity.layer.MinionLayer;
 import net.mrpillow.clashcraft.entity.MinionEntity;
 
 import net.minecraft.resources.ResourceLocation;
@@ -19,8 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class MinionRenderer extends GeoEntityRenderer<MinionEntity> {
 	public MinionRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new MinionModel());
-		this.shadowRadius = 0.5f;
-		this.addRenderLayer(new MinionLayer(this));
+		this.shadowRadius = 0.2f;
 	}
 
 	@Override
