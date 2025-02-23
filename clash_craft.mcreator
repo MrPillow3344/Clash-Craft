@@ -359,13 +359,7 @@
   ],
   "variable_elements": [
     {
-      "name": "hasGiantShirt",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "ignoreGiantShirt",
+      "name": "giantShirtSwitch",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -453,8 +447,9 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.230225c",
+    "version": "0.0.230225d",
     "author": "MrPillow3344, MRshoony, snapyboi111",
+    "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],

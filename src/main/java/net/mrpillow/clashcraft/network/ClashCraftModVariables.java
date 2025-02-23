@@ -60,8 +60,7 @@ public class ClashCraftModVariables {
 		public static void clonePlayer(PlayerEvent.Clone event) {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
-			clone.hasGiantShirt = original.hasGiantShirt;
-			clone.ignoreGiantShirt = original.ignoreGiantShirt;
+			clone.giantShirtSwitch = original.giantShirtSwitch;
 			if (!event.isWasDeath()) {
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -69,21 +68,18 @@ public class ClashCraftModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public boolean hasGiantShirt = false;
-		public boolean ignoreGiantShirt = false;
+		public boolean giantShirtSwitch = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("hasGiantShirt", hasGiantShirt);
-			nbt.putBoolean("ignoreGiantShirt", ignoreGiantShirt);
+			nbt.putBoolean("giantShirtSwitch", giantShirtSwitch);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			hasGiantShirt = nbt.getBoolean("hasGiantShirt");
-			ignoreGiantShirt = nbt.getBoolean("ignoreGiantShirt");
+			giantShirtSwitch = nbt.getBoolean("giantShirtSwitch");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

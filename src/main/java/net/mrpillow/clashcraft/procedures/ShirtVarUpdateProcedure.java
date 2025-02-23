@@ -31,31 +31,20 @@ public class ShirtVarUpdateProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).hasGiantShirt && !entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).ignoreGiantShirt
-				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
+		boolean giantShirt = false;
+		giantShirt = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get();
+		if (giantShirt && entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).giantShirtSwitch) {
 			{
 				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.hasGiantShirt = false;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.ignoreGiantShirt = true;
+				_vars.giantShirtSwitch = !entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).giantShirtSwitch;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 20, 0, false, false));
-		} else if (!entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).ignoreGiantShirt
-				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
+				_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, (int) Double.POSITIVE_INFINITY, 0, false, false));
+		} else if (!giantShirt) {
 			{
 				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.hasGiantShirt = true;
-				_vars.syncPlayerVariables(entity);
-			}
-		} else {
-			{
-				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.hasGiantShirt = false;
+				_vars.giantShirtSwitch = false;
 				_vars.syncPlayerVariables(entity);
 			}
 		}
