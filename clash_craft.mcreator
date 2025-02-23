@@ -110,7 +110,7 @@
     {
       "name": "GiantShirt",
       "type": "armor",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "giant_shirt",
       "metadata": {
@@ -161,29 +161,6 @@
         ]
       },
       "path": "~/TrainingCamp/Knight"
-    },
-    {
-      "name": "GiantShirtChestplateSetHP",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_shirt_chestplate_set_hp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GiantShirtChestplateSetHPProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Giant"
     },
     {
       "name": "GiantKill",
@@ -333,29 +310,6 @@
       "path": "~/TrainingCamp/Fireball"
     },
     {
-      "name": "ShirtFix",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shirt_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/ShirtFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Giant"
-    },
-    {
       "name": "FireballChest",
       "type": "structure",
       "compiles": true,
@@ -382,6 +336,25 @@
         ]
       },
       "path": "~/TrainingCamp/Minion"
+    },
+    {
+      "name": "ShirtVarUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shirt_var_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/ShirtVarUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Giant"
     }
   ],
   "variable_elements": [
@@ -480,7 +453,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.230225a",
+    "version": "0.0.230225b",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

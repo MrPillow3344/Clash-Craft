@@ -10,9 +10,6 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "onBodyTick": {
-      "name": "GiantShirtChestplateSetHP"
-    },
     "creativeTabs": [
       {
         "value": "CUSTOM:ClashCraftItems"
