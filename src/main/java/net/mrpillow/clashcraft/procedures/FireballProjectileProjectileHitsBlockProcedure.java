@@ -8,11 +8,13 @@ import net.minecraft.server.level.ServerLevel;
 
 public class FireballProjectileProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (world instanceof ServerLevel projectileLevel) {
-			Projectile _entityToSpawn = new LargeFireball(EntityType.FIREBALL, projectileLevel);
-			_entityToSpawn.setPos(x, (y + 20), z);
-			_entityToSpawn.shoot(0, (-1), 0, 1, 0);
-			projectileLevel.addFreshEntity(_entityToSpawn);
+		for (int index0 = 0; index0 < 3; index0++) {
+			if (world instanceof ServerLevel projectileLevel) {
+				Projectile _entityToSpawn = new LargeFireball(EntityType.FIREBALL, projectileLevel);
+				_entityToSpawn.setPos(x, (y + 20), z);
+				_entityToSpawn.shoot(0, (-1), 0, (float) 1.2, 0);
+				projectileLevel.addFreshEntity(_entityToSpawn);
+			}
 		}
 	}
 }

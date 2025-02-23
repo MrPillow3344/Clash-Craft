@@ -131,7 +131,7 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 					MinionEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = MinionEntity.this.distanceToSqr(livingentity);
-					if (d0 < 16) {
+					if (d0 < 32) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
 						MinionEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
 					}
@@ -155,8 +155,8 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 			}
 		});
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, true, false));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, true));
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 40, 5f) {
 			@Override
 			public boolean canContinueToUse() {
