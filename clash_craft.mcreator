@@ -110,7 +110,7 @@
     {
       "name": "GiantShirt",
       "type": "armor",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "giant_shirt",
       "metadata": {
@@ -359,13 +359,13 @@
   ],
   "variable_elements": [
     {
-      "name": "GiantShirtCooldown",
-      "type": "number",
+      "name": "hasGiantShirt",
+      "type": "logic",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "false"
     },
     {
-      "name": "hasGiantShirt",
+      "name": "ignoreGiantShirt",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"

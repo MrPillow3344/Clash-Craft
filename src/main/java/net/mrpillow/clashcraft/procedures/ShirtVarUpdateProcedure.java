@@ -31,16 +31,22 @@ public class ShirtVarUpdateProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).hasGiantShirt
+		if (entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).hasGiantShirt && !entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).hasGiantShirt
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
 			{
 				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
-				_vars.hasGiantShirt = true;
+				_vars.hasGiantShirt = false;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
+				_vars.ignoreGiantShirt = true;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, (int) Double.POSITIVE_INFINITY, 0, false, false));
-		} else if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get()) {
+				_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 20, 0, false, false));
+		} else if (!entity.getData(ClashCraftModVariables.PLAYER_VARIABLES).hasGiantShirt == ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
+				.getItem() == ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get())) {
 			{
 				ClashCraftModVariables.PlayerVariables _vars = entity.getData(ClashCraftModVariables.PLAYER_VARIABLES);
 				_vars.hasGiantShirt = true;
