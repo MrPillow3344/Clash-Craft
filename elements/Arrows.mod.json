@@ -22,7 +22,7 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "enableMeleeDamage": true,
+    "enableMeleeDamage": false,
     "damageVsEntity": 1.0,
     "specialInformation": {
       "fixedValue": []
@@ -32,6 +32,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "FireballItemRightclicked"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
