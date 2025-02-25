@@ -13,6 +13,7 @@ import net.mrpillow.clashcraft.item.KnightsSwordItem;
 import net.mrpillow.clashcraft.item.GiantShirtItem;
 import net.mrpillow.clashcraft.item.FireballItemItem;
 import net.mrpillow.clashcraft.item.ClashDimensionItem;
+import net.mrpillow.clashcraft.item.ArrowsItem;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
 import net.minecraft.world.item.Item;
@@ -27,6 +28,7 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> MINION_SPAWN_EGG = REGISTRY.register("minion_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.MINION, -16750951, -16777114, new Item.Properties()));
 	public static final DeferredItem<Item> MINIONS_IRON_BALL_ITEM = REGISTRY.register("minions_iron_ball_item", MinionsIronBallItemItem::new);
 	public static final DeferredItem<Item> FIREBALL_ITEM = REGISTRY.register("fireball_item", FireballItemItem::new);
+	public static final DeferredItem<Item> ARROWS = REGISTRY.register("arrows", ArrowsItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

@@ -24,5 +24,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.MINION.get(), MinionRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.MINIONS_IRON_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.ARROWS_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

@@ -355,6 +355,87 @@
         ]
       },
       "path": "~/TrainingCamp/Giant"
+    },
+    {
+      "name": "Arrows",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrows",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/item/ArrowsItem.java",
+          "src/main/resources/assets/clash_craft/models/item/arrows.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Arrows"
+    },
+    {
+      "name": "ArrowsItemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrows_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/ArrowsItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Arrows"
+    },
+    {
+      "name": "SpawnArrows",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_arrows",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/SpawnArrowsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Arrows"
+    },
+    {
+      "name": "ArrowsProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrows_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/ArrowsProjectileEntity.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Arrows"
     }
   ],
   "variable_elements": [
@@ -395,7 +476,8 @@
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.clash_dimension": "Clash Ticket",
-      "item.clash_craft.minions_iron_ball_item": "Iron Ball"
+      "item.clash_craft.minions_iron_ball_item": "Iron Ball",
+      "item.clash_craft.arrows": "Arrows Spell"
     },
     "he_il": {
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
@@ -411,7 +493,8 @@
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
-      "item.clash_craft.minions_iron_ball_item": "Iron Ball"
+      "item.clash_craft.minions_iron_ball_item": "Iron Ball",
+      "item.clash_craft.arrows": "Arrows Spell"
     }
   },
   "foldersRoot": {
@@ -435,6 +518,10 @@
           {
             "name": "Fireball",
             "children": []
+          },
+          {
+            "name": "Arrows",
+            "children": []
           }
         ]
       },
@@ -447,8 +534,8 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.230225e",
-    "author": "MrPillow3344, MRshoony, snapyboi111",
+    "version": "0.0.250225a",
+    "author": "MrPillow3344, MRshoony, snappyboi111",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "serverSideOnly": false,

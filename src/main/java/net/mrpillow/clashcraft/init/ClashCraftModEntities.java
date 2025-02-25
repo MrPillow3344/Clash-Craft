@@ -16,6 +16,7 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
+import net.mrpillow.clashcraft.entity.ArrowsProjectileEntity;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
 import net.minecraft.world.entity.MobCategory;
@@ -42,6 +43,8 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<MinionsIronBallEntity>of(MinionsIronBallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FireballProjectileEntity>> FIREBALL_PROJECTILE = register("fireball_projectile",
 			EntityType.Builder.<FireballProjectileEntity>of(FireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ArrowsProjectileEntity>> ARROWS_PROJECTILE = register("arrows_projectile",
+			EntityType.Builder.<ArrowsProjectileEntity>of(ArrowsProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.2f, 0.2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
