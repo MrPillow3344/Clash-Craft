@@ -2,23 +2,23 @@
   "_fv": 73,
   "_type": "loottable",
   "definition": {
-    "type": "Entity",
+    "type": "Chest",
     "pools": [
       {
-        "minrolls": 1,
-        "maxrolls": 1,
-        "minbonusrolls": 1,
+        "minrolls": 0,
+        "maxrolls": 27,
+        "minbonusrolls": 0,
         "maxbonusrolls": 1,
-        "hasbonusrolls": false,
+        "hasbonusrolls": true,
         "entries": [
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:KnightsSword"
+              "value": "CUSTOM:Arrows"
             },
-            "weight": 20,
+            "weight": 40,
             "minCount": 0,
-            "maxCount": 1,
+            "maxCount": 8,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -28,11 +28,11 @@
           {
             "type": "item",
             "item": {
-              "value": "Blocks.AIR"
+              "value": "CUSTOM:FireballItem"
             },
-            "weight": 80,
-            "minCount": 1,
-            "maxCount": 1,
+            "weight": 60,
+            "minCount": 0,
+            "maxCount": 8,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -42,7 +42,7 @@
         ]
       }
     ],
-    "name": "entities/knight",
+    "name": "chests/clash_dimension",
     "namespace": "mod"
   }
 }
