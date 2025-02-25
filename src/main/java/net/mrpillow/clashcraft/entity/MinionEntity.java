@@ -23,11 +23,8 @@ import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -42,7 +39,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
@@ -99,64 +95,8 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new Goal() {
-			{
-				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
-			}
-
-			public boolean canUse() {
-				if (MinionEntity.this.getTarget() != null && !MinionEntity.this.getMoveControl().hasWanted()) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-
-			@Override
-			public boolean canContinueToUse() {
-				return MinionEntity.this.getMoveControl().hasWanted() && MinionEntity.this.getTarget() != null && MinionEntity.this.getTarget().isAlive();
-			}
-
-			@Override
-			public void start() {
-				LivingEntity livingentity = MinionEntity.this.getTarget();
-				Vec3 vec3d = livingentity.getEyePosition(1);
-				MinionEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-			}
-
-			@Override
-			public void tick() {
-				LivingEntity livingentity = MinionEntity.this.getTarget();
-				if (MinionEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					MinionEntity.this.doHurtTarget(livingentity);
-				} else {
-					double d0 = MinionEntity.this.distanceToSqr(livingentity);
-					if (d0 < 32) {
-						Vec3 vec3d = livingentity.getEyePosition(1);
-						MinionEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-					}
-				}
-			}
-		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				RandomSource random = MinionEntity.this.getRandom();
-				double dir_x = MinionEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = MinionEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = MinionEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected boolean canPerformAttack(LivingEntity entity) {
-				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
-			}
-		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, true));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 40, 5f) {
 			@Override
 			public boolean canContinueToUse() {
