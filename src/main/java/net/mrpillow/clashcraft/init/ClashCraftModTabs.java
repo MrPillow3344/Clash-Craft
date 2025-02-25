@@ -22,6 +22,7 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.GIANT_SHIRT_CHESTPLATE.get());
 				tabData.accept(ClashCraftModItems.KNIGHTS_SWORD.get());
 				tabData.accept(ClashCraftModItems.FIREBALL_ITEM.get());
+				tabData.accept(ClashCraftModItems.ARROWS.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CLASH_CRAFT_SPAWN_EGGS = REGISTRY.register("clash_craft_spawn_eggs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.clash_craft.clash_craft_spawn_eggs")).icon(() -> new ItemStack(ClashCraftModItems.GIANT_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {

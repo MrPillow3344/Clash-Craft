@@ -1,7 +1,7 @@
 
 package net.mrpillow.clashcraft.item;
 
-import net.mrpillow.clashcraft.procedures.FireballItemRightclickedProcedure;
+import net.mrpillow.clashcraft.procedures.ArrowsItemRightclickedProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Rarity;
@@ -19,7 +19,7 @@ public class ArrowsItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		FireballItemRightclickedProcedure.execute(entity);
+		ArrowsItemRightclickedProcedure.execute(entity, ar.getObject());
 		return ar;
 	}
 }

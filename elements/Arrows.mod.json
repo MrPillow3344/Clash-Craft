@@ -9,7 +9,11 @@
     "states": [],
     "name": "Arrows Spell",
     "rarity": "RARE",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ClashCraftItems"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
@@ -33,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "FireballItemRightclicked"
+      "name": "ArrowsItemRightclicked"
     },
     "enableRanged": false,
     "shootConstantly": false,
