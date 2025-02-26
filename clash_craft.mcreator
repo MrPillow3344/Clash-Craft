@@ -196,11 +196,11 @@
       "registry_name": "minion",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
           "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json"
+          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java"
         ]
       },
       "path": "~/TrainingCamp/Minion"
