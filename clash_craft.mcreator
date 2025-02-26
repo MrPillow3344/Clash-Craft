@@ -390,10 +390,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -536,7 +532,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.250225a",
+    "version": "0.0.260225a",
     "author": "MrPillow3344, MRshoony, snappyboi111",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
