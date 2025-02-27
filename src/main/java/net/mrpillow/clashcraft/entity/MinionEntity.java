@@ -25,6 +25,7 @@ import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -76,7 +77,7 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 		super.defineSynchedData(builder);
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "knight");
+		builder.define(TEXTURE, "miniontexture");
 	}
 
 	public void setTexture(String texture) {
@@ -96,7 +97,8 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	protected void registerGoals() {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 1));
+		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 40, 5f) {
 			@Override
 			public boolean canContinueToUse() {
@@ -284,6 +286,9 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
+			if (!this.onGround()) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.minion.idle"));
+			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.minion.idle"));
 		}
 		return PlayState.STOP;
