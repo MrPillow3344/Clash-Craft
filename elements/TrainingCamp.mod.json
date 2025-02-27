@@ -135,6 +135,15 @@
         "maxGroup": 3,
         "weight": 20,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:MiniPekka"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 20,
+        "spawnType": "creature"
       }
     ]
   }

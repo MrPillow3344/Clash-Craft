@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
+import net.mrpillow.clashcraft.client.renderer.MiniPekkaRenderer;
 import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
 import net.mrpillow.clashcraft.client.renderer.GiantRenderer;
 
@@ -25,5 +26,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.MINIONS_IRON_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARROWS_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.MINI_PEKKA.get(), MiniPekkaRenderer::new);
 	}
 }

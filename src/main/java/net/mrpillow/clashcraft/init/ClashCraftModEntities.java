@@ -13,6 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mrpillow.clashcraft.entity.MinionsIronBallEntity;
 import net.mrpillow.clashcraft.entity.MinionEntity;
+import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
@@ -45,6 +46,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<FireballProjectileEntity>of(FireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ArrowsProjectileEntity>> ARROWS_PROJECTILE = register("arrows_projectile",
 			EntityType.Builder.<ArrowsProjectileEntity>of(ArrowsProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.2f, 0.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MiniPekkaEntity>> MINI_PEKKA = register("mini_pekka",
+			EntityType.Builder.<MiniPekkaEntity>of(MiniPekkaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -57,6 +62,7 @@ public class ClashCraftModEntities {
 		GiantEntity.init(event);
 		KnightEntity.init(event);
 		MinionEntity.init(event);
+		MiniPekkaEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -64,5 +70,6 @@ public class ClashCraftModEntities {
 		event.put(GIANT.get(), GiantEntity.createAttributes().build());
 		event.put(KNIGHT.get(), KnightEntity.createAttributes().build());
 		event.put(MINION.get(), MinionEntity.createAttributes().build());
+		event.put(MINI_PEKKA.get(), MiniPekkaEntity.createAttributes().build());
 	}
 }

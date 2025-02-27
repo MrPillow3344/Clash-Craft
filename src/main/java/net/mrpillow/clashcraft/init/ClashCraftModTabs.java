@@ -29,5 +29,6 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.GIANT_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.KNIGHT_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.MINION_SPAWN_EGG.get());
+				tabData.accept(ClashCraftModItems.MINI_PEKKA_SPAWN_EGG.get());
 			}).withTabsBefore(CLASH_CRAFT_ITEMS.getId()).build());
 }
