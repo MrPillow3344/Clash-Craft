@@ -16,11 +16,11 @@ public class SpawnArrowsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double xOffset = 6;
 		double yOffset = 20;
-		double r = 5;
+		double r = 4;
 		for (int i = 0; i < 3; i++) {
 			for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
 				for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
-					if (Math.pow(xLoop-5, 2) + Math.pow(zLoop -5, 2) <= Math.pow(r, 2)) {
+					if (Math.pow(xLoop-r, 2) + Math.pow(zLoop -r, 2) < Math.pow(r, 2)) {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
@@ -45,14 +45,15 @@ public class SpawnArrowsProcedure {
 									entityToSpawn.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 5, 1, (byte) 0);
-							_entityToSpawn.setPos(x + xLoop - 5, y + yOffset, z + zLoop - 5);
+							}.getArrow(projectileLevel, 2, 1, (byte) 0);
+							_entityToSpawn.setPos(x + xLoop  -r -0.5, y + yOffset, z + zLoop - r -0.5);
 							_entityToSpawn.shoot(0, -1, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
 				}
 			}
+			Thread.sleep(750)
 		}
 	}
 }
