@@ -1,38 +1,26 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.mrpillow.clashcraft.ClashCraftMod;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
 
 public class SpawnArrowsProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
-		double i = 0;
-		double j = 0;
-		double xOffset = 0;
-		double yOffset = 0;
-		xOffset = 20;
-		yOffset = 6;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
+		double xOffset = 6;
+		double yOffset = 20;
+		double r = 5;
 		for (int index0 = 0; index0 < 3; index0++) {
-			for (int index1 = 0; index1 < 10; index1++) {
-				i = i + 1;
-				for (int index2 = 0; index2 < 10; index2++) {
-					j = j + 1;
-					if ((i - 5) * (i - 5) + (j - 5) * (j - 5) <= 25) {
+			for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
+				for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
+					if (Math.pow(xLoop-5, 2) + Math.pow(zLoop -5, 2) <= Math.pow(r, 2)) {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
@@ -41,7 +29,7 @@ public class SpawnArrowsProcedure {
 										public byte getPierceLevel() {
 											return piercing;
 										}
-
+	
 										@Override
 										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
 											if (knockback > 0) {
@@ -58,17 +46,13 @@ public class SpawnArrowsProcedure {
 									return entityToSpawn;
 								}
 							}.getArrow(projectileLevel, 5, 1, (byte) 0);
-							_entityToSpawn.setPos(((x + i - 5) - xOffset), (y + j - 5 + yOffset), z);
-							_entityToSpawn.shoot((xOffset / yOffset), (-1), 1, (float) 1.2, (float) 0.1);
+							_entityToSpawn.setPos(x + xLoop - 5, y + yOffset, z + zLoop - 5);
+							_entityToSpawn.shoot(0, -1, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
 				}
 			}
-			ClashCraftMod.queueServerWork(15, () -> {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(""), false);
-			});
 		}
 	}
 }
