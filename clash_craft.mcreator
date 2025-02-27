@@ -23,9 +23,9 @@
       "registry_name": "target",
       "metadata": {
         "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json"
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
         ]
       },
       "path": "~/TrainingCamp"
