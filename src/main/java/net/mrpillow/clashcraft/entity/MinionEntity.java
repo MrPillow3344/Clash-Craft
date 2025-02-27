@@ -24,8 +24,8 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -40,6 +40,7 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
@@ -97,7 +98,16 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	protected void registerGoals() {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 1));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				RandomSource random = MinionEntity.this.getRandom();
+				double dir_x = MinionEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = MinionEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = MinionEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 40, 5f) {
 			@Override
