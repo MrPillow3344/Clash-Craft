@@ -17,7 +17,7 @@ public class SpawnArrowsProcedure {
 		double xOffset = 6;
 		double yOffset = 20;
 		double r = 5;
-		for (int index0 = 0; index0 < 3; index0++) {
+		for (int i = 0; i < 3; i++) {
 			for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
 				for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
 					if (Math.pow(xLoop-5, 2) + Math.pow(zLoop -5, 2) <= Math.pow(r, 2)) {
