@@ -97,7 +97,7 @@ public class SpawnArrowsProcedure {
 									return entityToSpawn;
 								}
 							}.getArrow(projectileLevel, 2, 1, (byte) 0);
-							_entityToSpawn.setPos(x + xLoop - r - 0.5 -xOffset, (y + yOffset), z- zLoop + r - 0.5);
+							_entityToSpawn.setPos(x + xLoop - r - 4 -xOffset, (y + yOffset), z- zLoop + r +1);
 							_entityToSpawn.shoot((xOffset / yOffset), (-1), 0, (float) 1.2, (float) 0.1);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
