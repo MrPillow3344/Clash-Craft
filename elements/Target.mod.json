@@ -16,7 +16,7 @@
         "value": "CUSTOM:TrainingCamp"
       }
     ],
-    "terrainAdaptation": "none",
+    "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE",
     "useStartHeight": false,
