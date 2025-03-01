@@ -496,6 +496,19 @@
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
+    },
+    {
+      "name": "MiniPekkaLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mini_pekka_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/mini_pekka.json"
+        ]
+      },
+      "path": "~/TrainingCamp/Mini Pekka"
     }
   ],
   "variable_elements": [
