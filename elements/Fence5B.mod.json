@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 2,
-    "separation": 1,
+    "spacing": 6,
+    "separation": 3,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Arena1"
