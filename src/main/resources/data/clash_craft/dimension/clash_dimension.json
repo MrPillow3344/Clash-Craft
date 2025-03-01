@@ -9,24 +9,24 @@
           "biome": "clash_craft:training_camp",
           "parameters": {
             "temperature": [
-              -2,
-              -1.9999
+              -0.5,
+              0.5
             ],
             "humidity": [
-              -2,
-              -1.9999
+              -0.5,
+              0.5
             ],
             "continentalness": [
-              -2,
-              -1.9999
+              -0.5,
+              0.5
             ],
             "weirdness": [
-              -2,
-              -1.9999
+              -0.5,
+              0.5
             ],
             "erosion": [
-              -2,
-              -1.9999
+              -0.5,
+              0.5
             ],
             "depth": 0,
             "offset": 0
@@ -36,24 +36,24 @@
           "biome": "clash_craft:arena_1",
           "parameters": {
             "temperature": [
-              -1.9,
-              -1.8999
+              -0.5,
+              0.5
             ],
             "humidity": [
-              -1.9,
-              -1.8999
+              -0.5,
+              0.5
             ],
             "continentalness": [
-              -1.9,
-              -1.8999
+              -0.5,
+              0.5
             ],
             "weirdness": [
-              -1.9,
-              -1.8999
+              -0.5,
+              0.5
             ],
             "erosion": [
-              -1.9,
-              -1.8999
+              -0.5,
+              0.5
             ],
             "depth": 0,
             "offset": 0
@@ -544,10 +544,7 @@
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:spruce_wood",
-                            "Properties": {
-                              "axis": "y"
-                            }
+                            "Name": "minecraft:mud"
                           }
                         }
                       ]
