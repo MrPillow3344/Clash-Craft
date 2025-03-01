@@ -21,7 +21,7 @@
     "surfaceDetectionType": "WORLD_SURFACE",
     "useStartHeight": true,
     "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
-    "startHeightMin": 64,
+    "startHeightMin": 0,
     "startHeightMax": 250,
     "size": 1,
     "maxDistanceFromCenter": 64,
