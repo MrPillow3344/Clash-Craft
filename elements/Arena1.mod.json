@@ -10,7 +10,7 @@
       "value": "Blocks.MOSS_BLOCK"
     },
     "underwaterBlock": {
-      "value": "Blocks.LOG#1"
+      "value": "Blocks.SPRUCE_WOOD"
     },
     "airColor": {
       "value": -7733273,
@@ -79,15 +79,15 @@
       "min": -1.9,
       "max": -1.8999
     },
-    "treesPerChunk": 0,
+    "treesPerChunk": 5,
     "vanillaTreeType": "Default",
-    "treeType": 0,
-    "minHeight": 7,
+    "treeType": 1,
+    "minHeight": 10,
     "treeStem": {
-      "value": ""
+      "value": "Blocks.LOG#0"
     },
     "treeBranch": {
-      "value": ""
+      "value": "Blocks.AIR"
     },
     "treeVines": {
       "value": ""

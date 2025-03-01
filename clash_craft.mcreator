@@ -518,7 +518,9 @@
       "registry_name": "arena_1",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/biome/arena_1.json"
+          "src/main/resources/data/clash_craft/worldgen/biome/arena_1.json",
+          "src/main/resources/data/clash_craft/worldgen/configured_feature/arena_1_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/arena_1_tree.json"
         ]
       },
       "path": "~/Arena-1"
