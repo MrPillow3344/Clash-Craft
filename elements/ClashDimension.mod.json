@@ -8,9 +8,6 @@
       },
       {
         "value": "CUSTOM:Arena1"
-      },
-      {
-        "value": "ocean"
       }
     ],
     "worldGenType": "Normal world gen",
