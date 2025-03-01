@@ -9,24 +9,24 @@
           "biome": "clash_craft:training_camp",
           "parameters": {
             "temperature": [
-              -0.5,
-              0.5
+              -2,
+              0
             ],
             "humidity": [
-              -0.5,
-              0.5
+              -2,
+              0
             ],
             "continentalness": [
-              -0.5,
-              0.5
+              -2,
+              0
             ],
             "weirdness": [
-              -0.5,
-              0.5
+              -2,
+              0
             ],
             "erosion": [
-              -0.5,
-              0.5
+              -2,
+              0
             ],
             "depth": 0,
             "offset": 0
@@ -37,23 +37,23 @@
           "parameters": {
             "temperature": [
               -0.5,
-              0.5
+              1.5
             ],
             "humidity": [
               -0.5,
-              0.5
+              1.5
             ],
             "continentalness": [
               -0.5,
-              0.5
+              1.5
             ],
             "weirdness": [
               -0.5,
-              0.5
+              1.5
             ],
             "erosion": [
               -0.5,
-              0.5
+              1.5
             ],
             "depth": 0,
             "offset": 0

@@ -7,9 +7,14 @@
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
-    "absolute": 0
+    "type": "minecraft:trapezoid",
+    "min_inclusive": {
+      "absolute": 64
+    },
+    "max_inclusive": {
+      "absolute": 250
+    }
   },
-  "project_start_to_heightmap": "WORLD_SURFACE",
   "biomes": "clash_craft:training_camp",
   "use_expansion_hack": false
 }
