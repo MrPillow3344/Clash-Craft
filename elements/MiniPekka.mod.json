@@ -89,7 +89,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:Arrows"
+      "value": ""
     },
     "livingSound": {
       "value": ""

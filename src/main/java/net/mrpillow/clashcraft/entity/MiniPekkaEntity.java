@@ -12,12 +12,10 @@ import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -36,7 +34,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -88,11 +85,6 @@ public class MiniPekkaEntity extends PathfinderMob implements GeoEntity {
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, true, true));
-	}
-
-	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ClashCraftModItems.ARROWS.get()));
 	}
 
 	@Override
