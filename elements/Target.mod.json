@@ -3,7 +3,7 @@
   "_type": "structure",
   "definition": {
     "structure": "target",
-    "projection": "rigid",
+    "projection": "terrain_matching",
     "ignoredBlocks": [
       {
         "value": "Blocks.STRUCTURE_BLOCK"
@@ -16,11 +16,11 @@
         "value": "CUSTOM:TrainingCamp"
       }
     ],
-    "terrainAdaptation": "beard_thin",
+    "terrainAdaptation": "none",
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE",
     "useStartHeight": true,
-    "startHeightProviderType": "TRAPEZOID",
+    "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
     "startHeightMin": 64,
     "startHeightMax": 250,
     "size": 1,
