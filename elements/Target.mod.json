@@ -16,12 +16,12 @@
         "value": "CUSTOM:TrainingCamp"
       }
     ],
-    "terrainAdaptation": "none",
+    "terrainAdaptation": "beard_thin",
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE",
     "useStartHeight": true,
     "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
-    "startHeightMin": 0,
+    "startHeightMin": 64,
     "startHeightMax": 250,
     "size": 1,
     "maxDistanceFromCenter": 64,
