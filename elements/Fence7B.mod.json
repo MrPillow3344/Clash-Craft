@@ -3,7 +3,7 @@
   "_type": "structure",
   "definition": {
     "structure": "fence_7b",
-    "projection": "rigid",
+    "projection": "terrain_matching",
     "ignoredBlocks": [
       {
         "value": "Blocks.STRUCTURE_BLOCK"
