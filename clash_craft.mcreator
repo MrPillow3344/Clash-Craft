@@ -509,6 +509,19 @@
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
+    },
+    {
+      "name": "Arena1",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arena_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/arena_1.json"
+        ]
+      },
+      "path": "~/Arena-1"
     }
   ],
   "variable_elements": [
@@ -531,9 +544,13 @@
       "~CUSTOM:KnightsSword"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.MOSS_BLOCK",
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
+    ],
+    "BIOMES:minecraft:has_structure/swamp_hut": [
+      "~CUSTOM:Arena1"
     ]
   },
   "tab_element_order": {},
@@ -556,7 +573,8 @@
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell"
+      "item.clash_craft.arrows": "Arrows Spell",
+      "biome.clash_craft.arena_1": "Goblin Stadium-Arena 1"
     },
     "he_il": {
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
@@ -576,7 +594,8 @@
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell"
+      "item.clash_craft.arrows": "Arrows Spell",
+      "biome.clash_craft.arena_1": "Goblin Stadium-Arena 1"
     }
   },
   "foldersRoot": {
@@ -613,6 +632,10 @@
       },
       {
         "name": "ClashDimension",
+        "children": []
+      },
+      {
+        "name": "Arena-1",
         "children": []
       }
     ]

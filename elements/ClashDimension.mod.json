@@ -5,6 +5,9 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:TrainingCamp"
+      },
+      {
+        "value": "CUSTOM:Arena1"
       }
     ],
     "worldGenType": "Normal world gen",
