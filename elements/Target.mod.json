@@ -19,7 +19,7 @@
     "terrainAdaptation": "beard_thin",
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE",
-    "useStartHeight": true,
+    "useStartHeight": false,
     "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
     "startHeightMin": 64,
     "startHeightMax": 250,
