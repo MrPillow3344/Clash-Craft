@@ -381,7 +381,7 @@
     {
       "name": "SpawnArrows",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "spawn_arrows",
       "metadata": {
