@@ -14,8 +14,8 @@ public class FireballProjectileProjectileHitsBlockProcedure {
 		zOffset = 6;
 		if (world instanceof ServerLevel projectileLevel) {
 			Projectile _entityToSpawn = new LargeFireball(EntityType.FIREBALL, projectileLevel);
-			_entityToSpawn.setPos(x, (y + yOffset), (z - zOffset));
-			_entityToSpawn.shoot(0, (-1), (zOffset / yOffset), (float) 1.2, 0);
+			_entityToSpawn.setPos(x, (y + 20), z);
+			_entityToSpawn.shoot(0, (-1), 0, (float) 0.6, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);
 		}
 	}

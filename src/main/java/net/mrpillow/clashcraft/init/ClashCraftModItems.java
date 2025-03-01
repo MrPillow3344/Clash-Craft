@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
+import net.mrpillow.clashcraft.item.PancakeItem;
 import net.mrpillow.clashcraft.item.MinionsIronBallItemItem;
 import net.mrpillow.clashcraft.item.KnightsSwordItem;
 import net.mrpillow.clashcraft.item.GiantShirtItem;
@@ -30,6 +31,7 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> FIREBALL_ITEM = REGISTRY.register("fireball_item", FireballItemItem::new);
 	public static final DeferredItem<Item> ARROWS = REGISTRY.register("arrows", ArrowsItem::new);
 	public static final DeferredItem<Item> MINI_PEKKA_SPAWN_EGG = REGISTRY.register("mini_pekka_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.MINI_PEKKA, -13811623, -12627608, new Item.Properties()));
+	public static final DeferredItem<Item> PANCAKE = REGISTRY.register("pancake", PancakeItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }
