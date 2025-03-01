@@ -537,6 +537,21 @@
         ]
       },
       "path": "~/Arena-1"
+    },
+    {
+      "name": "TrainingCampArena",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "training_camp_arena",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure/training_camp_arena.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/training_camp_arena.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/training_camp_arena.json"
+        ]
+      },
+      "path": "~/TrainingCamp"
     }
   ],
   "variable_elements": [
