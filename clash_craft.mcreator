@@ -522,6 +522,51 @@
         ]
       },
       "path": "~/Arena-1"
+    },
+    {
+      "name": "Fence4B",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fence_4_b",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_4_b.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/fence_4_b.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/fence_4_b.json"
+        ]
+      },
+      "path": "~/Arena-1/FenceStructures"
+    },
+    {
+      "name": "Fence5B",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fence_5_b",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/fence_5_b.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/fence_5_b.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_5_b.json"
+        ]
+      },
+      "path": "~/Arena-1/FenceStructures"
+    },
+    {
+      "name": "Fence7B",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fence_7_b",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/fence_7_b.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
+        ]
+      },
+      "path": "~/Arena-1/FenceStructures"
     }
   ],
   "variable_elements": [
@@ -636,7 +681,12 @@
       },
       {
         "name": "Arena-1",
-        "children": []
+        "children": [
+          {
+            "name": "FenceStructures",
+            "children": []
+          }
+        ]
       }
     ]
   },
