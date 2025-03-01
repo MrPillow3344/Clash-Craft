@@ -54,7 +54,7 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "rainingPossibility": 0.5,
+    "rainingPossibility": 0.0,
     "temperature": 1.7,
     "spawnBiome": false,
     "spawnInCaves": false,

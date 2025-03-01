@@ -1,7 +1,7 @@
 {
-  "has_precipitation": true,
+  "has_precipitation": false,
   "temperature": 1.7,
-  "downfall": 0.5,
+  "downfall": 0,
   "effects": {
     "foliage_color": -16740095,
     "grass_color": -16728574,
