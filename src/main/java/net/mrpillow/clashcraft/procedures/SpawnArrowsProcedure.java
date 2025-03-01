@@ -54,8 +54,8 @@ public class SpawnArrowsProcedure {
 									entityToSpawn.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 2, 1, (byte) 0);
-							_entityToSpawn.setPos(x + xLoop - r +2 -xOffset, (y + yOffset), z- zLoop + r +0.5);
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
+							_entityToSpawn.setPos(x + xLoop - r +1 -xOffset, (y + yOffset), z- zLoop + r +0.5);
 							_entityToSpawn.shoot((xOffset / yOffset), (-1), 0, (float) 1.2, (float) 0.1);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
