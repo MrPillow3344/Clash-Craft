@@ -79,9 +79,9 @@
       "min": -1.9,
       "max": -1.8999
     },
-    "treesPerChunk": 5,
+    "treesPerChunk": 0,
     "vanillaTreeType": "Default",
-    "treeType": 1,
+    "treeType": 0,
     "minHeight": 10,
     "treeStem": {
       "value": "Blocks.LOG#0"
