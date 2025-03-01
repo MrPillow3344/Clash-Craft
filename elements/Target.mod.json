@@ -3,7 +3,7 @@
   "_type": "structure",
   "definition": {
     "structure": "target",
-    "projection": "terrain_matching",
+    "projection": "rigid",
     "ignoredBlocks": [
       {
         "value": "Blocks.STRUCTURE_BLOCK"
@@ -19,7 +19,7 @@
     "terrainAdaptation": "none",
     "generationStep": "SURFACE_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE",
-    "useStartHeight": true,
+    "useStartHeight": false,
     "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
     "startHeightMin": 0,
     "startHeightMax": 250,

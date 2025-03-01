@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "clash_craft:target",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "processors": {
           "processors": [
             {
