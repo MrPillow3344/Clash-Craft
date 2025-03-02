@@ -457,33 +457,6 @@
       "path": "~/TrainingCamp/Mini Pekka"
     },
     {
-      "name": "PancakeRightclicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pancake_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/PancakeRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Mini Pekka"
-    },
-    {
       "name": "Pancake",
       "type": "item",
       "compiles": true,
@@ -491,8 +464,8 @@
       "registry_name": "pancake",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java",
-          "src/main/resources/assets/clash_craft/models/item/pancake.json"
+          "src/main/resources/assets/clash_craft/models/item/pancake.json",
+          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java"
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
@@ -736,7 +709,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.2020325b",
+    "version": "0.0.0220325c",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
