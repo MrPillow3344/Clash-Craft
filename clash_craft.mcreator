@@ -430,7 +430,7 @@
       "name": "TrainingCampSpellsLootTable",
       "type": "loottable",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "training_camp_spells_loot_table",
       "metadata": {
         "files": [
