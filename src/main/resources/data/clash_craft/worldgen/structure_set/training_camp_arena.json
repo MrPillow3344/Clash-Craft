@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "clash_craft:training_camp_arena",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 21,
+    "separation": 20,
+    "salt": 426797993
+  }
+}
