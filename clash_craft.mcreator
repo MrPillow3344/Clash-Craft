@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
         ]
       },
       "path": "~/ClashDimension"
@@ -511,19 +511,6 @@
       "path": "~/TrainingCamp/Mini Pekka"
     },
     {
-      "name": "Arena1",
-      "type": "biome",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arena_1",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/clash_craft/worldgen/biome/arena_1.json"
-        ]
-      },
-      "path": "~/Arena-1"
-    },
-    {
       "name": "Fence7B",
       "type": "structure",
       "compiles": true,
@@ -536,7 +523,20 @@
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
       },
-      "path": "~/Arena-1"
+      "path": "~/GoblinStadium"
+    },
+    {
+      "name": "GoblinStadium",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_stadium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
+        ]
+      },
+      "path": "~/GoblinStadium"
     }
   ],
   "variable_elements": [
@@ -565,7 +565,7 @@
       "~Blocks.GRASS"
     ],
     "BIOMES:minecraft:has_structure/swamp_hut": [
-      "~CUSTOM:Arena1"
+      "~CUSTOM:GoblinStadium"
     ]
   },
   "tab_element_order": {},
@@ -585,11 +585,11 @@
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
+      "biome.clash_craft.goblin_stadium": "Goblin Stadium-Arena 1",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell",
-      "biome.clash_craft.arena_1": "Goblin Stadium-Arena 1"
+      "item.clash_craft.arrows": "Arrows Spell"
     },
     "he_il": {
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
@@ -606,11 +606,11 @@
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
+      "biome.clash_craft.goblin_stadium": "Goblin Stadium-Arena 1",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell",
-      "biome.clash_craft.arena_1": "Goblin Stadium-Arena 1"
+      "item.clash_craft.arrows": "Arrows Spell"
     }
   },
   "foldersRoot": {
@@ -650,7 +650,7 @@
         "children": []
       },
       {
-        "name": "Arena-1",
+        "name": "GoblinStadium",
         "children": []
       }
     ]
@@ -658,7 +658,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.280225b",
+    "version": "0.0.020325a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

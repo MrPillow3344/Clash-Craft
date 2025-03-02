@@ -33,7 +33,7 @@
           }
         },
         {
-          "biome": "clash_craft:arena_1",
+          "biome": "clash_craft:goblin_stadium",
           "parameters": {
             "temperature": [
               0,
@@ -500,7 +500,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "clash_craft:arena_1"
+                "clash_craft:goblin_stadium"
               ]
             },
             "then_run": {

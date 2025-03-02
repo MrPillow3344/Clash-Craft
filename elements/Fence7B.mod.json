@@ -13,7 +13,7 @@
     "separation": 2,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:Arena1"
+        "value": "CUSTOM:GoblinStadium"
       }
     ],
     "terrainAdaptation": "beard_box",
