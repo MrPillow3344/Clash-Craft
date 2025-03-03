@@ -43,6 +43,6 @@ public class KnightsSwordItem extends SwordItem {
 	};
 
 	public KnightsSwordItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 1f, -2f)));
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 3f, -2f)));
 	}
 }

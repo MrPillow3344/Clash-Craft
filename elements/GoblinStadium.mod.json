@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Goblin Stadium-Arena 1",
+    "name": "Goblin Stadium",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },
@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -16728574,
+      "value": -16751104,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -104,7 +104,7 @@
     "spawnWoodlandMansion": false,
     "spawnJungleTemple": false,
     "spawnDesertPyramid": false,
-    "spawnSwampHut": true,
+    "spawnSwampHut": false,
     "spawnIgloo": false,
     "spawnOceanMonument": false,
     "spawnShipwreck": false,

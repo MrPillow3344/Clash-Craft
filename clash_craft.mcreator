@@ -457,33 +457,6 @@
       "path": "~/TrainingCamp/Mini Pekka"
     },
     {
-      "name": "PancakeRightclicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pancake_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/PancakeRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/TrainingCamp/Mini Pekka"
-    },
-    {
       "name": "Pancake",
       "type": "item",
       "compiles": true,
@@ -509,19 +482,6 @@
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
-    },
-    {
-      "name": "Arena1",
-      "type": "biome",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arena_1",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/clash_craft/worldgen/biome/arena_1.json"
-        ]
-      },
-      "path": "~/Arena-1"
     },
     {
       "name": "Fence7B",
@@ -570,6 +530,81 @@
         ]
       },
       "path": "~/TrainingCamp/Archers"
+    },
+    {
+      "name": "GoblinStadium",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_stadium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
+        ]
+      },
+      "path": "~/GoblinStadium"
+    },
+    {
+      "name": "MinionsIronBallLaunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minions_iron_ball_launch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/MinionsIronBallLaunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Minion"
+    },
+    {
+      "name": "PlayerFinishesEatingPancake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_finishes_eating_pancake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/PlayerFinishesEatingPancakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Mini Pekka"
     }
   ],
   "variable_elements": [
@@ -612,19 +647,16 @@
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
-      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "Giant",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
-      "entity.clash_craft.archer": "Archer",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell",
-      "biome.clash_craft.arena_1": "Goblin Stadium-Arena 1"
+      "item.clash_craft.arrows": "Arrows Spell"
     },
     "he_il": {
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",

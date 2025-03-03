@@ -9,11 +9,11 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 3,
-    "separation": 2,
+    "spacing": 7,
+    "separation": 4,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:Arena1"
+        "value": "CUSTOM:GoblinStadium"
       }
     ],
     "terrainAdaptation": "beard_box",
