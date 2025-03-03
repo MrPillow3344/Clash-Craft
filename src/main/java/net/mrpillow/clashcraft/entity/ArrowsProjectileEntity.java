@@ -9,6 +9,7 @@ import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -72,6 +73,12 @@ public class ArrowsProjectileEntity extends AbstractArrow implements ItemSupplie
 				livingEntity.push(vec3.x, 0.1, vec3.z);
 			}
 		}
+	}
+
+	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		SpawnArrowsProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override
