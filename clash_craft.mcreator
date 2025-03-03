@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -709,7 +709,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.0220325c",
+    "version": "0.0.0320325a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
