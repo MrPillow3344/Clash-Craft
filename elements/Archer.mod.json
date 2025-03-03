@@ -5,7 +5,7 @@
     "mobName": "Archer",
     "mobLabel": "",
     "mobModelTexture": "archerstexture.png",
-    "mobModelGlowTexture": "archerstexture.png",
+    "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
     },
@@ -20,11 +20,11 @@
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16724941,
+      "value": -10027264,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -65332,
+      "value": -39220,
       "falpha": 0.0
     },
     "creativeTabs": [],

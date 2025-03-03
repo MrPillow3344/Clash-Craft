@@ -1,22 +1,60 @@
 
 package net.mrpillow.clashcraft.entity;
 
-import net.minecraft.nbt.Tag;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+
+import net.mrpillow.clashcraft.init.ClashCraftModEntities;
+
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.Mth;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import javax.annotation.Nullable;
 
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animation.AnimationState;
+import java.util.EnumSet;
 
 public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ArcherEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ArcherEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ArcherEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -27,7 +65,6 @@ public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoE
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-
 	}
 
 	@Override
@@ -49,12 +86,10 @@ public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, false));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-
 		this.goalSelector.addGoal(1, new ArcherEntity.RangedAttackGoal(this, 1.25, 20, 15f) {
 			@Override
 			public boolean canContinueToUse() {
@@ -219,7 +254,6 @@ public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoE
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
-
 		return builder;
 	}
 
@@ -278,7 +312,6 @@ public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoE
 		if (this.deathTime == 20) {
 			this.remove(ArcherEntity.RemovalReason.KILLED);
 			this.dropExperience(this);
-
 		}
 	}
 
@@ -301,5 +334,4 @@ public class ArcherEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }
