@@ -19,6 +19,9 @@
     "modelHeight": 0.19999999999999998,
     "onHitsBlock": {
       "name": "SpawnArrows"
+    },
+    "onHitsEntity": {
+      "name": "SpawnArrows"
     }
   }
 }
