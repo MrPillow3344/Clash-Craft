@@ -516,7 +516,7 @@
     {
       "name": "Archer",
       "type": "animatedentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "archer",
       "metadata": {
@@ -541,13 +541,12 @@
         "files": [
           "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
         ]
-      },
-      "path": "~/GoblinStadium"
+      }
     },
     {
       "name": "MinionsIronBallLaunch",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "minions_iron_ball_launch",
       "metadata": {
@@ -582,7 +581,7 @@
     {
       "name": "PlayerFinishesEatingPancake",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "player_finishes_eating_pancake",
       "metadata": {
