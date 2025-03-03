@@ -495,8 +495,7 @@
           "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
-      },
-      "path": "~/GoblinStadium"
+      }
     },
     {
       "name": "GoblinStadium",
@@ -508,8 +507,7 @@
         "files": [
           "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
         ]
-      },
-      "path": "~/GoblinStadium"
+      }
     },
     {
       "name": "TrainingCampArena",
@@ -591,7 +589,7 @@
     {
       "name": "Archer",
       "type": "animatedentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "archer",
       "metadata": {

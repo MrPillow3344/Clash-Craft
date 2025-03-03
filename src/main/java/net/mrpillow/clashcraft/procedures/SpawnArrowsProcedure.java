@@ -14,12 +14,12 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-s
+
 public class SpawnArrowsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double xOffset = 6;
 		double yOffset = 20;
-		int r = 3;
+		double r = 3;
 		
 		for (int i = 0; i < 3; i++) {
 			ClashCraftMod.queueServerWork(9*i, () -> {
