@@ -589,7 +589,7 @@
     {
       "name": "Archer",
       "type": "animatedentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "archer",
       "metadata": {
