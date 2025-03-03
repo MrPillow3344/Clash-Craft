@@ -18,6 +18,7 @@ import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
 import net.mrpillow.clashcraft.entity.ArrowsProjectileEntity;
+import net.mrpillow.clashcraft.entity.ArcherEntityProjectile;
 import net.mrpillow.clashcraft.entity.ArcherEntity;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
@@ -55,6 +56,8 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<ArcherEntity>of(ArcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ArcherEntityProjectile>> ARCHER_PROJECTILE = register("projectile_archer",
+			EntityType.Builder.<ArcherEntityProjectile>of(ArcherEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

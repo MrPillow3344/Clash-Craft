@@ -36,7 +36,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
+    "onRightClickedInAir": {
       "name": "PlayerFinishesEatingPancake"
     },
     "enableRanged": false,
@@ -46,7 +46,7 @@
       "value": "CUSTOM:MinionsIronBall"
     },
     "projectileDisableAmmoCheck": false,
-    "isFood": true,
+    "isFood": false,
     "nutritionalValue": 5,
     "saturation": 0.5,
     "eatResultItem": {

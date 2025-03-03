@@ -1,6 +1,18 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.mrpillow.clashcraft.init.ClashCraftModEntities;
+import net.mrpillow.clashcraft.entity.MinionsIronBallEntity;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
 
 public class MinionsIronBallLaunchProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -31,7 +43,7 @@ public class MinionsIronBallLaunchProcedure {
 					entityToSpawn.setSilent(true);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, entity, 4, 1, (byte) 0);
+			}.getArrow(projectileLevel, entity, 3, 0, (byte) 0);
 			_entityToSpawn.setPos(x, y, z);
 			_entityToSpawn.shoot((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z), 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);

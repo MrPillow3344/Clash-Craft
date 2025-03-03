@@ -134,7 +134,7 @@
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": ""
+      "value": "CUSTOM:Arrows"
     },
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
