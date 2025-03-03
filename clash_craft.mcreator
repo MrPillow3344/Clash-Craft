@@ -495,7 +495,8 @@
           "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
-      }
+      },
+      "path": "~/Arena-1"
     },
     {
       "name": "GoblinStadium",
@@ -594,12 +595,12 @@
       "registry_name": "archer",
       "metadata": {
         "files": [
+          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntityProjectile.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/archer_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java",
-          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java"
         ]
       },
       "path": "~/TrainingCamp/Archers"
