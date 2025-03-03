@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "clash_craft:training_camp",
+  "spawners": {
+    "type": "clash_craft:archer",
+    "weight": 20,
+    "minCount": 2,
+    "maxCount": 2
+  }
+}

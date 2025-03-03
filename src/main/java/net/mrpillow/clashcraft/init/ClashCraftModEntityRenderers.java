@@ -13,6 +13,7 @@ import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
 import net.mrpillow.clashcraft.client.renderer.MiniPekkaRenderer;
 import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
 import net.mrpillow.clashcraft.client.renderer.GiantRenderer;
+import net.mrpillow.clashcraft.client.renderer.ArcherRenderer;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
@@ -27,5 +28,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARROWS_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.MINI_PEKKA.get(), MiniPekkaRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.ARCHER.get(), ArcherRenderer::new);
 	}
 }

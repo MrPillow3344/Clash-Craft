@@ -552,6 +552,24 @@
         ]
       },
       "path": "~/TrainingCamp"
+    },
+    {
+      "name": "Archer",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "archer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/layer/ArcherLayer.java",
+          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/archer_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Archers"
     }
   ],
   "variable_elements": [
@@ -594,9 +612,11 @@
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
+      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "Giant",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
+      "entity.clash_craft.archer": "Archer",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
@@ -615,9 +635,11 @@
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "חרב האביר",
+      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "ענק",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
+      "entity.clash_craft.archer": "Archer",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
@@ -656,6 +678,10 @@
           },
           {
             "name": "Mini Pekka",
+            "children": []
+          },
+          {
+            "name": "Archers",
             "children": []
           }
         ]

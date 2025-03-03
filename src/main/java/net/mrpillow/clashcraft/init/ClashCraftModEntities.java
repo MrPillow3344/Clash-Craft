@@ -18,6 +18,7 @@ import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
 import net.mrpillow.clashcraft.entity.ArrowsProjectileEntity;
+import net.mrpillow.clashcraft.entity.ArcherEntity;
 import net.mrpillow.clashcraft.ClashCraftMod;
 
 import net.minecraft.world.entity.MobCategory;
@@ -50,6 +51,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<MiniPekkaEntity>of(MiniPekkaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ArcherEntity>> ARCHER = register("archer",
+			EntityType.Builder.<ArcherEntity>of(ArcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -63,6 +68,7 @@ public class ClashCraftModEntities {
 		KnightEntity.init(event);
 		MinionEntity.init(event);
 		MiniPekkaEntity.init(event);
+		ArcherEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -71,5 +77,6 @@ public class ClashCraftModEntities {
 		event.put(KNIGHT.get(), KnightEntity.createAttributes().build());
 		event.put(MINION.get(), MinionEntity.createAttributes().build());
 		event.put(MINI_PEKKA.get(), MiniPekkaEntity.createAttributes().build());
+		event.put(ARCHER.get(), ArcherEntity.createAttributes().build());
 	}
 }
