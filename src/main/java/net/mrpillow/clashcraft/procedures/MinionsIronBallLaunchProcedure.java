@@ -43,7 +43,7 @@ public class MinionsIronBallLaunchProcedure {
 					entityToSpawn.setSilent(true);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, entity, 4, 1, (byte) 0);
+			}.getArrow(projectileLevel, entity, 3, 0, (byte) 0);
 			_entityToSpawn.setPos(x, y, z);
 			_entityToSpawn.shoot((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z), 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);

@@ -8,6 +8,7 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
+import net.mrpillow.clashcraft.entity.ArcherEntity;
 
 @EventBusSubscriber
 public class EntityAnimationFactory {
@@ -36,6 +37,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MiniPekkaEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ArcherEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

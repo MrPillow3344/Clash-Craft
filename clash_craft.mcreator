@@ -587,6 +587,25 @@
         ]
       },
       "path": "~/TrainingCamp/Minion"
+    },
+    {
+      "name": "Archer",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "archer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntityProjectile.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/archer_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/layer/ArcherLayer.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java",
+          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java"
+        ]
+      },
+      "path": "~/TrainingCamp/Archers"
     }
   ],
   "variable_elements": [
@@ -635,7 +654,6 @@
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
-      "biome.clash_craft.goblin_stadium": "Goblin Stadium",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
@@ -650,9 +668,11 @@
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",
+      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "ענק",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
+      "entity.clash_craft.archer": "Archer",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
@@ -672,6 +692,10 @@
         "children": [
           {
             "name": "Giant",
+            "children": []
+          },
+          {
+            "name": "Archers",
             "children": []
           },
           {
@@ -697,7 +721,7 @@
         ]
       },
       {
-        "name": "GoblinStadium",
+        "name": "Arena-1",
         "children": []
       },
       {
