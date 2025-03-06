@@ -60,7 +60,7 @@ public class ClashCraftModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<ArcherEntityProjectile>> ARCHER_PROJECTILE = register("projectile_archer",
 			EntityType.Builder.<ArcherEntityProjectile>of(ArcherEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
-			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).fireImmune().sized(3.5f, 4.2f));
+			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).fireImmune().sized(3.5f, 4f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

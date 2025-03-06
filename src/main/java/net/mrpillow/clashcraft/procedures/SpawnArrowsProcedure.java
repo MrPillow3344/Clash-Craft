@@ -21,7 +21,7 @@ public class SpawnArrowsProcedure {
 		double yOffset = 20;
 		double r = 3;
 		
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i <= 3; i++) {
 			ClashCraftMod.queueServerWork(9*i, () -> {
 				for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
 					for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
