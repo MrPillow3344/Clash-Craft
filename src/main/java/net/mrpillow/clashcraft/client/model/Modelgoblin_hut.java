@@ -1,5 +1,7 @@
 package net.mrpillow.clashcraft.client.model;
 
+import net.mrpillow.clashcraft.entity.GoblinHutEntity;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;

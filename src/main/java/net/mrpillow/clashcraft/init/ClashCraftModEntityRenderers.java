@@ -12,6 +12,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
 import net.mrpillow.clashcraft.client.renderer.MiniPekkaRenderer;
 import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
+import net.mrpillow.clashcraft.client.renderer.GoblinHutRenderer;
 import net.mrpillow.clashcraft.client.renderer.GiantRenderer;
 import net.mrpillow.clashcraft.client.renderer.ArcherRenderer;
 
@@ -30,5 +31,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.MINI_PEKKA.get(), MiniPekkaRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER.get(), ArcherRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
 	}
 }
