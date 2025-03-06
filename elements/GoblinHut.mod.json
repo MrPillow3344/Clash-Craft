@@ -3,7 +3,7 @@
   "_type": "livingentity",
   "definition": {
     "mobName": "Goblin Hut",
-    "mobLabel": "",
+    "mobLabel": "Here",
     "mobModelName": "Modelgoblin_hut",
     "mobModelTexture": "goblin_hut.png",
     "transparentModelCondition": {
@@ -21,10 +21,17 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
+    "modelLayers": [
+      {
+        "model": "Modelgoblin_hut",
+        "texture": "goblin_hut.png",
+        "disableHurtOverlay": false,
+        "glow": false
+      }
+    ],
     "animations": [],
-    "modelWidth": 3.5,
-    "modelHeight": 4.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 3.0,
     "mountedYOffset": 4.5,
     "hasSpawnEgg": true,
@@ -64,7 +71,7 @@
     },
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 0,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.0,
@@ -72,7 +79,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 0,
     "followRange": 0,
-    "health": 80,
+    "health": 60,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -125,7 +132,7 @@
         "max": 2147483647,
         "name": "goblinsLeft",
         "type": "integer",
-        "value": 5
+        "value": 4
       }
     ],
     "whenMobDies": {
@@ -134,9 +141,9 @@
     "onMobTickUpdate": {
       "name": "GoblinHutOnEntityTickUpdate"
     },
-    "hasAI": true,
+    "hasAI": false,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"103\" y=\"14\"></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

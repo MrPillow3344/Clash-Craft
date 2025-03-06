@@ -117,15 +117,14 @@ public class Modelgoblin_hut<T extends GoblinHutEntity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(GoblinHutEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
 		Roof.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		Walls.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		Floor.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		RightFloorSpikes.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		LeftFloorSpikes.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+	}
+
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 }
