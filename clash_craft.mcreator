@@ -496,7 +496,7 @@
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
       },
-      "path": "~/Arena-1"
+      "path": "~/GoblinStadium"
     },
     {
       "name": "GoblinStadium",
@@ -508,7 +508,8 @@
         "files": [
           "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
         ]
-      }
+      },
+      "path": "~/GoblinStadium"
     },
     {
       "name": "TrainingCampArena",
@@ -721,7 +722,7 @@
         ]
       },
       {
-        "name": "Arena-1",
+        "name": "GoblinStadium",
         "children": []
       },
       {
