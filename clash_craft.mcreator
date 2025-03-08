@@ -496,7 +496,7 @@
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
       },
-      "path": "~/GoblinStadium"
+      "path": "~/Arena-1"
     },
     {
       "name": "GoblinStadium",
@@ -509,7 +509,7 @@
           "src/main/resources/data/clash_craft/worldgen/biome/goblin_stadium.json"
         ]
       },
-      "path": "~/GoblinStadium"
+      "path": "~/Arena-1"
     },
     {
       "name": "TrainingCampArena",
@@ -620,7 +620,7 @@
           "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
         ]
       },
-      "path": "~/GoblinStadium/GoblinHut"
+      "path": "~/Arena-1/GoblinHut"
     },
     {
       "name": "GoblinHutOnEntityTickUpdate",
@@ -655,7 +655,7 @@
           }
         ]
       },
-      "path": "~/GoblinStadium/GoblinHut"
+      "path": "~/Arena-1/GoblinHut"
     },
     {
       "name": "GoblinHutEntityDies",
@@ -686,7 +686,7 @@
           }
         ]
       },
-      "path": "~/GoblinStadium/GoblinHut"
+      "path": "~/Arena-1/GoblinHut"
     }
   ],
   "variable_elements": [
@@ -806,7 +806,7 @@
         ]
       },
       {
-        "name": "GoblinStadium",
+        "name": "Arena-1",
         "children": [
           {
             "name": "GoblinHut",
