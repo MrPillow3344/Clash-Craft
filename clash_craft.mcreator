@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -226,8 +226,8 @@
       "registry_name": "minions_iron_ball_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json",
-          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java",
+          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -416,7 +416,7 @@
     {
       "name": "ArrowsProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "arrows_projectile",
       "metadata": {
@@ -464,8 +464,8 @@
       "registry_name": "pancake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/pancake.json",
-          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java",
+          "src/main/resources/assets/clash_craft/models/item/pancake.json"
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
@@ -517,9 +517,9 @@
       "registry_name": "training_camp_arena",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/structure_set/training_camp_arena.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/training_camp_arena.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/training_camp_arena.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/training_camp_arena.json"
+          "src/main/resources/data/clash_craft/worldgen/structure_set/training_camp_arena.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -607,7 +607,7 @@
     {
       "name": "SpearGoblin",
       "type": "animatedentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "spear_goblin",
       "metadata": {
@@ -618,7 +618,8 @@
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/spear_goblin_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java"
         ]
-      }
+      },
+      "path": "~/GoblinStadium"
     },
     {
       "name": "GoblinHutOnEntityTickUpdate",
@@ -658,7 +659,7 @@
     {
       "name": "GoblinHut",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hut",
       "metadata": {
@@ -674,7 +675,7 @@
     {
       "name": "GoblinHutEntityDies",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hut_entity_dies",
       "metadata": {
@@ -727,37 +728,36 @@
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
-    ],
-    "BIOMES:minecraft:has_structure/swamp_hut": [
-      "~CUSTOM:Arena1"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
+      "entity.clash_craft.spear_goblin": "Spear Goblin",
+      "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
+      "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
+      "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
+      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
+      "entity.clash_craft.archer": "Archer",
+      "entity.clash_craft.mini_pekka": "Mini Pekka",
+      "item.clash_craft.arrows": "Arrows Spell",
       "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
-      "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "entity.clash_craft.minion": "Minion",
       "entity.clash_craft.knight": "Knight",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.pancake": "Pancake",
-      "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
-      "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
+      "entity.clash_craft.goblin_hut": "Goblin Hut",
       "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "Giant",
-      "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
-      "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
-      "entity.clash_craft.archer": "Archer",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "biome.clash_craft.goblin_stadium": "Goblin Stadium",
       "item.clash_craft.clash_dimension": "Clash Ticket",
-      "item.clash_craft.minions_iron_ball_item": "Iron Ball",
-      "entity.clash_craft.mini_pekka": "Mini Pekka",
-      "item.clash_craft.arrows": "Arrows Spell"
+      "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
