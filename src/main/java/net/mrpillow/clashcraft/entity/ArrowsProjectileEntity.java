@@ -84,7 +84,7 @@ public class ArrowsProjectileEntity extends AbstractArrow implements ItemSupplie
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		SpawnArrowsProcedure.execute(this.level(), (double) blockHitResult.getBlockPos().getX(), (double) blockHitResult.getBlockPos().getY(),(double) blockHitResult.getBlockPos().getZ());
+		SpawnArrowsProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ(), this.getOwner());
 	}
 
 	@Override
