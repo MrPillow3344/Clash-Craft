@@ -11,7 +11,7 @@
     },
     "igniteFire": false,
     "power": 0.4,
-    "damage": 2.0,
+    "damage": 4.0,
     "knockback": 0,
     "entityModel": "ModelSpear_Converted",
     "customModelTexture": "speartexture.png",
