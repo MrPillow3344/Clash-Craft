@@ -142,7 +142,7 @@
     },
     "rangedItemType": "SpearProjectile",
     "rangedAttackInterval": 50,
-    "rangedAttackRadius": 10.0,
+    "rangedAttackRadius": 6.0,
     "height": 1.0,
     "attackRate": 7,
     "raidSpawnsCount": [

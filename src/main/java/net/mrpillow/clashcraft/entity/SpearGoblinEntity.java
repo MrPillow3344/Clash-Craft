@@ -90,7 +90,7 @@ public class SpearGoblinEntity extends PathfinderMob implements RangedAttackMob,
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(1, new SpearGoblinEntity.RangedAttackGoal(this, 1.25, 50, 10f) {
+		this.goalSelector.addGoal(1, new SpearGoblinEntity.RangedAttackGoal(this, 1.25, 50, 6f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
