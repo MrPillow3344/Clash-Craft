@@ -416,7 +416,7 @@
     {
       "name": "ArrowsProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "arrows_projectile",
       "metadata": {
@@ -495,8 +495,7 @@
           "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
           "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
         ]
-      },
-      "path": "~/Arena-1"
+      }
     },
     {
       "name": "GoblinStadium",
@@ -608,7 +607,7 @@
     {
       "name": "SpearGoblin",
       "type": "animatedentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "spear_goblin",
       "metadata": {
@@ -619,8 +618,7 @@
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/spear_goblin_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java"
         ]
-      },
-      "path": "~/Arena-1"
+      }
     },
     {
       "name": "GoblinHutOnEntityTickUpdate",
@@ -660,7 +658,7 @@
     {
       "name": "GoblinHut",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "goblin_hut",
       "metadata": {
@@ -676,7 +674,7 @@
     {
       "name": "GoblinHutEntityDies",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "goblin_hut_entity_dies",
       "metadata": {
