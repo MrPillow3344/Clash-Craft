@@ -144,6 +144,15 @@
         "maxGroup": 1,
         "weight": 20,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Archer"
+        },
+        "minGroup": 2,
+        "maxGroup": 2,
+        "weight": 20,
+        "spawnType": "creature"
       }
     ]
   }
