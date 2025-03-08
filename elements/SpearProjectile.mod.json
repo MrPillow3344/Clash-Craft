@@ -1,0 +1,21 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Spear"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.5,
+    "damage": 2.0,
+    "knockback": 0,
+    "entityModel": "ModelSpear_Converted",
+    "customModelTexture": "speartexture.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

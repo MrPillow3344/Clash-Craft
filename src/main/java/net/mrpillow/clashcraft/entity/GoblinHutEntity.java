@@ -150,6 +150,7 @@ public class GoblinHutEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 0);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
 		return builder;
 	}
 }

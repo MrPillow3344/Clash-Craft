@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "clash_craft:goblin_stadium",
+  "spawners": {
+    "type": "clash_craft:spear_goblin",
+    "weight": 20,
+    "minCount": 3,
+    "maxCount": 3
+  }
+}
