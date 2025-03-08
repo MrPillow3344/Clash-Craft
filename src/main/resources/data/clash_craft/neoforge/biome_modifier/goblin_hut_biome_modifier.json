@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "clash_craft:goblin_stadium",
+  "spawners": {
+    "type": "clash_craft:goblin_hut",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

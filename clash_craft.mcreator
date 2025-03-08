@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
         ]
       },
       "path": "~/ClashDimension"
@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -226,8 +226,8 @@
       "registry_name": "minions_iron_ball_item",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java",
-          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json"
+          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json",
+          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -464,8 +464,8 @@
       "registry_name": "pancake",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java",
-          "src/main/resources/assets/clash_craft/models/item/pancake.json"
+          "src/main/resources/assets/clash_craft/models/item/pancake.json",
+          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java"
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
@@ -518,9 +518,9 @@
       "registry_name": "training_camp_arena",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/structure/training_camp_arena.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/training_camp_arena.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/training_camp_arena.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/training_camp_arena.json"
+          "src/main/resources/data/clash_craft/worldgen/structure/training_camp_arena.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -621,6 +621,88 @@
         ]
       },
       "path": "~/Arena-1"
+    },
+    {
+      "name": "GoblinHutOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "goblin_hut_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoblinStadium/GoblinHut"
+    },
+    {
+      "name": "GoblinHut",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json"
+        ]
+      },
+      "path": "~/GoblinStadium/GoblinHut"
+    },
+    {
+      "name": "GoblinHutEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoblinStadium/GoblinHut"
     }
   ],
   "variable_elements": [
@@ -647,6 +729,9 @@
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
+    ],
+    "BIOMES:minecraft:has_structure/swamp_hut": [
+      "~CUSTOM:Arena1"
     ]
   },
   "tab_element_order": {},
@@ -682,6 +767,7 @@
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
+      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
@@ -692,6 +778,7 @@
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",
+      "entity.clash_craft.goblin_hut": "Goblin Hut",
       "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "entity.clash_craft.giant": "ענק",
       "item.clash_craft.fireball_item": "Fireball",
@@ -740,8 +827,13 @@
         ]
       },
       {
-        "name": "Arena-1",
-        "children": []
+        "name": "GoblinStadium",
+        "children": [
+          {
+            "name": "GoblinHut",
+            "children": []
+          }
+        ]
       },
       {
         "name": "ClashDimension",

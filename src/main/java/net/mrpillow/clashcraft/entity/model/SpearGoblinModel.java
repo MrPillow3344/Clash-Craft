@@ -1,15 +1,6 @@
 package net.mrpillow.clashcraft.entity.model;
 
-import software.bernie.geckolib.model.data.EntityModelData;
-import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.animation.AnimationState;
-
-import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
-
-import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
 
 public class SpearGoblinModel extends GeoModel<SpearGoblinEntity> {
 	@Override
