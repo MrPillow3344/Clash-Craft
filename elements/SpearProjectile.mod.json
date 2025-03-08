@@ -10,7 +10,7 @@
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 0.5,
+    "power": 0.4,
     "damage": 2.0,
     "knockback": 0,
     "entityModel": "ModelSpear_Converted",
