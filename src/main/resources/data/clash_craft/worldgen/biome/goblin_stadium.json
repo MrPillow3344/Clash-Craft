@@ -12,7 +12,14 @@
   },
   "spawners": {
     "monster": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "clash_craft:spear_goblin",
+        "weight": 20,
+        "minCount": 3,
+        "maxCount": 3
+      }
+    ],
     "ambient": [],
     "axolotls": [],
     "underground_water_creature": [],

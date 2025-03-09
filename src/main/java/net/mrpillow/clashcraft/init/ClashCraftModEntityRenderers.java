@@ -9,6 +9,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mrpillow.clashcraft.client.renderer.SpearProjectileRenderer;
+import net.mrpillow.clashcraft.client.renderer.SpearGoblinRenderer;
 import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
 import net.mrpillow.clashcraft.client.renderer.MiniPekkaRenderer;
 import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
@@ -32,5 +34,7 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER.get(), ArcherRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.SPEAR_GOBLIN.get(), SpearGoblinRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.SPEAR_PROJECTILE.get(), SpearProjectileRenderer::new);
 	}
 }

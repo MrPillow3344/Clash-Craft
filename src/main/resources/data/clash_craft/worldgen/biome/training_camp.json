@@ -36,6 +36,12 @@
         "weight": 20,
         "minCount": 1,
         "maxCount": 1
+      },
+      {
+        "type": "clash_craft:archer",
+        "weight": 20,
+        "minCount": 2,
+        "maxCount": 2
       }
     ],
     "ambient": [],

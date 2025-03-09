@@ -24,19 +24,19 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import javax.annotation.Nullable;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class MinionsIronBallEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ClashCraftModItems.MINIONS_IRON_BALL_ITEM.get());
+public class SpearProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ClashCraftModItems.SPEAR.get());
 	private int knockback = 0;
 
-	public MinionsIronBallEntity(EntityType<? extends MinionsIronBallEntity> type, Level world) {
+	public SpearProjectileEntity(EntityType<? extends SpearProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public MinionsIronBallEntity(EntityType<? extends MinionsIronBallEntity> type, double x, double y, double z, Level world, @Nullable ItemStack firedFromWeapon) {
+	public SpearProjectileEntity(EntityType<? extends SpearProjectileEntity> type, double x, double y, double z, Level world, @Nullable ItemStack firedFromWeapon) {
 		super(type, x, y, z, world, PROJECTILE_ITEM, firedFromWeapon);
 	}
 
-	public MinionsIronBallEntity(EntityType<? extends MinionsIronBallEntity> type, LivingEntity entity, Level world, @Nullable ItemStack firedFromWeapon) {
+	public SpearProjectileEntity(EntityType<? extends SpearProjectileEntity> type, LivingEntity entity, Level world, @Nullable ItemStack firedFromWeapon) {
 		super(type, entity, world, PROJECTILE_ITEM, firedFromWeapon);
 	}
 
@@ -48,7 +48,7 @@ public class MinionsIronBallEntity extends AbstractArrow implements ItemSupplier
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(ClashCraftModItems.MINIONS_IRON_BALL_ITEM.get());
+		return new ItemStack(ClashCraftModItems.SPEAR.get());
 	}
 
 	@Override
@@ -79,16 +79,16 @@ public class MinionsIronBallEntity extends AbstractArrow implements ItemSupplier
 			this.discard();
 	}
 
-	public static MinionsIronBallEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 0.25f, 3, 0);
+	public static SpearProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 0.4f, 4, 0);
 	}
 
-	public static MinionsIronBallEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 0.25f, 3, 0);
+	public static SpearProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.4f, 4, 0);
 	}
 
-	public static MinionsIronBallEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		MinionsIronBallEntity entityarrow = new MinionsIronBallEntity(ClashCraftModEntities.MINIONS_IRON_BALL.get(), entity, world, null);
+	public static SpearProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		SpearProjectileEntity entityarrow = new SpearProjectileEntity(ClashCraftModEntities.SPEAR_PROJECTILE.get(), entity, world, null);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -99,14 +99,14 @@ public class MinionsIronBallEntity extends AbstractArrow implements ItemSupplier
 		return entityarrow;
 	}
 
-	public static MinionsIronBallEntity shoot(LivingEntity entity, LivingEntity target) {
-		MinionsIronBallEntity entityarrow = new MinionsIronBallEntity(ClashCraftModEntities.MINIONS_IRON_BALL.get(), entity, entity.level(), null);
+	public static SpearProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		SpearProjectileEntity entityarrow = new SpearProjectileEntity(ClashCraftModEntities.SPEAR_PROJECTILE.get(), entity, entity.level(), null);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.25f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.4f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(3);
+		entityarrow.setBaseDamage(4);
 		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);

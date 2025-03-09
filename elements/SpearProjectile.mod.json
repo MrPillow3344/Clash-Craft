@@ -3,18 +3,18 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:MinionsIronBallItem"
+      "value": "CUSTOM:Spear"
     },
     "showParticles": false,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 0.25,
-    "damage": 3.0,
+    "power": 0.4,
+    "damage": 4.0,
     "knockback": 0,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "ModelSpear_Converted",
+    "customModelTexture": "speartexture.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5
   }
