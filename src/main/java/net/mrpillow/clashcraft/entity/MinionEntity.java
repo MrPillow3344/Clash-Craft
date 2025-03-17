@@ -12,6 +12,7 @@ import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
+import net.mrpillow.clashcraft.procedures.NotTooHighMinionProcedure;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.phys.Vec3;
@@ -248,6 +249,7 @@ public class MinionEntity extends PathfinderMob implements RangedAttackMob, GeoE
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		NotTooHighMinionProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
