@@ -24,6 +24,7 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.FIREBALL_ITEM.get());
 				tabData.accept(ClashCraftModItems.ARROWS.get());
 				tabData.accept(ClashCraftModItems.PANCAKE.get());
+				tabData.accept(ClashCraftModItems.SPEAR.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CLASH_CRAFT_SPAWN_EGGS = REGISTRY.register("clash_craft_spawn_eggs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.clash_craft.clash_craft_spawn_eggs")).icon(() -> new ItemStack(ClashCraftModItems.GIANT_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
@@ -33,5 +34,6 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.MINI_PEKKA_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.ARCHER_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.GOBLIN_HUT_SPAWN_EGG.get());
+				tabData.accept(ClashCraftModItems.SPEAR_GOBLIN_SPAWN_EGG.get());
 			}).withTabsBefore(CLASH_CRAFT_ITEMS.getId()).build());
 }
