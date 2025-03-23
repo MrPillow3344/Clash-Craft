@@ -381,7 +381,7 @@
     {
       "name": "SpawnArrows",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "spawn_arrows",
       "metadata": {
@@ -932,7 +932,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.0920325a",
+    "version": "0.0.2320325a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

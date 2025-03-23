@@ -19,7 +19,7 @@ import net.minecraft.server.level.ServerLevel;
 
 public class SpawnArrowsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		Random rand = new Random;
+		Random rand = new Random();
 		double xOffset = 6;
 		double yOffset = 20;
 		double r = 3;
