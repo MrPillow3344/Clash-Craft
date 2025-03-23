@@ -609,7 +609,7 @@
     {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
