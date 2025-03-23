@@ -1,6 +1,16 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.mrpillow.clashcraft.init.ClashCraftModEntities;
+import net.mrpillow.clashcraft.entity.SpearProjectileEntity;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 
 public class SpearItemShootsProjectileProcedure {
 	public static void execute(Entity entity) {
@@ -34,7 +44,7 @@ public class SpearItemShootsProjectileProcedure {
 						entityToSpawn.setSilent(true);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 2, (int) 0.1, (byte) 0);
+				}.getArrow(projectileLevel, entity, 2, 1, (byte) 0);
 				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);

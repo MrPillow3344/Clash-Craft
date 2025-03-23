@@ -25,7 +25,7 @@ public class SpawnArrowsProcedure {
 		double r = 3;
 		
 		for (int i = 0; i <= 3; i++) {
-			rand.setSeed(rand.next(32));
+			rand.setSeed(rand.nextInt());
 			ClashCraftMod.queueServerWork(9*i, () -> {
 				for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
 					for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
@@ -59,7 +59,7 @@ public class SpawnArrowsProcedure {
 									return entityToSpawn;
 								}
 							}.getArrow(projectileLevel, 2, 0, (byte) 0);
-							_entityToSpawn.setPos(x + xLoop - r -xOffset + 2 + randFloat(-0.5f, 0.5f), (y + yOffset), z- zLoop + r + 0.5 + randFloat(-0.5f, 0.5f));
+							_entityToSpawn.setPos(x + xLoop - r -xOffset + 2 + randFloat(rand, -0.5f, 0.5f), (y + yOffset), z- zLoop + r + 0.5 + (double) randFloat(rand, -0.5f, 0.5f));
 							_entityToSpawn.shoot((xOffset / yOffset), (-1), 0, (float) 1.2, (float) 0.1);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}

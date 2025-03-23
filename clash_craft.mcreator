@@ -381,7 +381,7 @@
     {
       "name": "SpawnArrows",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "spawn_arrows",
       "metadata": {
@@ -713,8 +713,8 @@
       "registry_name": "spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/spear.json",
-          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java",
+          "src/main/resources/assets/clash_craft/models/item/spear.json"
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
