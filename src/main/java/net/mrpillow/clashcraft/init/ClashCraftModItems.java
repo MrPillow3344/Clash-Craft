@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
+import net.mrpillow.clashcraft.item.SpearItem;
 import net.mrpillow.clashcraft.item.PancakeItem;
 import net.mrpillow.clashcraft.item.MinionsIronBallItemItem;
 import net.mrpillow.clashcraft.item.KnightsSwordItem;
@@ -34,6 +35,8 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> PANCAKE = REGISTRY.register("pancake", PancakeItem::new);
 	public static final DeferredItem<Item> ARCHER_SPAWN_EGG = REGISTRY.register("archer_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.ARCHER, -10027264, -39220, new Item.Properties()));
 	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -6724096, -14394350, new Item.Properties()));
+	public static final DeferredItem<Item> SPEAR_GOBLIN_SPAWN_EGG = REGISTRY.register("spear_goblin_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.SPEAR_GOBLIN, -10040320, -6724096, new Item.Properties()));
+	public static final DeferredItem<Item> SPEAR = REGISTRY.register("spear", SpearItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

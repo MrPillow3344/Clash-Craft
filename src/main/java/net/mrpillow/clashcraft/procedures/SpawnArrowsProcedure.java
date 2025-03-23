@@ -2,6 +2,8 @@ package net.mrpillow.clashcraft.procedures;
 
 import net.mrpillow.clashcraft.ClashCraftMod;
 
+import java.util.Random;
+
 import net.mrpillow.clashcraft.ClashCraftMod;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
@@ -17,11 +19,13 @@ import net.minecraft.server.level.ServerLevel;
 
 public class SpawnArrowsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		Random rand = new Random;
 		double xOffset = 6;
 		double yOffset = 20;
 		double r = 3;
 		
 		for (int i = 0; i <= 3; i++) {
+			rand.setSeed(rand.next(32));
 			ClashCraftMod.queueServerWork(9*i, () -> {
 				for (int xLoop = 0; xLoop <= (int) (r * 2); xLoop++) {
 					for (int zLoop = 0; zLoop <= (int) (r * 2); zLoop++) {
@@ -54,8 +58,8 @@ public class SpawnArrowsProcedure {
 									entityToSpawn.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 4, 1, (byte) 0);
-							_entityToSpawn.setPos(x + xLoop - r -xOffset + 2, (y + yOffset), z- zLoop + r + 0.5);
+							}.getArrow(projectileLevel, 2, 0, (byte) 0);
+							_entityToSpawn.setPos(x + xLoop - r -xOffset + 2 + randFloat(-0.5f, 0.5f), (y + yOffset), z- zLoop + r + 0.5 + randFloat(-0.5f, 0.5f));
 							_entityToSpawn.shoot((xOffset / yOffset), (-1), 0, (float) 1.2, (float) 0.1);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
@@ -75,4 +79,8 @@ public class SpawnArrowsProcedure {
 	public static double dSquared(double x1, double y1, double x2, double y2) { 
 		return Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2); 
 	}
+
+	public static float randFloat(Random r, float min, float max) {
+		return min + r.nextFloat() * (max - min);
+		}
 }

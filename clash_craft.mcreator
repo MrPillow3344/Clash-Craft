@@ -713,8 +713,8 @@
       "registry_name": "spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/spear.json",
-          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java",
+          "src/main/resources/assets/clash_craft/models/item/spear.json"
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
@@ -729,6 +729,25 @@
         "files": [
           "src/main/java/net/mrpillow/clashcraft/entity/SpearProjectileEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Arena-1/SpearGoblin"
+    },
+    {
+      "name": "SpearItemShootsProjectile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_item_shoots_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/SpearItemShootsProjectileProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
