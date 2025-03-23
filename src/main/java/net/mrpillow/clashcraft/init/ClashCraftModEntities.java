@@ -61,14 +61,16 @@ public class ClashCraftModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ArcherEntityProjectile>> ARCHER_PROJECTILE = register("projectile_archer",
 			EntityType.Builder.<ArcherEntityProjectile>of(ArcherEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
-			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpearGoblinEntity>> SPEAR_GOBLIN = register("spear_goblin",
 			EntityType.Builder.<SpearGoblinEntity>of(SpearGoblinEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpearProjectileEntity>> SPEAR_PROJECTILE = register("spear_projectile",
 			EntityType.Builder.<SpearProjectileEntity>of(SpearProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
+			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
+
+					.sized(2f, 3f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -83,8 +85,8 @@ public class ClashCraftModEntities {
 		MinionEntity.init(event);
 		MiniPekkaEntity.init(event);
 		ArcherEntity.init(event);
-		GoblinHutEntity.init(event);
 		SpearGoblinEntity.init(event);
+		GoblinHutEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -94,7 +96,7 @@ public class ClashCraftModEntities {
 		event.put(MINION.get(), MinionEntity.createAttributes().build());
 		event.put(MINI_PEKKA.get(), MiniPekkaEntity.createAttributes().build());
 		event.put(ARCHER.get(), ArcherEntity.createAttributes().build());
-		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 		event.put(SPEAR_GOBLIN.get(), SpearGoblinEntity.createAttributes().build());
+		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 	}
 }

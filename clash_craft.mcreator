@@ -607,26 +607,10 @@
       "path": "~/TrainingCamp/Archers"
     },
     {
-      "name": "GoblinHut",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_hut",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json"
-        ]
-      },
-      "path": "~/Arena-1/GoblinHut"
-    },
-    {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
+      "compiles": false,
+      "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
         "files": [
@@ -786,6 +770,23 @@
         ]
       },
       "path": "~/TrainingCamp/Minion"
+    },
+    {
+      "name": "GoblinHut",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GoblinHutModel.java",
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
     }
   ],
   "variable_elements": [
@@ -822,8 +823,8 @@
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
-      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "item.clash_craft.spear": "Spear",
+      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
@@ -850,8 +851,8 @@
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
-      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "item.clash_craft.spear": "Spear",
+      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
@@ -932,7 +933,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.2320325a",
+    "version": "0.0.2320325b",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

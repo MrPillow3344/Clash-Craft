@@ -33,8 +33,8 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.MINI_PEKKA.get(), MiniPekkaRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER.get(), ArcherRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.ARCHER_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.SPEAR_GOBLIN.get(), SpearGoblinRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.SPEAR_PROJECTILE.get(), SpearProjectileRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
 	}
 }
