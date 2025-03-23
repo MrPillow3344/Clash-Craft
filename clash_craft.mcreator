@@ -713,8 +713,8 @@
       "registry_name": "spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java",
-          "src/main/resources/assets/clash_craft/models/item/spear.json"
+          "src/main/resources/assets/clash_craft/models/item/spear.json",
+          "src/main/java/net/mrpillow/clashcraft/item/SpearItem.java"
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
@@ -751,6 +751,41 @@
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
+    },
+    {
+      "name": "NotTooHighMinion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "not_too_high_minion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/NotTooHighMinionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/TrainingCamp/Minion"
     }
   ],
   "variable_elements": [
