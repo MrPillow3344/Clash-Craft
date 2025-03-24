@@ -2,38 +2,38 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Goblin Stadium",
+    "name": "Bone Pit",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.SAND#0"
     },
     "undergroundBlock": {
-      "value": "Blocks.MOSS_BLOCK"
+      "value": "Blocks.SANDSTONE#0"
     },
     "underwaterBlock": {
-      "value": "Blocks.MUD"
+      "value": "Blocks.SANDSTONE#0"
     },
     "airColor": {
-      "value": -7733273,
+      "value": -154,
       "falpha": 0.0
     },
     "fogColor": {
-      "value": -6094868,
+      "value": -52,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -16751104,
+      "value": -13312,
       "falpha": 0.0
     },
     "foliageColor": {
-      "value": -16740095,
+      "value": -103,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -16724058,
+      "value": -6711040,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -16187442,
+      "value": -6711040,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -60,34 +60,34 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -1.8,
-      "max": -1.6
+      "min": -1.6,
+      "max": -1.4
     },
     "genHumidity": {
-      "min": -1.8,
-      "max": -1.6
+      "min": -1.6,
+      "max": -1.4
     },
     "genContinentalness": {
-      "min": -1.8,
-      "max": -1.6
+      "min": -1.6,
+      "max": -1.4
     },
     "genErosion": {
-      "min": -1.8,
-      "max": -1.6
+      "min": -1.6,
+      "max": -1.4
     },
     "genWeirdness": {
-      "min": -1.8,
-      "max": -1.6
+      "min": -1.6,
+      "max": -1.4
     },
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
     "treeType": 0,
-    "minHeight": 10,
+    "minHeight": 7,
     "treeStem": {
-      "value": "Blocks.LOG#0"
+      "value": ""
     },
     "treeBranch": {
-      "value": "Blocks.AIR"
+      "value": ""
     },
     "treeVines": {
       "value": ""
@@ -112,20 +112,10 @@
     "spawnBuriedTreasure": false,
     "oceanRuinType": "NONE",
     "spawnNetherBridge": false,
-    "spawnNetherFossil": false,
+    "spawnNetherFossil": true,
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": [
-      {
-        "entity": {
-          "value": "CUSTOM:SpearGoblin"
-        },
-        "minGroup": 3,
-        "maxGroup": 3,
-        "weight": 20,
-        "spawnType": "creature"
-      }
-    ]
+    "spawnEntries": []
   }
 }

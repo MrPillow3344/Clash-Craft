@@ -8,9 +8,9 @@
       "registry_name": "training_camp",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json",
           "src/main/resources/data/clash_craft/worldgen/configured_feature/training_camp_tree.json",
-          "src/main/resources/data/clash_craft/worldgen/biome/training_camp.json"
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/training_camp_tree.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
-          "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
           "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json"
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
+          "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -787,6 +787,19 @@
         ]
       },
       "path": "~/Arena-1/GoblinHut"
+    },
+    {
+      "name": "BonePit",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bone_pit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/bone_pit.json"
+        ]
+      },
+      "path": "~/Arena-2"
     }
   ],
   "variable_elements": [
@@ -802,6 +815,9 @@
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GiantShirt.body"
     ],
+    "BIOMES:minecraft:has_structure/nether_fossil": [
+      "~CUSTOM:BonePit"
+    ],
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:Pancake"
     ],
@@ -809,6 +825,8 @@
       "~CUSTOM:KnightsSword"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.SANDSTONE#0",
+      "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
@@ -825,6 +843,7 @@
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
       "item.clash_craft.spear": "Spear",
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
+      "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
@@ -853,6 +872,7 @@
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "item.clash_craft.spear": "Spear",
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
+      "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
@@ -923,6 +943,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Arena-2",
+        "children": []
       },
       {
         "name": "ClashDimension",
