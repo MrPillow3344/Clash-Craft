@@ -929,6 +929,9 @@
       "~CUSTOM:KnightsSword"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.BLUE_ICE",
+      "~Blocks.STONEBRICK#0",
+      "~Blocks.PACKED_MUD",
       "~Blocks.PLANKS#3",
       "~Blocks.POLISHED_DEEPSLATE",
       "~Blocks.SMOOTH_STONE",

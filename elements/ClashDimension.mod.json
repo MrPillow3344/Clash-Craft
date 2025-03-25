@@ -23,6 +23,18 @@
       },
       {
         "value": "CUSTOM:PEKKAsPlayhouse"
+      },
+      {
+        "value": "CUSTOM:RoyaleArena"
+      },
+      {
+        "value": "CUSTOM:FrozenPeak"
+      },
+      {
+        "value": "CUSTOM:JungleArena"
+      },
+      {
+        "value": "CUSTOM:HogMountain"
       }
     ],
     "worldGenType": "Normal world gen",
