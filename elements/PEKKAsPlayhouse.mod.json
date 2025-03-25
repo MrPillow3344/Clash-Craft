@@ -1,0 +1,121 @@
+{
+  "_fv": 73,
+  "_type": "biome",
+  "definition": {
+    "name": "P.E.K.K.A's Playhouse",
+    "groundBlock": {
+      "value": "Blocks.POLISHED_DEEPSLATE"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.POLISHED_DEEPSLATE"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.POLISHED_DEEPSLATE"
+    },
+    "airColor": {
+      "value": -52429,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -39322,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -13382656,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -13382656,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -26368,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -52480,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "particlesProbability": 0.5,
+    "rainingPossibility": 0.0,
+    "temperature": 2.0,
+    "spawnBiome": false,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": -0.8,
+      "max": -0.6
+    },
+    "genHumidity": {
+      "min": -0.8,
+      "max": -0.6
+    },
+    "genContinentalness": {
+      "min": -0.8,
+      "max": -0.6
+    },
+    "genErosion": {
+      "min": -0.8,
+      "max": -0.6
+    },
+    "genWeirdness": {
+      "min": -0.8,
+      "max": -0.6
+    },
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Default",
+    "treeType": 0,
+    "minHeight": 7,
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "defaultFeatures": [],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": false,
+    "oceanRuinType": "NONE",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "NONE",
+    "spawnEntries": []
+  }
+}
