@@ -35,5 +35,6 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.ARCHER_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.SPEAR_GOBLIN_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.GOBLIN_HUT_SPAWN_EGG.get());
+				tabData.accept(ClashCraftModItems.LARRY_SPAWN_EGG.get());
 			}).withTabsBefore(CLASH_CRAFT_ITEMS.getId()).build());
 }

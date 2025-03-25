@@ -116,6 +116,16 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:Larry"
+        },
+        "minGroup": 3,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "creature"
+      }
+    ]
   }
 }

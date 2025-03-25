@@ -7,6 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
 import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
+import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
@@ -60,6 +61,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof GoblinHutEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof LarryEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

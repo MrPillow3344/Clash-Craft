@@ -904,6 +904,22 @@
         ]
       },
       "path": "~/Arena-10"
+    },
+    {
+      "name": "Larry",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "larry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
+        ]
+      },
+      "path": "~/Arena-2/Skeletons"
     }
   ],
   "variable_elements": [
@@ -918,6 +934,9 @@
   "tag_elements": {
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GiantShirt.body"
+    ],
+    "ENTITIES:minecraft:undead": [
+      "~CUSTOM:Larry"
     ],
     "BIOMES:minecraft:has_structure/nether_fossil": [
       "~CUSTOM:BonePit"
@@ -946,6 +965,7 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -966,6 +986,7 @@
       "entity.clash_craft.minion": "Minion",
       "entity.clash_craft.knight": "Knight",
       "biome.clash_craft.spell_valley": "Spell Valley",
+      "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
@@ -983,6 +1004,7 @@
       "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -1003,6 +1025,7 @@
       "entity.clash_craft.minion": "מיניון",
       "entity.clash_craft.knight": "אביר",
       "biome.clash_craft.spell_valley": "Spell Valley",
+      "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",

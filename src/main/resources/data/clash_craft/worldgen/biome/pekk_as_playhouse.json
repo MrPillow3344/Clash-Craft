@@ -12,7 +12,14 @@
   },
   "spawners": {
     "monster": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "clash_craft:larry",
+        "weight": 20,
+        "minCount": 15,
+        "maxCount": 15
+      }
+    ],
     "ambient": [],
     "axolotls": [],
     "underground_water_creature": [],

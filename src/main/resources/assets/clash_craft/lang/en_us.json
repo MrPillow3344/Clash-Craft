@@ -1,4 +1,5 @@
 {
+  "entity.clash_craft.larry": "Larry",
   "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
   "entity.clash_craft.spear_goblin": "Spear Goblin",
   "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -19,6 +20,7 @@
   "entity.clash_craft.minion": "Minion",
   "entity.clash_craft.knight": "Knight",
   "biome.clash_craft.spell_valley": "Spell Valley",
+  "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
   "biome.clash_craft.training_camp": "Training Camp",
   "item.clash_craft.pancake": "Pancake",
   "item.clash_craft.knights_sword": "Knight\u0027s Sword",

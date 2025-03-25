@@ -16,6 +16,7 @@ import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
 import net.mrpillow.clashcraft.entity.MinionsIronBallEntity;
 import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
+import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
@@ -71,6 +72,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
 
 					.sized(2f, 3f));
+	public static final DeferredHolder<EntityType<?>, EntityType<LarryEntity>> LARRY = register("larry",
+			EntityType.Builder.<LarryEntity>of(LarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -87,6 +92,7 @@ public class ClashCraftModEntities {
 		ArcherEntity.init(event);
 		SpearGoblinEntity.init(event);
 		GoblinHutEntity.init(event);
+		LarryEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -98,5 +104,6 @@ public class ClashCraftModEntities {
 		event.put(ARCHER.get(), ArcherEntity.createAttributes().build());
 		event.put(SPEAR_GOBLIN.get(), SpearGoblinEntity.createAttributes().build());
 		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
+		event.put(LARRY.get(), LarryEntity.createAttributes().build());
 	}
 }
