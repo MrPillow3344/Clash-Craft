@@ -2,22 +2,22 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Barbarian Bowl",
+    "name": "Frozen Peak",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.BLUE_ICE"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "Blocks.BLUE_ICE"
     },
     "underwaterBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.BLUE_ICE"
     },
     "airColor": {
-      "value": -16737844,
+      "value": -6684673,
       "falpha": 0.0
     },
     "fogColor": {
-      "value": -16737793,
+      "value": -10027009,
       "falpha": 0.0
     },
     "grassColor": {
@@ -29,11 +29,11 @@
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -16724788,
+      "value": -16777063,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -16724788,
+      "value": -16777063,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -54,29 +54,29 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "rainingPossibility": 0.0,
-    "temperature": 2.0,
+    "rainingPossibility": 1.0,
+    "temperature": 0.0,
     "spawnBiome": false,
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.25,
+      "min": -0.125,
       "max": 0.0
     },
     "genHumidity": {
-      "min": -0.25,
+      "min": -0.125,
       "max": 0.0
     },
     "genContinentalness": {
-      "min": -0.25,
+      "min": -0.125,
       "max": 0.0
     },
     "genErosion": {
-      "min": -0.25,
+      "min": -0.125,
       "max": 0.0
     },
     "genWeirdness": {
-      "min": -0.25,
+      "min": -0.125,
       "max": 0.0
     },
     "treesPerChunk": 0,

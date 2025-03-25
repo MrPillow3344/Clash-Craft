@@ -2,38 +2,38 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Barbarian Bowl",
+    "name": "Hog Mountain",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "Blocks.MOSS_BLOCK"
     },
     "underwaterBlock": {
       "value": "Blocks.STONE#0"
     },
     "airColor": {
-      "value": -16737844,
+      "value": -16711681,
       "falpha": 0.0
     },
     "fogColor": {
-      "value": -16737793,
+      "value": -16724788,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -13382656,
+      "value": -6684928,
       "falpha": 0.0
     },
     "foliageColor": {
-      "value": -13382656,
+      "value": -6684928,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -16724788,
+      "value": -6684673,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -16724788,
+      "value": -6684673,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -60,23 +60,23 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.25,
+      "min": -1.5,
       "max": 0.0
     },
     "genHumidity": {
-      "min": -0.25,
+      "min": -1.5,
       "max": 0.0
     },
     "genContinentalness": {
-      "min": -0.25,
+      "min": -1.5,
       "max": 0.0
     },
     "genErosion": {
-      "min": -0.25,
+      "min": -1.5,
       "max": 0.0
     },
     "genWeirdness": {
-      "min": -0.25,
+      "min": -1.5,
       "max": 0.0
     },
     "treesPerChunk": 0,

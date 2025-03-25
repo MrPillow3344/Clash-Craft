@@ -2,38 +2,38 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Barbarian Bowl",
+    "name": "Jungle Arena",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "Blocks.PACKED_MUD"
     },
     "underwaterBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.MUD"
     },
     "airColor": {
-      "value": -16737844,
+      "value": -16737997,
       "falpha": 0.0
     },
     "fogColor": {
-      "value": -16737793,
+      "value": -16751104,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -13382656,
+      "value": -10053376,
       "falpha": 0.0
     },
     "foliageColor": {
-      "value": -13382656,
+      "value": -16751104,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -16724788,
+      "value": -16751053,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -16724788,
+      "value": -16751002,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -60,24 +60,24 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.25,
-      "max": 0.0
+      "min": 0.0,
+      "max": 0.125
     },
     "genHumidity": {
-      "min": -0.25,
-      "max": 0.0
+      "min": 0.0,
+      "max": 0.125
     },
     "genContinentalness": {
-      "min": -0.25,
-      "max": 0.0
+      "min": 0.0,
+      "max": 0.125
     },
     "genErosion": {
-      "min": -0.25,
-      "max": 0.0
+      "min": 0.0,
+      "max": 0.125
     },
     "genWeirdness": {
-      "min": -0.25,
-      "max": 0.0
+      "min": 0.0,
+      "max": 0.125
     },
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
@@ -95,7 +95,9 @@
     "treeFruits": {
       "value": ""
     },
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "SwampVegetation"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

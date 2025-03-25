@@ -852,6 +852,58 @@
         ]
       },
       "path": "~/Arena-6"
+    },
+    {
+      "name": "RoyaleArena",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "royale_arena",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/royale_arena.json"
+        ]
+      },
+      "path": "~/Arena-7"
+    },
+    {
+      "name": "FrozenPeak",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_peak",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/frozen_peak.json"
+        ]
+      },
+      "path": "~/Arena-8"
+    },
+    {
+      "name": "JungleArena",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jungle_arena",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/jungle_arena.json"
+        ]
+      },
+      "path": "~/Arena-9"
+    },
+    {
+      "name": "HogMountain",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hog_mountain",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/biome/hog_mountain.json"
+        ]
+      },
+      "path": "~/Arena-10"
     }
   ],
   "variable_elements": [
@@ -901,8 +953,10 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
+      "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
       "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
@@ -916,8 +970,10 @@
       "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
       "entity.clash_craft.giant": "Giant",
+      "biome.clash_craft.royale_arena": "Royale Arena",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "Clash Craft Items",
+      "biome.clash_craft.jungle_arena": "Jungle Arena",
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "biome.clash_craft.goblin_stadium": "Goblin Stadium",
       "item.clash_craft.clash_dimension": "Clash Ticket",
@@ -934,8 +990,10 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
+      "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
       "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
@@ -949,8 +1007,10 @@
       "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
       "entity.clash_craft.giant": "ענק",
+      "biome.clash_craft.royale_arena": "Royale Arena",
       "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
+      "biome.clash_craft.jungle_arena": "Jungle Arena",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
       "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
@@ -1029,6 +1089,22 @@
       },
       {
         "name": "Arena-6",
+        "children": []
+      },
+      {
+        "name": "Arena-7",
+        "children": []
+      },
+      {
+        "name": "Arena-8",
+        "children": []
+      },
+      {
+        "name": "Arena-9",
+        "children": []
+      },
+      {
+        "name": "Arena-10",
         "children": []
       }
     ]
