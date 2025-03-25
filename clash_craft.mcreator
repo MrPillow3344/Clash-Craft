@@ -1072,7 +1072,12 @@
       },
       {
         "name": "Arena-2",
-        "children": []
+        "children": [
+          {
+            "name": "Skeletons",
+            "children": []
+          }
+        ]
       },
       {
         "name": "ClashDimension",
