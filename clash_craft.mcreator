@@ -877,6 +877,9 @@
       "~CUSTOM:KnightsSword"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.PLANKS#3",
+      "~Blocks.POLISHED_DEEPSLATE",
+      "~Blocks.SMOOTH_STONE",
       "~Blocks.SANDSTONE#0",
       "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",

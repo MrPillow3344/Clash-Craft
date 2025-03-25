@@ -11,6 +11,18 @@
       },
       {
         "value": "CUSTOM:BonePit"
+      },
+      {
+        "value": "CUSTOM:BarbarianBowl"
+      },
+      {
+        "value": "CUSTOM:SpellValley"
+      },
+      {
+        "value": "CUSTOM:BuildersWorkshop"
+      },
+      {
+        "value": "CUSTOM:PEKKAsPlayhouse"
       }
     ],
     "worldGenType": "Normal world gen",
