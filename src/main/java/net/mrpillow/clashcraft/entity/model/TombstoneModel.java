@@ -1,10 +1,6 @@
 package net.mrpillow.clashcraft.entity.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.mrpillow.clashcraft.entity.TombstoneEntity;
-
-import net.minecraft.resources.ResourceLocation;
+import software.bernie.geckolib.animation.AnimationState;
 
 public class TombstoneModel extends GeoModel<TombstoneEntity> {
 	@Override

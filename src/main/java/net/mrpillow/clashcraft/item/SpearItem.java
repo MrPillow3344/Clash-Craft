@@ -19,7 +19,7 @@ public class SpearItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		SpearItemShootsProjectileProcedure.execute(entity);
+		SpearItemShootsProjectileProcedure.execute(entity, ar.getObject());
 		return ar;
 	}
 }

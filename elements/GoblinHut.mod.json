@@ -1,38 +1,39 @@
 {
   "_fv": 73,
-  "_type": "animatedentity",
+  "_type": "livingentity",
   "definition": {
     "mobName": "Goblin Hut",
     "mobLabel": "",
-    "mobModelTexture": "goblin_hut.png",
-    "mobModelGlowTexture": "",
+    "mobModelName": "Biped",
+    "mobModelTexture": "minipekka.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [
-      {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "goblinsLeft",
-        "type": "integer",
-        "value": 4
-      }
-    ],
-    "modelWidth": 2.0,
-    "modelHeight": 3.0,
+    "modelLayers": [],
+    "animations": [],
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -6724096,
+      "value": -9091033,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -14394350,
+      "value": -14917090,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -67,18 +68,22 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 100.0,
     "movementSpeed": 0.0,
+    "stepHeight": 0.0,
     "armorBaseValue": 0.0,
     "trackingRange": 0,
     "followRange": 0,
     "health": 35,
     "xpAmount": 5,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
@@ -114,41 +119,26 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "goblinsLeft",
+        "type": "integer",
+        "value": 4
+      }
+    ],
     "whenMobDies": {
       "name": "GoblinHutEntityDies"
     },
     "onMobTickUpdate": {
       "name": "GoblinHutOnEntityTickUpdate"
     },
-    "hasAI": true,
+    "hasAI": false,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
-    "model": "goblin_hut.geo.json",
-    "groupName": "",
-    "animation1": "animation.model.idle",
-    "animation2": "",
-    "animation3": "",
-    "animation4": "",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": false,
-    "enable3": false,
-    "enable4": false,
-    "enable5": false,
-    "enable6": false,
-    "enable7": false,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": true,
-    "headMovement": false,
-    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -157,8 +147,18 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
-    "attackRate": 7,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 10,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:GoblinStadium"
+      }
+    ],
+    "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,
       3,
@@ -167,14 +167,6 @@
       4,
       4,
       2
-    ],
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
-    "spawnInDungeons": false
+    ]
   }
 }

@@ -938,20 +938,16 @@
       "path": "~/Arena-2/Tombstone"
     },
     {
-      "name": "TombstoneSpawnSkeletons",
+      "name": "TombstoneEntityDies",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tombstone_spawn_skeletons",
+      "registry_name": "tombstone_entity_dies",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneSpawnSkeletonsProcedure.java"
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneEntityDiesProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -973,16 +969,20 @@
       "path": "~/Arena-2/Tombstone"
     },
     {
-      "name": "TombstoneEntityDies",
+      "name": "TombstoneSpawnSkeletons",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tombstone_entity_dies",
+      "registry_name": "tombstone_spawn_skeletons",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneEntityDiesProcedure.java"
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneSpawnSkeletonsProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -1173,6 +1173,38 @@
         ]
       },
       {
+        "name": "Arena-9",
+        "children": []
+      },
+      {
+        "name": "Arena-7",
+        "children": []
+      },
+      {
+        "name": "Arena-8",
+        "children": []
+      },
+      {
+        "name": "Arena-5",
+        "children": []
+      },
+      {
+        "name": "Arena-6",
+        "children": []
+      },
+      {
+        "name": "Arena-3",
+        "children": []
+      },
+      {
+        "name": "Arena-4",
+        "children": []
+      },
+      {
+        "name": "Arena-10",
+        "children": []
+      },
+      {
         "name": "Arena-1",
         "children": [
           {
@@ -1200,38 +1232,6 @@
       },
       {
         "name": "ClashDimension",
-        "children": []
-      },
-      {
-        "name": "Arena-3",
-        "children": []
-      },
-      {
-        "name": "Arena-4",
-        "children": []
-      },
-      {
-        "name": "Arena-5",
-        "children": []
-      },
-      {
-        "name": "Arena-6",
-        "children": []
-      },
-      {
-        "name": "Arena-7",
-        "children": []
-      },
-      {
-        "name": "Arena-8",
-        "children": []
-      },
-      {
-        "name": "Arena-9",
-        "children": []
-      },
-      {
-        "name": "Arena-10",
         "children": []
       }
     ]
