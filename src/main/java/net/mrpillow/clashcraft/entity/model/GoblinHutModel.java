@@ -9,12 +9,12 @@ import net.minecraft.resources.ResourceLocation;
 public class GoblinHutModel extends GeoModel<GoblinHutEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(GoblinHutEntity entity) {
-		return ResourceLocation.parse("clash_craft:animations/goblin_hut.animation.json");
+		return ResourceLocation.parse("clash_craft:animations/giant.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(GoblinHutEntity entity) {
-		return ResourceLocation.parse("clash_craft:geo/goblin_hut.geo.json");
+		return ResourceLocation.parse("clash_craft:geo/giant.geo.json");
 	}
 
 	@Override
