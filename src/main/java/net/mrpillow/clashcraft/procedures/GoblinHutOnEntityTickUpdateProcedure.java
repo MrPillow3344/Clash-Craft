@@ -1,7 +1,6 @@
 package net.mrpillow.clashcraft.procedures;
 
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
-import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;

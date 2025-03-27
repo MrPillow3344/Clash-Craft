@@ -1,6 +1,20 @@
 
 package net.mrpillow.clashcraft.client.renderer;
 
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.mrpillow.clashcraft.entity.model.TombstoneModel;
+import net.mrpillow.clashcraft.entity.TombstoneEntity;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class TombstoneRenderer extends GeoEntityRenderer<TombstoneEntity> {
 	public TombstoneRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new TombstoneModel());

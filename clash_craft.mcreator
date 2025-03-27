@@ -24,8 +24,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json"
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -60,9 +60,9 @@
       "registry_name": "king_tower",
       "metadata": {
         "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/king_tower.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json"
+          "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -75,11 +75,11 @@
       "registry_name": "giant",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java"
         ]
       },
       "path": "~/TrainingCamp/Giant"
@@ -115,8 +115,8 @@
       "registry_name": "giant_shirt",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java",
-          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json"
+          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json",
+          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java"
         ]
       },
       "path": "~/TrainingCamp/Giant"
@@ -130,10 +130,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mrpillow/clashcraft/entity/model/KnightModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java"
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -196,9 +196,9 @@
       "registry_name": "minion",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
           "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json"
         ]
@@ -226,8 +226,8 @@
       "registry_name": "minions_iron_ball_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json",
-          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java",
+          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -349,8 +349,8 @@
       "registry_name": "arrows",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/ArrowsItem.java",
-          "src/main/resources/assets/clash_craft/models/item/arrows.json"
+          "src/main/resources/assets/clash_craft/models/item/arrows.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ArrowsItem.java"
         ]
       },
       "path": "~/TrainingCamp/Arrows"
@@ -447,10 +447,10 @@
       "registry_name": "mini_pekka",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/MiniPekkaEntity.java",
           "src/main/resources/assets/clash_craft/models/item/mini_pekka_spawn_egg.json",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/mini_pekka_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/MiniPekkaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/MiniPekkaRenderer.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/mini_pekka_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MiniPekkaModel.java"
         ]
       },
@@ -464,8 +464,8 @@
       "registry_name": "pancake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/pancake.json",
-          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java",
+          "src/main/resources/assets/clash_craft/models/item/pancake.json"
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
@@ -492,8 +492,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/clash_craft/worldgen/structure_set/fence_7_b.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
+          "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json"
         ]
       },
       "path": "~/Arena-1"
@@ -596,12 +596,12 @@
       "registry_name": "archer",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntityProjectile.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/archer_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java",
-          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java"
         ]
       },
       "path": "~/TrainingCamp/Archers"
@@ -609,7 +609,7 @@
     {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
@@ -681,8 +681,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mrpillow/clashcraft/entity/model/SpearGoblinModel.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/spear_goblin_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/spear_goblin_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java"
         ]
@@ -731,6 +731,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -971,7 +975,7 @@
     {
       "name": "TombstoneSpawnSkeletons",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tombstone_spawn_skeletons",
       "metadata": {
@@ -1037,15 +1041,15 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.BLUE_ICE",
-      "~Blocks.STONEBRICK#0",
-      "~Blocks.PACKED_MUD",
       "~Blocks.PLANKS#3",
-      "~Blocks.POLISHED_DEEPSLATE",
-      "~Blocks.SMOOTH_STONE",
       "~Blocks.SANDSTONE#0",
+      "~Blocks.STONEBRICK#0",
       "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",
+      "~Blocks.PACKED_MUD",
+      "~Blocks.POLISHED_DEEPSLATE",
       "~Blocks.STONE#0",
+      "~Blocks.SMOOTH_STONE",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
     ]

@@ -19,7 +19,6 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
-import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
 import net.mrpillow.clashcraft.entity.ArrowsProjectileEntity;
