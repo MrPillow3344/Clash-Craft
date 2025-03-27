@@ -609,7 +609,7 @@
     {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
@@ -772,23 +772,6 @@
       "path": "~/TrainingCamp/Minion"
     },
     {
-      "name": "GoblinHut",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_hut",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GoblinHutModel.java",
-          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
-        ]
-      },
-      "path": "~/Arena-1/GoblinHut"
-    },
-    {
       "name": "BonePit",
       "type": "biome",
       "compiles": true,
@@ -920,6 +903,22 @@
         ]
       },
       "path": "~/Arena-2/Skeletons"
+    },
+    {
+      "name": "GoblinHut",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
     }
   ],
   "variable_elements": [
@@ -1143,7 +1142,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.2720325a",
+    "version": "0.0.2720325b",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
