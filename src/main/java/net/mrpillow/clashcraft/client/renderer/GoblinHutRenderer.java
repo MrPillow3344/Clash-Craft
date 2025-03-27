@@ -18,6 +18,6 @@ public class GoblinHutRenderer extends HumanoidMobRenderer<GoblinHutEntity, Huma
 
 	@Override
 	public ResourceLocation getTextureLocation(GoblinHutEntity entity) {
-		return ResourceLocation.parse("clash_craft:textures/entities/goblin_hut.png");
+		return ResourceLocation.parse("clash_craft:textures/entities/minipekka.png");
 	}
 }

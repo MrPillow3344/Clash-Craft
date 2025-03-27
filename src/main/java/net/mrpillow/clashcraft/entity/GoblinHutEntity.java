@@ -25,14 +25,26 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 public class GoblinHutEntity extends PathfinderMob {
+	public static final EntityDataAccessor<Integer> DATA_goblinsLeft = SynchedEntityData.defineId(GoblinHutEntity.class, EntityDataSerializers.INT);
+
 	public GoblinHutEntity(EntityType<GoblinHutEntity> type, Level world) {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(true);
 		setPersistenceRequired();
+	}
+
+	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_goblinsLeft, 4);
 	}
 
 	@Override
@@ -74,6 +86,19 @@ public class GoblinHutEntity extends PathfinderMob {
 	public void die(DamageSource source) {
 		super.die(source);
 		GoblinHutEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putInt("DatagoblinsLeft", this.entityData.get(DATA_goblinsLeft));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DatagoblinsLeft"))
+			this.entityData.set(DATA_goblinsLeft, compound.getInt("DatagoblinsLeft"));
 	}
 
 	@Override

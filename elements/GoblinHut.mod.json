@@ -5,7 +5,7 @@
     "mobName": "Goblin Hut",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "goblin_hut.png",
+    "mobModelTexture": "minipekka.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -23,8 +23,8 @@
     },
     "modelLayers": [],
     "animations": [],
-    "modelWidth": 3.0,
-    "modelHeight": 3.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -119,7 +119,15 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "goblinsLeft",
+        "type": "integer",
+        "value": 4
+      }
+    ],
     "whenMobDies": {
       "name": "GoblinHutEntityDies"
     },
@@ -143,8 +151,8 @@
     "doesDespawnWhenIdle": false,
     "spawningProbability": 10,
     "mobSpawningType": "creature",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:GoblinStadium"

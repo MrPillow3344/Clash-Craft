@@ -4,7 +4,7 @@
   "spawners": {
     "type": "clash_craft:goblin_hut",
     "weight": 10,
-    "minCount": 4,
-    "maxCount": 4
+    "minCount": 1,
+    "maxCount": 1
   }
 }

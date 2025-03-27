@@ -609,7 +609,7 @@
     {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
@@ -731,6 +731,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -1142,7 +1146,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.2720325b",
+    "version": "0.0.2720325d",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
