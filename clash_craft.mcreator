@@ -920,6 +920,88 @@
         ]
       },
       "path": "~/Arena-2/Skeletons"
+    },
+    {
+      "name": "Tombstone",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/TombstoneRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/TombstoneEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/tombstone_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/TombstoneModel.java"
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "TombstoneSpawnSkeletons",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone_spawn_skeletons",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneSpawnSkeletonsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "TombstoneEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
     }
   ],
   "variable_elements": [
@@ -928,6 +1010,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "SpawnerLeft",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -976,11 +1064,13 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
+      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
       "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
       "entity.clash_craft.minion": "Minion",
@@ -1015,11 +1105,13 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
+      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
       "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
       "entity.clash_craft.minion": "מיניון",
@@ -1098,6 +1190,10 @@
         "children": [
           {
             "name": "Skeletons",
+            "children": []
+          },
+          {
+            "name": "Tombstone",
             "children": []
           }
         ]

@@ -11,6 +11,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
+import net.mrpillow.clashcraft.entity.TombstoneEntity;
 import net.mrpillow.clashcraft.entity.SpearProjectileEntity;
 import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
 import net.mrpillow.clashcraft.entity.MinionsIronBallEntity;
@@ -76,6 +77,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<LarryEntity>of(LarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TombstoneEntity>> TOMBSTONE = register("tombstone",
+			EntityType.Builder.<TombstoneEntity>of(TombstoneEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1.1f, 1.2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -93,6 +98,7 @@ public class ClashCraftModEntities {
 		SpearGoblinEntity.init(event);
 		GoblinHutEntity.init(event);
 		LarryEntity.init(event);
+		TombstoneEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -105,5 +111,6 @@ public class ClashCraftModEntities {
 		event.put(SPEAR_GOBLIN.get(), SpearGoblinEntity.createAttributes().build());
 		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 		event.put(LARRY.get(), LarryEntity.createAttributes().build());
+		event.put(TOMBSTONE.get(), TombstoneEntity.createAttributes().build());
 	}
 }

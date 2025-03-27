@@ -61,6 +61,7 @@ public class ClashCraftModVariables {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
 			clone.giantShirtSwitch = original.giantShirtSwitch;
+			clone.SpawnerLeft = original.SpawnerLeft;
 			if (!event.isWasDeath()) {
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -69,17 +70,20 @@ public class ClashCraftModVariables {
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
 		public boolean giantShirtSwitch = false;
+		public double SpawnerLeft = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("giantShirtSwitch", giantShirtSwitch);
+			nbt.putDouble("SpawnerLeft", SpawnerLeft);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			giantShirtSwitch = nbt.getBoolean("giantShirtSwitch");
+			SpawnerLeft = nbt.getDouble("SpawnerLeft");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
