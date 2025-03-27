@@ -971,7 +971,7 @@
     {
       "name": "TombstoneSpawnSkeletons",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tombstone_spawn_skeletons",
       "metadata": {
