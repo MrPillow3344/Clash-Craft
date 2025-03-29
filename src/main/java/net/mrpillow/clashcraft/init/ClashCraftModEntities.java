@@ -75,7 +75,7 @@ public class ClashCraftModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
-			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
+			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.75f, 3.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TombstoneEntity>> TOMBSTONE = register("tombstone",
