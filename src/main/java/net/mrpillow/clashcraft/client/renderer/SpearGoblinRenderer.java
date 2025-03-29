@@ -1,20 +1,6 @@
 
 package net.mrpillow.clashcraft.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.mrpillow.clashcraft.entity.model.SpearGoblinModel;
-import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class SpearGoblinRenderer extends GeoEntityRenderer<SpearGoblinEntity> {
 	public SpearGoblinRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new SpearGoblinModel());
@@ -33,4 +19,5 @@ public class SpearGoblinRenderer extends GeoEntityRenderer<SpearGoblinEntity> {
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
 	}
+
 }

@@ -18,6 +18,12 @@
         "weight": 20,
         "minCount": 3,
         "maxCount": 3
+      },
+      {
+        "type": "clash_craft:tombstone",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 1
       }
     ],
     "ambient": [],

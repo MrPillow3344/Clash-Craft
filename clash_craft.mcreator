@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -607,6 +607,72 @@
       "path": "~/TrainingCamp/Archers"
     },
     {
+      "name": "GoblinHutOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
+    },
+    {
+      "name": "GoblinHutEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
+    },
+    {
       "name": "SpearGoblin",
       "type": "animatedentity",
       "compiles": true,
@@ -834,10 +900,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -859,14 +925,79 @@
       "path": "~/Arena-1/GoblinHut"
     },
     {
-      "name": "GoblinHutOnEntityTickUpdate",
+      "name": "Tombstone",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/tombstone_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/TombstoneEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/TombstoneRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/TombstoneModel.java"
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "TombstoneEntityDies",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "goblin_hut_on_entity_tick_update",
+      "registry_name": "tombstone_entity_dies",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutOnEntityTickUpdateProcedure.java"
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "Tesla",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tesla",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
+        ]
+      },
+      "path": "~/Arena-10/Tesla"
+    },
+    {
+      "name": "EntityCloseToTesla",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_close_to_tesla",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/EntityCloseToTeslaProcedure.java"
         ],
         "dependencies": [
           {
@@ -891,19 +1022,23 @@
           }
         ]
       },
-      "path": "~/Arena-1/GoblinHut"
+      "path": "~/Arena-10/Tesla"
     },
     {
-      "name": "GoblinHutEntityDies",
+      "name": "TombstoneSpawnSkeletons",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "goblin_hut_entity_dies",
+      "registry_name": "tombstone_spawn_skeletons",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutEntityDiesProcedure.java"
+          "src/main/java/net/mrpillow/clashcraft/procedures/TombstoneSpawnSkeletonsProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -922,7 +1057,7 @@
           }
         ]
       },
-      "path": "~/Arena-1/GoblinHut"
+      "path": "~/Arena-2/Tombstone"
     }
   ],
   "variable_elements": [
@@ -931,6 +1066,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "SpawnerLeft",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -952,15 +1093,15 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.BLUE_ICE",
-      "~Blocks.PLANKS#3",
-      "~Blocks.SANDSTONE#0",
       "~Blocks.STONEBRICK#0",
+      "~Blocks.PACKED_MUD",
+      "~Blocks.PLANKS#3",
+      "~Blocks.POLISHED_DEEPSLATE",
+      "~Blocks.SMOOTH_STONE",
+      "~Blocks.SANDSTONE#0",
       "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",
-      "~Blocks.PACKED_MUD",
-      "~Blocks.POLISHED_DEEPSLATE",
       "~Blocks.STONE#0",
-      "~Blocks.SMOOTH_STONE",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
     ]
@@ -969,6 +1110,7 @@
   "language_map": {
     "en_us": {
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -979,11 +1121,14 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
+      "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
+      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
       "item.clash_craft.giant_shirt_chestplate": "Giant Shirt",
       "item_group.clash_craft.clash_craft_spawn_eggs": "Clash Craft Spawn Eggs",
       "entity.clash_craft.minion": "Minion",
@@ -1008,6 +1153,7 @@
     },
     "he_il": {
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -1018,11 +1164,14 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
+      "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
+      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
       "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
       "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
       "entity.clash_craft.minion": "מיניון",
@@ -1084,6 +1233,43 @@
         ]
       },
       {
+        "name": "Arena-9",
+        "children": []
+      },
+      {
+        "name": "Arena-7",
+        "children": []
+      },
+      {
+        "name": "Arena-8",
+        "children": []
+      },
+      {
+        "name": "Arena-5",
+        "children": []
+      },
+      {
+        "name": "Arena-6",
+        "children": []
+      },
+      {
+        "name": "Arena-3",
+        "children": []
+      },
+      {
+        "name": "Arena-4",
+        "children": []
+      },
+      {
+        "name": "Arena-10",
+        "children": [
+          {
+            "name": "Tesla",
+            "children": []
+          }
+        ]
+      },
+      {
         "name": "Arena-1",
         "children": [
           {
@@ -1102,43 +1288,15 @@
           {
             "name": "Skeletons",
             "children": []
+          },
+          {
+            "name": "Tombstone",
+            "children": []
           }
         ]
       },
       {
         "name": "ClashDimension",
-        "children": []
-      },
-      {
-        "name": "Arena-3",
-        "children": []
-      },
-      {
-        "name": "Arena-4",
-        "children": []
-      },
-      {
-        "name": "Arena-5",
-        "children": []
-      },
-      {
-        "name": "Arena-6",
-        "children": []
-      },
-      {
-        "name": "Arena-7",
-        "children": []
-      },
-      {
-        "name": "Arena-8",
-        "children": []
-      },
-      {
-        "name": "Arena-9",
-        "children": []
-      },
-      {
-        "name": "Arena-10",
         "children": []
       }
     ]

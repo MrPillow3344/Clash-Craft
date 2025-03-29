@@ -2,15 +2,15 @@
   "replace": false,
   "values": [
     "minecraft:blue_ice",
-    "minecraft:jungle_planks",
-    "minecraft:sandstone",
     "minecraft:stone_bricks",
+    "minecraft:packed_mud",
+    "minecraft:jungle_planks",
+    "minecraft:polished_deepslate",
+    "minecraft:smooth_stone",
+    "minecraft:sandstone",
     "minecraft:sand",
     "minecraft:moss_block",
-    "minecraft:packed_mud",
-    "minecraft:polished_deepslate",
     "minecraft:stone",
-    "minecraft:smooth_stone",
     "minecraft:dirt",
     "minecraft:grass_block"
   ]

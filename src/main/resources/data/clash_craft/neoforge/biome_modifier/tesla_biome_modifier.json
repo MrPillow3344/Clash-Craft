@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "clash_craft:hog_mountain",
+  "spawners": {
+    "type": "clash_craft:tesla",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}
