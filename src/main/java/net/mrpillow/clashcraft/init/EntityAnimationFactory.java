@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mrpillow.clashcraft.entity.TombstoneEntity;
+import net.mrpillow.clashcraft.entity.TeslaEntity;
 import net.mrpillow.clashcraft.entity.SpearGoblinEntity;
 import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
@@ -75,6 +76,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof TombstoneEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TeslaEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

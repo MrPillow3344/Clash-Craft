@@ -1,5 +1,6 @@
 {
   "entity.clash_craft.larry": "Larry",
+  "entity.clash_craft.tesla": "Tesla",
   "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
   "entity.clash_craft.spear_goblin": "Spear Goblin",
   "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -10,6 +11,7 @@
   "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
   "biome.clash_craft.bone_pit": "Bone Pit",
   "entity.clash_craft.archer": "Archer",
+  "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
   "entity.clash_craft.tombstone": "Tombstone",
   "biome.clash_craft.hog_mountain": "Hog Mountain",
   "entity.clash_craft.mini_pekka": "Mini Pekka",

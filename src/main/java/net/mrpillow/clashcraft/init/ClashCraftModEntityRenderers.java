@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mrpillow.clashcraft.client.renderer.TombstoneRenderer;
+import net.mrpillow.clashcraft.client.renderer.TeslaRenderer;
 import net.mrpillow.clashcraft.client.renderer.SpearProjectileRenderer;
 import net.mrpillow.clashcraft.client.renderer.SpearGoblinRenderer;
 import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
@@ -39,5 +40,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.LARRY.get(), LarryRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.TOMBSTONE.get(), TombstoneRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.TESLA.get(), TeslaRenderer::new);
 	}
 }

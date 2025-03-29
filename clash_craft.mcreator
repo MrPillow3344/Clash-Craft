@@ -199,8 +199,7 @@
           "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
           "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json"
+          "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -1006,6 +1005,23 @@
         ]
       },
       "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "Tesla",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tesla",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
+        ]
+      },
+      "path": "~/Arena-10/Tesla"
     }
   ],
   "variable_elements": [
@@ -1058,6 +1074,7 @@
   "language_map": {
     "en_us": {
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -1068,6 +1085,7 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
       "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
@@ -1099,6 +1117,7 @@
     },
     "he_il": {
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
@@ -1109,6 +1128,7 @@
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
+      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
       "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
@@ -1206,7 +1226,12 @@
       },
       {
         "name": "Arena-10",
-        "children": []
+        "children": [
+          {
+            "name": "Tesla",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Arena-1",

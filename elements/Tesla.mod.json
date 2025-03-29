@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Minion",
+    "mobName": "Tesla",
     "mobLabel": "",
-    "mobModelTexture": "miniontexture.png",
+    "mobModelTexture": "tesla.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,25 +13,21 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.19999999999999998,
-    "modelHeight": 0.5,
-    "modelShadowSize": 0.19999999999999998,
-    "mountedYOffset": 0.45,
+    "modelWidth": 0.8,
+    "modelHeight": 3.0,
+    "modelShadowSize": 0.8,
+    "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16750951,
+      "value": -676542,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16777114,
+      "value": -15514662,
       "falpha": 0.0
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:ClashCraftSpawnEggs"
-      }
-    ],
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -55,17 +51,17 @@
     },
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 0,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
+    "knockbackResistance": 1000.0,
+    "movementSpeed": 0.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 5,
-    "xpAmount": 10,
+    "health": 30,
+    "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": true,
+    "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -77,8 +73,8 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
-    "immuneToCactus": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": true,
     "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
@@ -106,22 +102,19 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "onMobTickUpdate": {
-      "name": "NotTooHighMinion"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"-316\" y=\"18\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block><block type=\"attack_on_collide\" x=\"749\" y=\"107\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field></block><block type=\"leap_at_target\" x=\"441\" y=\"135\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></xml>",
-    "model": "minion.geo.json",
-    "groupName": "head",
-    "animation1": "animation.minion.idle",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" collapsed=\"true\" deletable=\"false\" x=\"53\" y=\"-36\"><next><block type=\"attack_entity\" collapsed=\"true\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block><block type=\"attack_on_collide\" collapsed=\"true\" x=\"885\" y=\"10\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\" collapsed=\"true\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\" collapsed=\"true\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\" collapsed=\"true\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\" collapsed=\"true\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "tesla.geo.json",
+    "groupName": "",
+    "animation1": "Idle",
     "animation2": "",
     "animation3": "",
-    "animation4": "animation.minion.attack",
+    "animation4": "Attack",
     "animation5": "",
     "animation6": "",
     "animation7": "",
-    "animation8": "animation.minion.idle",
+    "animation8": "",
     "animation9": "",
     "animation10": "",
     "enable2": false,
@@ -130,22 +123,22 @@
     "enable5": false,
     "enable6": false,
     "enable7": false,
-    "enable8": true,
+    "enable8": false,
     "enable9": false,
     "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
-    "headMovement": true,
+    "disableDeathRotation": true,
+    "headMovement": false,
     "eyeHeight": false,
     "breedTriggerItems": [],
-    "ranged": true,
+    "ranged": false,
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "MinionsIronBall",
-    "rangedAttackInterval": 40,
-    "rangedAttackRadius": 5.0,
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
     "height": 1.0,
     "attackRate": 7,
     "raidSpawnsCount": [
@@ -157,15 +150,15 @@
       4,
       2
     ],
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
-    "mobSpawningType": "creature",
-    "minNumberOfMobsPerGroup": 3,
-    "maxNumberOfMobsPerGroup": 3,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:TrainingCamp"
+        "value": "CUSTOM:HogMountain"
       }
     ],
     "spawnInDungeons": false
