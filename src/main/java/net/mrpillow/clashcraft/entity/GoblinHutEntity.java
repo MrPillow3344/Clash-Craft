@@ -1,20 +1,46 @@
 
 package net.mrpillow.clashcraft.entity;
 
-import net.minecraft.nbt.Tag;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
+
+import net.mrpillow.clashcraft.procedures.GoblinHutOnEntityTickUpdateProcedure;
+import net.mrpillow.clashcraft.procedures.GoblinHutEntityDiesProcedure;
+import net.mrpillow.clashcraft.init.ClashCraftModEntities;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 public class GoblinHutEntity extends PathfinderMob {
-
 	public static final EntityDataAccessor<Integer> DATA_goblinsLeft = SynchedEntityData.defineId(GoblinHutEntity.class, EntityDataSerializers.INT);
 
 	public GoblinHutEntity(EntityType<GoblinHutEntity> type, Level world) {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(true);
-
 		setPersistenceRequired();
-
 		refreshDimensions();
 	}
 
@@ -114,12 +140,8 @@ public class GoblinHutEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 0);
-
 		builder = builder.add(Attributes.STEP_HEIGHT, 0);
-
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
-
 		return builder;
 	}
-
 }

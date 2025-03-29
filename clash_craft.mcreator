@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
           "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json"
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
         ]
       },
       "path": "~/ClashDimension"
@@ -199,8 +199,7 @@
           "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
-          "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/minion_biome_modifier.json"
+          "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -900,10 +899,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -1093,15 +1092,15 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.BLUE_ICE",
-      "~Blocks.STONEBRICK#0",
-      "~Blocks.PACKED_MUD",
       "~Blocks.PLANKS#3",
-      "~Blocks.POLISHED_DEEPSLATE",
-      "~Blocks.SMOOTH_STONE",
       "~Blocks.SANDSTONE#0",
+      "~Blocks.STONEBRICK#0",
       "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",
+      "~Blocks.PACKED_MUD",
+      "~Blocks.POLISHED_DEEPSLATE",
       "~Blocks.STONE#0",
+      "~Blocks.SMOOTH_STONE",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
     ]

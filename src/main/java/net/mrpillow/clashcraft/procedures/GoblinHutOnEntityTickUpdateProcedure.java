@@ -1,6 +1,13 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.mrpillow.clashcraft.init.ClashCraftModEntities;
+import net.mrpillow.clashcraft.entity.GoblinHutEntity;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 
 public class GoblinHutOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

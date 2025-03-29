@@ -1,6 +1,10 @@
 package net.mrpillow.clashcraft.entity.model;
 
-import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.model.GeoModel;
+
+import net.mrpillow.clashcraft.entity.TeslaEntity;
+
+import net.minecraft.resources.ResourceLocation;
 
 public class TeslaModel extends GeoModel<TeslaEntity> {
 	@Override
