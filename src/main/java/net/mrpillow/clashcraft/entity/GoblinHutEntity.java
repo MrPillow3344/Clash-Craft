@@ -15,9 +15,11 @@ import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -39,6 +41,7 @@ public class GoblinHutEntity extends PathfinderMob {
 		xpReward = 5;
 		setNoAi(true);
 		setPersistenceRequired();
+		refreshDimensions();
 	}
 
 	@Override
@@ -53,8 +56,8 @@ public class GoblinHutEntity extends PathfinderMob {
 	}
 
 	@Override
-	public Vec3 getPassengerRidingPosition(Entity entity) {
-		return super.getPassengerRidingPosition(entity).add(0, -0.35F, 0);
+	protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float f) {
+		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, 3.6f, 0);
 	}
 
 	@Override
@@ -118,6 +121,11 @@ public class GoblinHutEntity extends PathfinderMob {
 
 	@Override
 	protected void pushEntities() {
+	}
+
+	@Override
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1.3f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

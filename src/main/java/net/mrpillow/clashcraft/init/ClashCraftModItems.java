@@ -37,7 +37,7 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> SPEAR_GOBLIN_SPAWN_EGG = REGISTRY.register("spear_goblin_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.SPEAR_GOBLIN, -10040320, -6724096, new Item.Properties()));
 	public static final DeferredItem<Item> SPEAR = REGISTRY.register("spear", SpearItem::new);
 	public static final DeferredItem<Item> LARRY_SPAWN_EGG = REGISTRY.register("larry_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.LARRY, -1, -3355444, new Item.Properties()));
-	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -9091033, -14917090, new Item.Properties()));
+	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -10007004, -15306729, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

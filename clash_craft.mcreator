@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
           "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json"
+          "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
         ]
       },
       "path": "~/ClashDimension"
@@ -607,72 +607,6 @@
       "path": "~/TrainingCamp/Archers"
     },
     {
-      "name": "GoblinHutOnEntityTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_hut_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arena-1/GoblinHut"
-    },
-    {
-      "name": "GoblinHutEntityDies",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_hut_entity_dies",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutEntityDiesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arena-1/GoblinHut"
-    },
-    {
       "name": "SpearGoblin",
       "type": "animatedentity",
       "compiles": true,
@@ -680,11 +614,11 @@
       "registry_name": "spear_goblin",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/SpearGoblinModel.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/spear_goblin_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/spear_goblin_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/SpearGoblinModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/spear_goblin_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java"
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
@@ -900,10 +834,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -920,6 +854,72 @@
           "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
           "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
+    },
+    {
+      "name": "GoblinHutOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
+    },
+    {
+      "name": "GoblinHutEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GoblinHutEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Arena-1/GoblinHut"
@@ -952,15 +952,15 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.BLUE_ICE",
-      "~Blocks.STONEBRICK#0",
-      "~Blocks.PACKED_MUD",
       "~Blocks.PLANKS#3",
-      "~Blocks.POLISHED_DEEPSLATE",
-      "~Blocks.SMOOTH_STONE",
       "~Blocks.SANDSTONE#0",
+      "~Blocks.STONEBRICK#0",
       "~Blocks.SAND#0",
       "~Blocks.MOSS_BLOCK",
+      "~Blocks.PACKED_MUD",
+      "~Blocks.POLISHED_DEEPSLATE",
       "~Blocks.STONE#0",
+      "~Blocks.SMOOTH_STONE",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
     ]
@@ -1146,7 +1146,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.2720325d",
+    "version": "0.0.290325a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
