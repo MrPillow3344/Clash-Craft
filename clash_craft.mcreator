@@ -608,7 +608,7 @@
     {
       "name": "GoblinHutOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hut_on_entity_tick_update",
       "metadata": {
@@ -773,23 +773,6 @@
         ]
       },
       "path": "~/TrainingCamp/Minion"
-    },
-    {
-      "name": "GoblinHut",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_hut",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GoblinHutModel.java",
-          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
-        ]
-      },
-      "path": "~/Arena-1/GoblinHut"
     },
     {
       "name": "BonePit",
@@ -1019,6 +1002,59 @@
           "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
+        ]
+      },
+      "path": "~/Arena-10/Tesla"
+    },
+    {
+      "name": "GoblinHut",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GoblinHutModel.java",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json"
+        ]
+      },
+      "path": "~/Arena-1/GoblinHut"
+    },
+    {
+      "name": "EntityCloseToTesla",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_close_to_tesla",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/EntityCloseToTeslaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Arena-10/Tesla"

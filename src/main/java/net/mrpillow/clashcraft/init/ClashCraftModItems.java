@@ -36,10 +36,10 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> ARCHER_SPAWN_EGG = REGISTRY.register("archer_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.ARCHER, -10027264, -39220, new Item.Properties()));
 	public static final DeferredItem<Item> SPEAR_GOBLIN_SPAWN_EGG = REGISTRY.register("spear_goblin_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.SPEAR_GOBLIN, -10040320, -6724096, new Item.Properties()));
 	public static final DeferredItem<Item> SPEAR = REGISTRY.register("spear", SpearItem::new);
-	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -9091033, -14917090, new Item.Properties()));
 	public static final DeferredItem<Item> LARRY_SPAWN_EGG = REGISTRY.register("larry_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.LARRY, -1, -3355444, new Item.Properties()));
 	public static final DeferredItem<Item> TOMBSTONE_SPAWN_EGG = REGISTRY.register("tombstone_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.TOMBSTONE, -10066330, -3355444, new Item.Properties()));
 	public static final DeferredItem<Item> TESLA_SPAWN_EGG = REGISTRY.register("tesla_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.TESLA, -676542, -15514662, new Item.Properties()));
+	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -6724096, -10053376, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

@@ -20,6 +20,7 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
+import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
 import net.mrpillow.clashcraft.entity.ArrowsProjectileEntity;
@@ -69,10 +70,6 @@ public class ClashCraftModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpearProjectileEntity>> SPEAR_PROJECTILE = register("spear_projectile",
 			EntityType.Builder.<SpearProjectileEntity>of(SpearProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
-			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<LarryEntity>> LARRY = register("larry",
 			EntityType.Builder.<LarryEntity>of(LarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -85,6 +82,10 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<TeslaEntity>of(TeslaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.8f, 3f));
+	public static final DeferredHolder<EntityType<?>, EntityType<GoblinHutEntity>> GOBLIN_HUT = register("goblin_hut",
+			EntityType.Builder.<GoblinHutEntity>of(GoblinHutEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -100,10 +101,10 @@ public class ClashCraftModEntities {
 		MiniPekkaEntity.init(event);
 		ArcherEntity.init(event);
 		SpearGoblinEntity.init(event);
-		GoblinHutEntity.init(event);
 		LarryEntity.init(event);
 		TombstoneEntity.init(event);
 		TeslaEntity.init(event);
+		GoblinHutEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -114,9 +115,9 @@ public class ClashCraftModEntities {
 		event.put(MINI_PEKKA.get(), MiniPekkaEntity.createAttributes().build());
 		event.put(ARCHER.get(), ArcherEntity.createAttributes().build());
 		event.put(SPEAR_GOBLIN.get(), SpearGoblinEntity.createAttributes().build());
-		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 		event.put(LARRY.get(), LarryEntity.createAttributes().build());
 		event.put(TOMBSTONE.get(), TombstoneEntity.createAttributes().build());
 		event.put(TESLA.get(), TeslaEntity.createAttributes().build());
+		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 	}
 }
