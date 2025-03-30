@@ -20,7 +20,7 @@ public class TeslaAttackProcedure {
 		if (entity == null)
 			return;
 		Entity enemy = null;
-		if (0 >= (entity instanceof TeslaEntity _datEntI ? _datEntI.getEntityData().get(TeslaEntity.DATA_attackCooldown) : 0) && EntityCloseToTeslaProcedure.execute(world, x, y, z)) {
+		if (0 >= (entity instanceof TeslaEntity _datEntI ? _datEntI.getEntityData().get(TeslaEntity.DATA_attackCooldown) : 0) && EntityCloseToTeslaProcedure.execute(world, x, y, z, entity)) {
 			enemy = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
@@ -36,7 +36,7 @@ public class TeslaAttackProcedure {
 					}
 					return false;
 				}
-			}.checkGamemode(enemy) && new Object() {
+			}.checkGamemode(enemy) || new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayer _serverPlayer) {
 						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
@@ -47,9 +47,6 @@ public class TeslaAttackProcedure {
 					return false;
 				}
 			}.checkGamemode(enemy)) {
-				if (entity instanceof TeslaEntity) {
-					((TeslaEntity) entity).setAnimation("Attack");
-				}
 				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), 6);
 				if (entity instanceof TeslaEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 50);
