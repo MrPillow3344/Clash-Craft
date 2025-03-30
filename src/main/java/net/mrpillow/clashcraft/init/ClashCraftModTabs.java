@@ -37,5 +37,6 @@ public class ClashCraftModTabs {
 				tabData.accept(ClashCraftModItems.LARRY_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.GOBLIN_HUT_SPAWN_EGG.get());
 				tabData.accept(ClashCraftModItems.TOMBSTONE_SPAWN_EGG.get());
+				tabData.accept(ClashCraftModItems.TESLA_SPAWN_EGG.get());
 			}).withTabsBefore(CLASH_CRAFT_ITEMS.getId()).build());
 }

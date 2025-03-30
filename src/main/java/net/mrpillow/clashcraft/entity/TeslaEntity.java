@@ -12,7 +12,7 @@ import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-import net.mrpillow.clashcraft.procedures.EntityCloseToTeslaProcedure;
+import net.mrpillow.clashcraft.procedures.TeslaAttackProcedure;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -44,6 +44,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_attackCooldown = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.INT);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -62,6 +63,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "tesla");
+		builder.define(DATA_attackCooldown, 0);
 	}
 
 	public void setTexture(String texture) {
@@ -109,6 +111,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
+		compound.putInt("DataattackCooldown", this.entityData.get(DATA_attackCooldown));
 	}
 
 	@Override
@@ -116,18 +119,33 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("DataattackCooldown"))
+			this.entityData.set(DATA_attackCooldown, compound.getInt("DataattackCooldown"));
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		EntityCloseToTeslaProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		TeslaAttackProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
 		return super.getDefaultDimensions(pose).scale(1f);
+	}
+
+	@Override
+	public boolean isPushable() {
+		return false;
+	}
+
+	@Override
+	protected void doPush(Entity entityIn) {
+	}
+
+	@Override
+	protected void pushEntities() {
 	}
 
 	@Override
@@ -159,24 +177,6 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 			return event.setAndContinue(RawAnimation.begin().thenLoop("Idle"));
 		}
 		return PlayState.STOP;
-	}
-
-	private PlayState attackingPredicate(AnimationState event) {
-		double d1 = this.getX() - this.xOld;
-		double d0 = this.getZ() - this.zOld;
-		float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
-		if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
-			this.swinging = true;
-			this.lastSwing = level().getGameTime();
-		}
-		if (this.swinging && this.lastSwing + 7L <= level().getGameTime()) {
-			this.swinging = false;
-		}
-		if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-			event.getController().forceAnimationReset();
-			return event.setAndContinue(RawAnimation.begin().thenPlay("Attack"));
-		}
-		return PlayState.CONTINUE;
 	}
 
 	String prevAnim = "empty";
@@ -218,7 +218,6 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
 		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
 		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
 	}
 
