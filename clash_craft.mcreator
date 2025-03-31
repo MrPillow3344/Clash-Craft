@@ -978,8 +978,8 @@
       "registry_name": "tesla",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"

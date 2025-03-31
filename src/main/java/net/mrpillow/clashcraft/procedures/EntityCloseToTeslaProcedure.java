@@ -12,15 +12,19 @@ public class EntityCloseToTeslaProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return false;
-		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).isEmpty()) {
+		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
 			if (entity instanceof TeslaEntity) {
 				((TeslaEntity) entity).setAnimation("Attack");
 			}
+			if (entity instanceof TeslaEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(TeslaEntity.DATA_isItUp, true);
 			return true;
 		}
 		if (entity instanceof TeslaEntity) {
 			((TeslaEntity) entity).setAnimation("Idle");
 		}
+		if (entity instanceof TeslaEntity _datEntSetL)
+			_datEntSetL.getEntityData().set(TeslaEntity.DATA_isItUp, false);
 		return false;
 	}
 }
