@@ -17,9 +17,7 @@ import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacementTypes;
@@ -77,17 +75,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, (float) 6) {
-			@Override
-			public boolean canContinueToUse() {
-				double x = TeslaEntity.this.getX();
-				double y = TeslaEntity.this.getY();
-				double z = TeslaEntity.this.getZ();
-				Entity entity = TeslaEntity.this;
-				Level world = TeslaEntity.this.level();
-				return super.canContinueToUse() && true;
-			}
-		});
+
 	}
 
 	@Override
