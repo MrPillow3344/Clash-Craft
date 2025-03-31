@@ -1092,37 +1092,6 @@
         ]
       },
       "path": "~/Arena-10/Tesla"
-    },
-    {
-      "name": "SkarmiSpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skarmi_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/SkarmiSpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arena-6/Skeleton Army"
     }
   ],
   "variable_elements": [
@@ -1315,12 +1284,7 @@
       },
       {
         "name": "Arena-6",
-        "children": [
-          {
-            "name": "Skeleton Army",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Arena-3",
@@ -1378,7 +1342,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.300325c",
+    "version": "0.0.310325d",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
