@@ -58,6 +58,9 @@ public class TeslaAttackProcedure {
 		if (!(entity instanceof TeslaEntity _datEntL7 && _datEntL7.getEntityData().get(TeslaEntity.DATA_isItUp))) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1000, 255, false, false));
+		} else {
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(MobEffects.DAMAGE_RESISTANCE);
 		}
 		if (entity instanceof TeslaEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, (int) ((entity instanceof TeslaEntity _datEntI ? _datEntI.getEntityData().get(TeslaEntity.DATA_attackCooldown) : 0) - 1));
