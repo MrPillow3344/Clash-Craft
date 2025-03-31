@@ -19,6 +19,11 @@
         "name": "attackCooldown",
         "type": "integer",
         "value": 0
+      },
+      {
+        "name": "isItUp",
+        "type": "logic",
+        "value": true
       }
     ],
     "modelWidth": 0.8,

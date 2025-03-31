@@ -43,6 +43,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Integer> DATA_attackCooldown = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_isItUp = SynchedEntityData.defineId(TeslaEntity.class, EntityDataSerializers.BOOLEAN);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -62,6 +63,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "tesla");
 		builder.define(DATA_attackCooldown, 0);
+		builder.define(DATA_isItUp, true);
 	}
 
 	public void setTexture(String texture) {
@@ -100,6 +102,7 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
 		compound.putInt("DataattackCooldown", this.entityData.get(DATA_attackCooldown));
+		compound.putBoolean("DataisItUp", this.entityData.get(DATA_isItUp));
 	}
 
 	@Override
@@ -109,6 +112,8 @@ public class TeslaEntity extends PathfinderMob implements GeoEntity {
 			this.setTexture(compound.getString("Texture"));
 		if (compound.contains("DataattackCooldown"))
 			this.entityData.set(DATA_attackCooldown, compound.getInt("DataattackCooldown"));
+		if (compound.contains("DataisItUp"))
+			this.entityData.set(DATA_isItUp, compound.getBoolean("DataisItUp"));
 	}
 
 	@Override
