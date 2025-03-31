@@ -1092,6 +1092,36 @@
         ]
       },
       "path": "~/Arena-10/Tesla"
+    },
+    {
+      "name": "Baluta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baluta",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/BalutaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShaharRatsabi",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shahar_ratsabi",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/command/ShaharRatsabiCommand.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1342,7 +1372,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.310325d",
+    "version": "0.0.310325a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
