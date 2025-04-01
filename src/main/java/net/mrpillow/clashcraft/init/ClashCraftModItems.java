@@ -11,8 +11,6 @@ import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.mrpillow.clashcraft.item.SpearItem;
 import net.mrpillow.clashcraft.item.PancakeItem;
 import net.mrpillow.clashcraft.item.MinionsIronBallItemItem;
-import net.mrpillow.clashcraft.item.LarrysBoneItem;
-import net.mrpillow.clashcraft.item.LarrySpawnerItem;
 import net.mrpillow.clashcraft.item.KnightsSwordItem;
 import net.mrpillow.clashcraft.item.GiantShirtItem;
 import net.mrpillow.clashcraft.item.FireballItemItem;
@@ -42,9 +40,6 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> GOBLIN_HUT_SPAWN_EGG = REGISTRY.register("goblin_hut_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.GOBLIN_HUT, -10007004, -15306729, new Item.Properties()));
 	public static final DeferredItem<Item> TOMBSTONE_SPAWN_EGG = REGISTRY.register("tombstone_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.TOMBSTONE, -10066330, -3355444, new Item.Properties()));
 	public static final DeferredItem<Item> TESLA_SPAWN_EGG = REGISTRY.register("tesla_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.TESLA, -676542, -15514662, new Item.Properties()));
-	public static final DeferredItem<Item> LARRYS_BONE = REGISTRY.register("larrys_bone", LarrysBoneItem::new);
-	public static final DeferredItem<Item> LARRY_SPAWNER = REGISTRY.register("larry_spawner", LarrySpawnerItem::new);
-	public static final DeferredItem<Item> KIND_LARRY_SPAWN_EGG = REGISTRY.register("kind_larry_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.KIND_LARRY, -1, -1, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

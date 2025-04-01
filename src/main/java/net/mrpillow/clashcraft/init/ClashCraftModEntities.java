@@ -20,7 +20,6 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
-import net.mrpillow.clashcraft.entity.KindLarryEntity;
 import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
@@ -84,13 +83,9 @@ public class ClashCraftModEntities {
 
 					.sized(1.1f, 1.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TeslaEntity>> TESLA = register("tesla",
-			EntityType.Builder.<TeslaEntity>of(TeslaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<TeslaEntity>of(TeslaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.8f, 3f));
-	public static final DeferredHolder<EntityType<?>, EntityType<KindLarryEntity>> KIND_LARRY = register("kind_larry",
-			EntityType.Builder.<KindLarryEntity>of(KindLarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 0.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -110,7 +105,6 @@ public class ClashCraftModEntities {
 		GoblinHutEntity.init(event);
 		TombstoneEntity.init(event);
 		TeslaEntity.init(event);
-		KindLarryEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -125,6 +119,5 @@ public class ClashCraftModEntities {
 		event.put(GOBLIN_HUT.get(), GoblinHutEntity.createAttributes().build());
 		event.put(TOMBSTONE.get(), TombstoneEntity.createAttributes().build());
 		event.put(TESLA.get(), TeslaEntity.createAttributes().build());
-		event.put(KIND_LARRY.get(), KindLarryEntity.createAttributes().build());
 	}
 }
