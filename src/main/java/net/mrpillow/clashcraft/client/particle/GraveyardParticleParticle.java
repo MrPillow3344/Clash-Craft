@@ -38,13 +38,13 @@ public class GraveyardParticleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.lifetime = (int) Math.max(1, 30 + (this.random.nextInt(10) - 5));
-		this.gravity = -0.1f;
+		this.lifetime = (int) Math.max(1, 600 + (this.random.nextInt(60) - 30));
+		this.gravity = 0f;
 		this.hasPhysics = false;
-		this.xd = vx * 0.5;
-		this.yd = vy * 0.5;
-		this.zd = vz * 0.5;
-		this.angularVelocity = 0f;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
+		this.angularVelocity = 0.5f;
 		this.angularAcceleration = 0.1f;
 		this.pickSprite(spriteSet);
 	}

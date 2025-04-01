@@ -10,11 +10,11 @@
     "scale": {
       "fixedValue": 1.0
     },
-    "speedFactor": 0.5,
-    "gravity": -0.1,
-    "maxAge": 30,
-    "maxAgeDiff": 5,
-    "angularVelocity": 0.0,
+    "speedFactor": 0.0,
+    "gravity": 0.0,
+    "maxAge": 600,
+    "maxAgeDiff": 30,
+    "angularVelocity": 0.5,
     "angularAcceleration": 0.1,
     "canCollide": false,
     "alwaysShow": true,

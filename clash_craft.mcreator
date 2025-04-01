@@ -1332,6 +1332,18 @@
         ],
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1391,8 +1403,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1439,8 +1451,8 @@
       "item.clash_craft.graveyard": "Graveyard Spawn"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",

@@ -20,9 +20,6 @@
     "onHitsBlock": {
       "name": "GraveyardSpawn"
     },
-    "onHitsPlayer": {
-      "name": "GraveyardSpawn"
-    },
     "onHitsEntity": {
       "name": "GraveyardSpawn"
     }
