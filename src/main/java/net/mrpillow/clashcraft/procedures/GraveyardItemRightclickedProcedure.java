@@ -57,7 +57,7 @@ public class GraveyardItemRightclickedProcedure {
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 1000);
 		}
 	}
 }
