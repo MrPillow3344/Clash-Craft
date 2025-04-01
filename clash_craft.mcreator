@@ -1122,6 +1122,20 @@
           "src/main/java/net/mrpillow/clashcraft/command/ShaharRatsabiCommand.java"
         ]
       }
+    },
+    {
+      "name": "Electricity",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/particle/ElectricityParticle.java",
+          "src/main/resources/assets/clash_craft/particles/electricity.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
