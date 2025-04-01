@@ -83,7 +83,7 @@ public class ClashCraftModEntities {
 
 					.sized(1.1f, 1.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TeslaEntity>> TESLA = register("tesla",
-			EntityType.Builder.<TeslaEntity>of(TeslaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<TeslaEntity>of(TeslaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.8f, 3f));
 
