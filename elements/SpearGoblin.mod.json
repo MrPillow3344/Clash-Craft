@@ -89,7 +89,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:Spear"
+      "value": ""
     },
     "livingSound": {
       "value": ""

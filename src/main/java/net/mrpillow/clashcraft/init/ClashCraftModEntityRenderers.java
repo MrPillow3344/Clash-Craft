@@ -17,6 +17,7 @@ import net.mrpillow.clashcraft.client.renderer.MinionRenderer;
 import net.mrpillow.clashcraft.client.renderer.MiniPekkaRenderer;
 import net.mrpillow.clashcraft.client.renderer.LarryRenderer;
 import net.mrpillow.clashcraft.client.renderer.KnightRenderer;
+import net.mrpillow.clashcraft.client.renderer.KindLarryRenderer;
 import net.mrpillow.clashcraft.client.renderer.GoblinHutRenderer;
 import net.mrpillow.clashcraft.client.renderer.GiantRenderer;
 import net.mrpillow.clashcraft.client.renderer.ArcherRenderer;
@@ -42,5 +43,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.GOBLIN_HUT.get(), GoblinHutRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.TOMBSTONE.get(), TombstoneRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.TESLA.get(), TeslaRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.KIND_LARRY.get(), KindLarryRenderer::new);
 	}
 }
