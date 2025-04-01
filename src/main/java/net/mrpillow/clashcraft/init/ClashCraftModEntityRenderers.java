@@ -44,5 +44,6 @@ public class ClashCraftModEntityRenderers {
 		event.registerEntityRenderer(ClashCraftModEntities.TOMBSTONE.get(), TombstoneRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.TESLA.get(), TeslaRenderer::new);
 		event.registerEntityRenderer(ClashCraftModEntities.KIND_LARRY.get(), KindLarryRenderer::new);
+		event.registerEntityRenderer(ClashCraftModEntities.GRAVEYARD_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

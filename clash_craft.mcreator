@@ -899,10 +899,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -978,8 +978,8 @@
       "registry_name": "tesla",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
@@ -1145,8 +1145,8 @@
       "registry_name": "larrys_bone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/larrys_bone.json",
-          "src/main/java/net/mrpillow/clashcraft/item/LarrysBoneItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/LarrysBoneItem.java",
+          "src/main/resources/assets/clash_craft/models/item/larrys_bone.json"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -1172,8 +1172,8 @@
       "registry_name": "larry_spawner",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/larry_spawner.json",
-          "src/main/java/net/mrpillow/clashcraft/item/LarrySpawnerItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/LarrySpawnerItem.java",
+          "src/main/resources/assets/clash_craft/models/item/larry_spawner.json"
         ]
       },
       "path": "~/Arena-2/Tombstone"
@@ -1186,11 +1186,11 @@
       "registry_name": "kind_larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/KindLarryEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/kind_larry_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/entity/layer/KindLarryLayer.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/KindLarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/KindLarryModel.java",
-          "src/main/resources/assets/clash_craft/models/item/kind_larry_spawn_egg.json"
+          "src/main/java/net/mrpillow/clashcraft/entity/KindLarryEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KindLarryRenderer.java"
         ]
       },
       "path": "~/Arena-2/Tombstone"
@@ -1255,6 +1255,89 @@
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
+    },
+    {
+      "name": "GraveyardParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/particles/graveyard_particle.json",
+          "src/main/java/net/mrpillow/clashcraft/client/particle/GraveyardParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Graveyard",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/item/GraveyardItem.java",
+          "src/main/resources/assets/clash_craft/models/item/graveyard.json"
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/GraveyardProjectileEntity.java"
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardItemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GraveyardItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GraveyardSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
     }
   ],
   "variable_elements": [
@@ -1308,8 +1391,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1352,11 +1435,12 @@
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "biome.clash_craft.goblin_stadium": "Goblin Stadium",
       "item.clash_craft.clash_dimension": "Clash Ticket",
-      "item.clash_craft.minions_iron_ball_item": "Iron Ball"
+      "item.clash_craft.minions_iron_ball_item": "Iron Ball",
+      "item.clash_craft.graveyard": "Graveyard Spawn"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1400,6 +1484,7 @@
       "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "כדור ברזל",
+      "item.clash_craft.graveyard": "Graveyard Spawn",
       "biome.clash_craft.arena_1": "איצטדיון הגובלינים"
     }
   },
@@ -1509,13 +1594,22 @@
       {
         "name": "Particles",
         "children": []
+      },
+      {
+        "name": "Arena-11",
+        "children": [
+          {
+            "name": "Graveyard",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.010425a",
+    "version": "0.0.010425b",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
