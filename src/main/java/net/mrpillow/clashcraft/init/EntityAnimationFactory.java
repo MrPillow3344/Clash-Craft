@@ -11,6 +11,7 @@ import net.mrpillow.clashcraft.entity.MinionEntity;
 import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
+import net.mrpillow.clashcraft.entity.KindLarryEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.ArcherEntity;
 
@@ -76,6 +77,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof TeslaEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof KindLarryEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
