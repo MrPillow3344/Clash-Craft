@@ -1181,7 +1181,7 @@
     {
       "name": "KindLarry",
       "type": "animatedentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "kind_larry",
       "metadata": {
@@ -1226,6 +1226,19 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "TombstoneLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/tombstone.json"
         ]
       },
       "path": "~/Arena-2/Tombstone"
@@ -1282,8 +1295,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1329,8 +1342,8 @@
       "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
