@@ -1,5 +1,6 @@
 package net.mrpillow.clashcraft.procedures;
 
+import net.mrpillow.clashcraft.init.ClashCraftModParticleTypes;
 import net.mrpillow.clashcraft.entity.TeslaEntity;
 
 import net.minecraft.world.phys.Vec3;
@@ -14,6 +15,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.Minecraft;
 
 import java.util.Comparator;
@@ -50,17 +53,26 @@ public class TeslaAttackProcedure {
 					return false;
 				}
 			}.checkGamemode(enemy)) {
-				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), 6);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), x, (y + 3.25), z, 100, 0.1, 0.1, 0.1, 0);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (enemy.getX()), (enemy.getY() + 1.6), (enemy.getZ()), 100, 0.1, 0.1, 0.1, 0);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), ((x + enemy.getX()) / 2), ((y + 3.25 + enemy.getY() + 1.6) / 2), ((z + enemy.getZ()) / 2), 100, 0.1, 0.1, 0.1, 0);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (((x + enemy.getX()) / 2 + x) / 2), (((y + 3.25 + enemy.getY() + 1.6) / 2 + y + 3.25) / 2), (((z + enemy.getZ()) / 2 + z) / 2), 100, 0.1,
+							0.1, 0.15, 0);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (((x + enemy.getX()) / 2 + enemy.getX()) / 2), (((y + 3.25 + enemy.getY() + 1.6) / 2 + enemy.getY() + 1.6) / 2),
+							(((z + enemy.getZ()) / 2 + enemy.getZ()) / 2), 100, 0.1, 0.1, 0.1, 0);
+				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), 3);
 				if (entity instanceof TeslaEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 50);
+					_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 30);
 			}
 		}
-		if (!(entity instanceof TeslaEntity _datEntL7 && _datEntL7.getEntityData().get(TeslaEntity.DATA_isItUp))) {
+		if (!(entity instanceof TeslaEntity _datEntL27 && _datEntL27.getEntityData().get(TeslaEntity.DATA_isItUp))) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1000, 255, false, false));
-		} else {
-			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(MobEffects.DAMAGE_RESISTANCE);
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3, 255, false, false));
 		}
 		if (entity instanceof TeslaEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, (int) ((entity instanceof TeslaEntity _datEntI ? _datEntI.getEntityData().get(TeslaEntity.DATA_attackCooldown) : 0) - 1));

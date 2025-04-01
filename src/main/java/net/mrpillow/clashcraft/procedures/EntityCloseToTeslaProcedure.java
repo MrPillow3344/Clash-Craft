@@ -14,11 +14,17 @@ public class EntityCloseToTeslaProcedure {
 			return false;
 		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
 			if (entity instanceof TeslaEntity) {
+				((TeslaEntity) entity).setAnimation("2");
+			}
+			if (entity instanceof TeslaEntity) {
 				((TeslaEntity) entity).setAnimation("Attack");
 			}
 			if (entity instanceof TeslaEntity _datEntSetL)
 				_datEntSetL.getEntityData().set(TeslaEntity.DATA_isItUp, true);
 			return true;
+		}
+		if (entity instanceof TeslaEntity) {
+			((TeslaEntity) entity).setAnimation("3");
 		}
 		if (entity instanceof TeslaEntity) {
 			((TeslaEntity) entity).setAnimation("Idle");

@@ -899,10 +899,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -978,8 +978,8 @@
       "registry_name": "tesla",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
           "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
@@ -1122,6 +1122,126 @@
           "src/main/java/net/mrpillow/clashcraft/command/ShaharRatsabiCommand.java"
         ]
       }
+    },
+    {
+      "name": "Electricity",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/particle/ElectricityParticle.java",
+          "src/main/resources/assets/clash_craft/particles/electricity.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LarrysBone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "larrys_bone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/larrys_bone.json",
+          "src/main/java/net/mrpillow/clashcraft/item/LarrysBoneItem.java"
+        ]
+      },
+      "path": "~/Arena-2/Skeletons"
+    },
+    {
+      "name": "LarryLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "larry_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/larry.json"
+        ]
+      },
+      "path": "~/Arena-2/Skeletons"
+    },
+    {
+      "name": "LarrySpawner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "larry_spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/larry_spawner.json",
+          "src/main/java/net/mrpillow/clashcraft/item/LarrySpawnerItem.java"
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "KindLarry",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kind_larry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/KindLarryEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/layer/KindLarryLayer.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KindLarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/KindLarryModel.java",
+          "src/main/resources/assets/clash_craft/models/item/kind_larry_spawn_egg.json"
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "LarrySpawnerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "larry_spawner_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/LarrySpawnerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "TombstoneLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tombstone_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/tombstone.json"
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
     }
   ],
   "variable_elements": [
@@ -1144,12 +1264,14 @@
       "~CUSTOM:GiantShirt.body"
     ],
     "ENTITIES:minecraft:undead": [
+      "~CUSTOM:KindLarry",
       "~CUSTOM:Larry"
     ],
     "BIOMES:minecraft:has_structure/nether_fossil": [
       "~CUSTOM:BonePit"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:LarrysBone",
       "~CUSTOM:Pancake"
     ],
     "ITEMS:minecraft:swords": [
@@ -1176,9 +1298,11 @@
       "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
+      "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
+      "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
       "item.clash_craft.spear": "Spear",
@@ -1190,6 +1314,7 @@
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
       "item.clash_craft.arrows": "Arrows Spell",
+      "item.clash_craft.larrys_bone": "Larry\u0027s Bone",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
       "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
@@ -1199,6 +1324,7 @@
       "entity.clash_craft.knight": "Knight",
       "biome.clash_craft.spell_valley": "Spell Valley",
       "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
+      "item.clash_craft.larry_spawner": "Larry Spawner",
       "biome.clash_craft.training_camp": "Training Camp",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
@@ -1219,9 +1345,11 @@
       "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
+      "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
+      "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "item.clash_craft.spear": "Spear",
@@ -1233,6 +1361,7 @@
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
+      "item.clash_craft.larrys_bone": "Larry\u0027s Bone",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
       "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
@@ -1242,6 +1371,7 @@
       "entity.clash_craft.knight": "אביר",
       "biome.clash_craft.spell_valley": "Spell Valley",
       "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
+      "item.clash_craft.larry_spawner": "Larry Spawner",
       "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",

@@ -127,7 +127,7 @@
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"16\" y=\"-36\"></block><block type=\"swim_in_water\" collapsed=\"true\" x=\"898\" y=\"0\"><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\" collapsed=\"true\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\" collapsed=\"true\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\" collapsed=\"true\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block><block type=\"attack_entity\" x=\"712\" y=\"12\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></next></block><block type=\"attack_entity\" x=\"601\" y=\"18\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block><block type=\"watch_closest_entity\" x=\"602\" y=\"118\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">6</field><field name=\"condition\">null,EntityCloseToTesla</field></block><block type=\"wander\" x=\"984\" y=\"144\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field></block><block type=\"look_around\" x=\"1045\" y=\"148\"><field name=\"condition\">null,null</field></block></xml>",
     "model": "tesla.geo.json",
     "groupName": "",
-    "animation1": "Idle",
+    "animation1": "Attack",
     "animation2": "",
     "animation3": "",
     "animation4": "Attack",
@@ -173,7 +173,7 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [

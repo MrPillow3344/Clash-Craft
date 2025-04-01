@@ -224,7 +224,7 @@
 			}
 		},
 		"Attack": {
-			"animation_length": 0.25,
+			"animation_length": 1,
 			"bones": {
 				"LeftDoor": {
 					"rotation": {
