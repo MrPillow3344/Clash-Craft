@@ -4,6 +4,7 @@ import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 import net.mrpillow.clashcraft.entity.GraveyardProjectileEntity;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -13,9 +14,10 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.client.Minecraft;
 
 public class GraveyardItemRightclickedProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double fromZ = 0;
@@ -56,6 +58,9 @@ public class GraveyardItemRightclickedProcedure {
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
+			if (world.isClientSide())
+				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
+			itemstack.setCount((int) (itemstack.getCount() - 1));
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 1000);
 		}

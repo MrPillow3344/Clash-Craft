@@ -19,7 +19,7 @@ public class GraveyardItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		GraveyardItemRightclickedProcedure.execute(entity, ar.getObject());
+		GraveyardItemRightclickedProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 }
