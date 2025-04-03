@@ -1287,7 +1287,7 @@
     {
       "name": "GraveyardProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "graveyard_projectile",
       "metadata": {
@@ -1333,37 +1333,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mrpillow/clashcraft/procedures/GraveyardSpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arena-11/Graveyard"
-    },
-    {
-      "name": "Test",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/TestProcedure.java"
         ],
         "dependencies": [
           {
@@ -1438,8 +1407,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1486,8 +1455,8 @@
       "item.clash_craft.graveyard": "Graveyard Spawn"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "טסלה",
       "entity.clash_craft.larry": "לארי",
+      "entity.clash_craft.tesla": "טסלה",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "ביצת זימון של לארי הנחמד",
       "entity.clash_craft.spear_goblin": "גובלין חניתות",
@@ -1656,8 +1625,9 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.020425a",
+    "version": "0.0.030425a",
     "author": "MrPillow3344, MRshoony",
+    "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],

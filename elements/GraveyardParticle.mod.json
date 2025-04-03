@@ -5,8 +5,8 @@
     "texture": "graveyard",
     "animate": false,
     "frameDuration": 1,
-    "width": 0.2,
-    "height": 0.2,
+    "width": 0.7,
+    "height": 0.7,
     "scale": {
       "fixedValue": 1.0
     },
