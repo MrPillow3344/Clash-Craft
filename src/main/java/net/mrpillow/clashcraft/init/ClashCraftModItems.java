@@ -14,6 +14,7 @@ import net.mrpillow.clashcraft.item.MinionsIronBallItemItem;
 import net.mrpillow.clashcraft.item.LarrysBoneItem;
 import net.mrpillow.clashcraft.item.LarrySpawnerItem;
 import net.mrpillow.clashcraft.item.KnightsSwordItem;
+import net.mrpillow.clashcraft.item.GraveyardItemItem;
 import net.mrpillow.clashcraft.item.GiantShirtItem;
 import net.mrpillow.clashcraft.item.FireballItemItem;
 import net.mrpillow.clashcraft.item.ClashDimensionItem;
@@ -45,6 +46,7 @@ public class ClashCraftModItems {
 	public static final DeferredItem<Item> LARRYS_BONE = REGISTRY.register("larrys_bone", LarrysBoneItem::new);
 	public static final DeferredItem<Item> LARRY_SPAWNER = REGISTRY.register("larry_spawner", LarrySpawnerItem::new);
 	public static final DeferredItem<Item> KIND_LARRY_SPAWN_EGG = REGISTRY.register("kind_larry_spawn_egg", () -> new DeferredSpawnEggItem(ClashCraftModEntities.KIND_LARRY, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> GRAVEYARD_ITEM = REGISTRY.register("graveyard_item", GraveyardItemItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

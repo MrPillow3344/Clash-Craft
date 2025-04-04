@@ -1,11 +1,10 @@
 
 package net.mrpillow.clashcraft.command;
 
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
-import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.Dist;
 
 import net.mrpillow.clashcraft.procedures.BalutaProcedure;
 
@@ -15,10 +14,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-@EventBusSubscriber(value = Dist.CLIENT)
+@EventBusSubscriber
 public class ShaharRatsabiCommand {
 	@SubscribeEvent
-	public static void registerCommand(RegisterClientCommandsEvent event) {
+	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("shaharratsabi")
 
 				.executes(arguments -> {

@@ -1272,6 +1272,145 @@
         ]
       },
       "path": "~/Arena-4"
+    },
+    {
+      "name": "GraveyardItemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/GraveyardItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "ParticlesSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "particles_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/ParticlesSpawnProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/particle/GraveyardParticleParticle.java",
+          "src/main/resources/assets/clash_craft/particles/graveyard_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Fvgfdv",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fvgfdv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/network/FvgfdvMessage.java"
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "SkeletonSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "skeleton_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/SkeletonSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "SpearGoblinDeath",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_goblin_death",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/loot_table/entities/spear_goblin.json"
+        ]
+      },
+      "path": "~/Arena-1/SpearGoblin"
+    },
+    {
+      "name": "GraveyardItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/clash_craft/models/item/graveyard_item.json",
+          "src/main/java/net/mrpillow/clashcraft/item/GraveyardItemItem.java"
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "graveyard_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/GraveyardProjectileEntity.java"
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
     }
   ],
   "variable_elements": [
@@ -1325,8 +1464,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1372,51 +1511,53 @@
       "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
-      "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
-      "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
       "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
-      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "item.clash_craft.spear": "Spear",
-      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
+      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
-      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
       "entity.clash_craft.tombstone": "Tombstone",
-      "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
       "item.clash_craft.larrys_bone": "Larry\u0027s Bone",
       "biome.clash_craft.frozen_peak": "Frozen Peak",
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
-      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
-      "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
-      "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
       "entity.clash_craft.minion": "מיניון",
-      "entity.clash_craft.knight": "אביר",
       "biome.clash_craft.spell_valley": "Spell Valley",
-      "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
       "item.clash_craft.larry_spawner": "Larry Spawner",
-      "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",
       "entity.clash_craft.goblin_hut": "Goblin Hut",
-      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
-      "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
       "entity.clash_craft.giant": "ענק",
-      "biome.clash_craft.royale_arena": "Royale Arena",
-      "item.clash_craft.fireball_item": "Fireball",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
-      "biome.clash_craft.jungle_arena": "Jungle Arena",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
-      "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "כדור ברזל",
+      "item.clash_craft.graveyard_item": "Graveyard Spawn",
+      "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
+      "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
+      "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
+      "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
+      "key.clash_craft.fvgfdv": "Fvgfdv",
+      "biome.clash_craft.hog_mountain": "Hog Mountain",
+      "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
+      "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
+      "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
+      "entity.clash_craft.knight": "אביר",
+      "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
+      "biome.clash_craft.training_camp": "מחנה אימונים",
+      "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
+      "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
+      "biome.clash_craft.royale_arena": "Royale Arena",
+      "item.clash_craft.fireball_item": "Fireball",
+      "biome.clash_craft.jungle_arena": "Jungle Arena",
+      "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "biome.clash_craft.arena_1": "איצטדיון הגובלינים"
     }
   },
@@ -1469,6 +1610,28 @@
         "children": []
       },
       {
+        "name": "Arena-11",
+        "children": [
+          {
+            "name": "Graveyard",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Arena-10",
+        "children": [
+          {
+            "name": "Tesla",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
         "name": "Arena-5",
         "children": []
       },
@@ -1483,15 +1646,6 @@
       {
         "name": "Arena-4",
         "children": []
-      },
-      {
-        "name": "Arena-10",
-        "children": [
-          {
-            "name": "Tesla",
-            "children": []
-          }
-        ]
       },
       {
         "name": "Arena-1",
@@ -1521,10 +1675,6 @@
       },
       {
         "name": "ClashDimension",
-        "children": []
-      },
-      {
-        "name": "Particles",
         "children": []
       }
     ]

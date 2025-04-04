@@ -10,21 +10,19 @@ import net.minecraft.client.Minecraft;
 
 public class BalutaProcedure {
 	public static void execute(LevelAccessor world) {
+		if (!world.isClientSide() && world.getServer() != null)
+			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("1"), false);
 		ClashCraftMod.queueServerWork(10, () -> {
 			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("1"), false);
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("2"), false);
 			ClashCraftMod.queueServerWork(10, () -> {
 				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("2"), false);
-				ClashCraftMod.queueServerWork(10, () -> {
+					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("3"), false);
+				ClashCraftMod.queueServerWork(20, () -> {
+					if (world.isClientSide())
+						Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(Blocks.SNIFFER_EGG));
 					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("3"), false);
-					ClashCraftMod.queueServerWork(20, () -> {
-						if (world.isClientSide())
-							Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(Blocks.SNIFFER_EGG));
-						if (!world.isClientSide() && world.getServer() != null)
-							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Baluta Al Harosh"), false);
-					});
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Baluta Al Harosh"), false);
 				});
 			});
 		});

@@ -1,0 +1,27 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Graveyard"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": true,
+    "power": 0.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "modelWidth": 0.25,
+    "modelHeight": 0.25,
+    "onHitsBlock": {
+      "name": "ParticlesSpawn"
+    },
+    "onHitsEntity": {
+      "name": "ParticlesSpawn"
+    }
+  }
+}

@@ -21,6 +21,7 @@ import net.mrpillow.clashcraft.entity.MiniPekkaEntity;
 import net.mrpillow.clashcraft.entity.LarryEntity;
 import net.mrpillow.clashcraft.entity.KnightEntity;
 import net.mrpillow.clashcraft.entity.KindLarryEntity;
+import net.mrpillow.clashcraft.entity.GraveyardProjectileEntity;
 import net.mrpillow.clashcraft.entity.GoblinHutEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
 import net.mrpillow.clashcraft.entity.FireballProjectileEntity;
@@ -91,6 +92,8 @@ public class ClashCraftModEntities {
 			EntityType.Builder.<KindLarryEntity>of(KindLarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 0.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<GraveyardProjectileEntity>> GRAVEYARD_PROJECTILE = register("graveyard_projectile",
+			EntityType.Builder.<GraveyardProjectileEntity>of(GraveyardProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.25f, 0.25f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

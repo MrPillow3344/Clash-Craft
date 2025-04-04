@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mrpillow.clashcraft.client.particle.GraveyardParticleParticle;
 import net.mrpillow.clashcraft.client.particle.ElectricityParticle;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -16,5 +17,6 @@ public class ClashCraftModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(ClashCraftModParticleTypes.ELECTRICITY.get(), ElectricityParticle::provider);
+		event.registerSpriteSet(ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get(), GraveyardParticleParticle::provider);
 	}
 }

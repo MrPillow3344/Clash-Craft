@@ -16,4 +16,5 @@ import net.minecraft.core.particles.ParticleType;
 public class ClashCraftModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(Registries.PARTICLE_TYPE, ClashCraftMod.MODID);
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> ELECTRICITY = REGISTRY.register("electricity", () -> new SimpleParticleType(true));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> GRAVEYARD_PARTICLE = REGISTRY.register("graveyard_particle", () -> new SimpleParticleType(true));
 }
