@@ -1,9 +1,8 @@
 {
-  "entity.clash_craft.larry": "Larry",
   "entity.clash_craft.tesla": "Tesla",
+  "entity.clash_craft.larry": "Larry",
   "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
   "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
-  "item.clash_craft.graveyard_item": "Graveyard Spawn",
   "entity.clash_craft.spear_goblin": "Spear Goblin",
   "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
   "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
@@ -15,7 +14,6 @@
   "biome.clash_craft.bone_pit": "Bone Pit",
   "entity.clash_craft.archer": "Archer",
   "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
-  "key.clash_craft.fvgfdv": "Fvgfdv",
   "entity.clash_craft.tombstone": "Tombstone",
   "biome.clash_craft.hog_mountain": "Hog Mountain",
   "entity.clash_craft.mini_pekka": "Mini Pekka",
