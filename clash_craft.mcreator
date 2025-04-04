@@ -1271,20 +1271,6 @@
       "path": "~/Particles"
     },
     {
-      "name": "Graveyard",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "graveyard",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/GraveyardItem.java",
-          "src/main/resources/assets/clash_craft/models/item/graveyard.json"
-        ]
-      },
-      "path": "~/Arena-11/Graveyard"
-    },
-    {
       "name": "GraveyardProjectile",
       "type": "projectile",
       "compiles": true,
@@ -1325,20 +1311,6 @@
       "path": "~/Arena-11/Graveyard"
     },
     {
-      "name": "Test",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/TestProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Arena-11/Graveyard"
-    },
-    {
       "name": "ParticlesSpawn",
       "type": "procedure",
       "compiles": true,
@@ -1368,6 +1340,10 @@
             "type": "number"
           },
           {
+            "name": "y",
+            "type": "number"
+          },
+          {
             "name": "z",
             "type": "number"
           },
@@ -1375,6 +1351,20 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "GraveyardItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "graveyard_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/item/GraveyardItemItem.java",
+          "src/main/resources/assets/clash_craft/models/item/graveyard_item.json"
         ]
       },
       "path": "~/Arena-11/Graveyard"
@@ -1431,10 +1421,11 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
+      "item.clash_craft.graveyard_item": "Graveyard Spawn",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
@@ -1475,56 +1466,55 @@
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "biome.clash_craft.goblin_stadium": "Goblin Stadium",
       "item.clash_craft.clash_dimension": "Clash Ticket",
-      "item.clash_craft.minions_iron_ball_item": "Iron Ball",
-      "item.clash_craft.graveyard": "Graveyard Spawn"
+      "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "טסלה",
       "entity.clash_craft.larry": "לארי",
+      "entity.clash_craft.tesla": "טסלה",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "ביצת זימון של לארי הנחמד",
       "entity.clash_craft.spear_goblin": "גובלין חניתות",
-      "item.clash_craft.spear_goblin_spawn_egg": "ביצת זימון של גובלין חניתות",
-      "biome.clash_craft.builders_workshop": "סדנת הבנאים",
       "entity.clash_craft.kind_larry": "לארי נחמד",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
-      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "item.clash_craft.spear": "חנית",
-      "item.clash_craft.goblin_hut_spawn_egg": "ביצת בקתת הגובלינים",
+      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "biome.clash_craft.bone_pit": "זירת העצמות",
       "entity.clash_craft.archer": "צלפת",
-      "item.clash_craft.tesla_spawn_egg": "ביצת זימון טסלה",
       "entity.clash_craft.tombstone": "מצבה",
-      "biome.clash_craft.hog_mountain": "הר החזירים",
       "entity.clash_craft.mini_pekka": "מיני-פקה",
       "item.clash_craft.arrows": "מתקפת חיצים",
       "item.clash_craft.larrys_bone": "העצם של לארי",
       "biome.clash_craft.frozen_peak": "הפסגה הקפואה",
       "biome.clash_craft.barbarian_bowl": "ארנת הברברים",
-      "item.clash_craft.tombstone_spawn_egg": "ביצת זימון מצבה",
-      "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
-      "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
       "entity.clash_craft.minion": "מיניון",
-      "entity.clash_craft.knight": "אביר",
       "biome.clash_craft.spell_valley": "עמק השיקויים",
-      "item.clash_craft.larry_spawn_egg": "ביצת זימון לארי",
       "item.clash_craft.larry_spawner": "מזמן לארי",
-      "biome.clash_craft.training_camp": "מחנה אימונים",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",
       "entity.clash_craft.goblin_hut": "בקתת גובלינים",
-      "item.clash_craft.archer_spawn_egg": "ביצת צלפת",
-      "biome.clash_craft.pekk_as_playhouse": "חצר המשחקים של פקה",
       "entity.clash_craft.giant": "ענק",
-      "biome.clash_craft.royale_arena": "הארנה המלכותית",
-      "item.clash_craft.fireball_item": "כדור אש",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
-      "biome.clash_craft.jungle_arena": "ארנת הג\u0027ונגל",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
-      "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "כדור ברזל",
-      "item.clash_craft.graveyard": "זימון בית קברות",
+      "item.clash_craft.graveyard_item": "Graveyard Spawn",
+      "item.clash_craft.spear_goblin_spawn_egg": "ביצת זימון של גובלין חניתות",
+      "biome.clash_craft.builders_workshop": "סדנת הבנאים",
+      "item.clash_craft.goblin_hut_spawn_egg": "ביצת בקתת הגובלינים",
+      "item.clash_craft.tesla_spawn_egg": "ביצת זימון טסלה",
+      "biome.clash_craft.hog_mountain": "הר החזירים",
+      "item.clash_craft.tombstone_spawn_egg": "ביצת זימון מצבה",
+      "item.clash_craft.giant_shirt_chestplate": "חולצת הענק",
+      "item_group.clash_craft.clash_craft_spawn_eggs": "קלאש קראפט - ביצי זימון",
+      "entity.clash_craft.knight": "אביר",
+      "item.clash_craft.larry_spawn_egg": "ביצת זימון לארי",
+      "biome.clash_craft.training_camp": "מחנה אימונים",
+      "item.clash_craft.archer_spawn_egg": "ביצת צלפת",
+      "biome.clash_craft.pekk_as_playhouse": "חצר המשחקים של פקה",
+      "biome.clash_craft.royale_arena": "הארנה המלכותית",
+      "item.clash_craft.fireball_item": "כדור אש",
+      "biome.clash_craft.jungle_arena": "ארנת הג\u0027ונגל",
+      "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
       "biome.clash_craft.arena_1": "איצטדיון הגובלינים"
     }
   },

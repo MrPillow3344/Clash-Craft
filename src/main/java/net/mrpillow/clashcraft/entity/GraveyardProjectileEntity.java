@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class GraveyardProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ClashCraftModItems.GRAVEYARD.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ClashCraftModItems.GRAVEYARD_ITEM.get());
 	private int knockback = 0;
 
 	public GraveyardProjectileEntity(EntityType<? extends GraveyardProjectileEntity> type, Level world) {
@@ -51,7 +51,7 @@ public class GraveyardProjectileEntity extends AbstractArrow implements ItemSupp
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(ClashCraftModItems.GRAVEYARD.get());
+		return new ItemStack(ClashCraftModItems.GRAVEYARD_ITEM.get());
 	}
 
 	@Override

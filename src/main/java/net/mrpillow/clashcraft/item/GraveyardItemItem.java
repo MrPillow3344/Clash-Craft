@@ -11,8 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-public class GraveyardItem extends Item {
-	public GraveyardItem() {
+public class GraveyardItemItem extends Item {
+	public GraveyardItemItem() {
 		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
 	}
 

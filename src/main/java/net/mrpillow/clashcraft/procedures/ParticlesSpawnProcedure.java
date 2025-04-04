@@ -15,8 +15,8 @@ import net.minecraft.core.BlockPos;
 public class ParticlesSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double r = 4;
-		double particlePerBlock = 0.5;
-		int skeletonsLeft = 20;
+		double particlePerBlock = 3;
+		particlePerBlock = 1 / particlePerBlock;
 		
 		for (double i = -r; i < r; i += particlePerBlock) {
 			for (double j = -r; j < r; j += particlePerBlock) {
