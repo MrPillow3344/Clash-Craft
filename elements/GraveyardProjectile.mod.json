@@ -18,10 +18,10 @@
     "modelWidth": 0.25,
     "modelHeight": 0.25,
     "onHitsBlock": {
-      "name": "GraveyardSpawn"
+      "name": "ParticlesSpawn"
     },
     "onHitsEntity": {
-      "name": "GraveyardSpawn"
+      "name": "ParticlesSpawn"
     }
   }
 }

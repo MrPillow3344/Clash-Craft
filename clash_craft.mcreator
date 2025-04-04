@@ -1288,7 +1288,7 @@
       "name": "GraveyardProjectile",
       "type": "projectile",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "graveyard_projectile",
       "metadata": {
         "files": [
@@ -1325,37 +1325,6 @@
       "path": "~/Arena-11/Graveyard"
     },
     {
-      "name": "GraveyardSpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "graveyard_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/GraveyardSpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arena-11/Graveyard"
-    },
-    {
       "name": "Test",
       "type": "procedure",
       "compiles": true,
@@ -1365,17 +1334,37 @@
         "files": [
           "src/main/java/net/mrpillow/clashcraft/procedures/TestProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "ParticlesSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "particles_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/ParticlesSpawnProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "SkeletonSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/SkeletonSpawnProcedure.java"
+        ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
             "type": "number"
           },
           {
@@ -1442,8 +1431,8 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
@@ -1490,8 +1479,8 @@
       "item.clash_craft.graveyard": "Graveyard Spawn"
     },
     "he_il": {
-      "entity.clash_craft.larry": "לארי",
       "entity.clash_craft.tesla": "טסלה",
+      "entity.clash_craft.larry": "לארי",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "ביצת זימון של לארי הנחמד",
       "entity.clash_craft.spear_goblin": "גובלין חניתות",

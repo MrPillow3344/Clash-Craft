@@ -12,7 +12,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
-public class GraveyardSpawnProcedure {
+public class ParticlesSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double r = 4;
 		double particlePerBlock = 0.5;
@@ -29,26 +29,9 @@ public class GraveyardSpawnProcedure {
 		}
 
 		ClashCraftMod.queueServerWork(10, () -> {
-			int k=0;
-			while (0 <= skeletonsLeft) {
-				ClashCraftMod.queueServerWork((randInt(0, 8)-k), () -> {
-					
-				
-					if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = ClashCraftModEntities.LARRY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}}
-					
-				});
-				k+=0.25;
-			}
+			SkeletonSpawnProcedure.execute(world, x, z);
 		});
 	}
-
-	public static int randInt(int min, int max) {
-		return (int) ((Math.random() * (max - min)) + min);
-		}
 
 	public static double dFromZ(double x, double y) {
 		return x*x +y*y;

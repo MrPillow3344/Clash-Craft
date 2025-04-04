@@ -4,7 +4,7 @@ package net.mrpillow.clashcraft.entity;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
-import net.mrpillow.clashcraft.procedures.GraveyardSpawnProcedure;
+import net.mrpillow.clashcraft.procedures.ParticlesSpawnProcedure;
 import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
@@ -78,13 +78,13 @@ public class GraveyardProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		GraveyardSpawnProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		ParticlesSpawnProcedure.execute(this.level(), entityHitResult.getLocation().x, entityHitResult.getLocation().y, entityHitResult.getLocation().z);
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		GraveyardSpawnProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		ParticlesSpawnProcedure.execute(this.level(), blockHitResult.getLocation().x, blockHitResult.getLocation().y, blockHitResult.getLocation().z);
 	}
 
 	@Override
