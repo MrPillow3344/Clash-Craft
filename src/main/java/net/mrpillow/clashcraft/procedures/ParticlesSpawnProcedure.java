@@ -11,9 +11,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.levelgen.Heightmap;
 
 public class ParticlesSpawnProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double z) {
 		double r = 4;
 		double particlePerBlock = 3;
 		particlePerBlock = 1 / particlePerBlock;
@@ -22,15 +23,15 @@ public class ParticlesSpawnProcedure {
 			for (double j = -r; j < r; j += particlePerBlock) {
 			
 				if (dFromZ(i, j) <= r*r) {
-					world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get()), (x + i), y, (z + j), 0, 1, 0);
+					world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get()), 
+					(x + i), 
+					world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), 
+					(z + j), 
+					0, 1, 0);
 				}
 				
 			}
 		}
-
-		ClashCraftMod.queueServerWork(10, () -> {
-			SkeletonSpawnProcedure.execute(world, x, z);
-		});
 	}
 
 	public static double dFromZ(double x, double y) {

@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "K",
+    "keyBindingName": "Fvgfdv",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "SkeletonSpawn"
+    }
+  }
+}
