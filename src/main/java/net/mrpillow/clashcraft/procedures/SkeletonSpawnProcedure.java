@@ -17,7 +17,7 @@ public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double skeletonsToSpawn = 20;
 		ParticlesSpawnProcedure.execute(world, x, z);
-		
+		/*
 		ClashCraftMod.queueServerWork(10, () -> {
 		for (int i = 0; i < (int) skeletonsToSpawn; i ++) {
 		
@@ -40,5 +40,6 @@ public class SkeletonSpawnProcedure {
 			});
 		}
 		});
+	*/
 	}
 }

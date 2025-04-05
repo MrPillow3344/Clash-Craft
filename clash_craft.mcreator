@@ -1463,9 +1463,6 @@
       "~CUSTOM:LarrysBone",
       "~CUSTOM:Pancake"
     ],
-    "ENTITIES:minecraft:raiders": [
-      "~CUSTOM:KindLarry"
-    ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:KnightsSword"
     ],
@@ -1487,10 +1484,11 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
+      "item.clash_craft.graveyard_item": "Graveyard Spawn",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
@@ -1502,6 +1500,7 @@
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
       "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
+      "key.clash_craft.fvgfdv": "Fvgfdv",
       "entity.clash_craft.tombstone": "Tombstone",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "entity.clash_craft.mini_pekka": "Mini Pekka",
@@ -1534,15 +1533,15 @@
       "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "Tesla",
       "entity.clash_craft.larry": "Larry",
+      "entity.clash_craft.tesla": "Tesla",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
       "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
-      "item.clash_craft.spear": "Spear",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
+      "item.clash_craft.spear": "Spear",
       "biome.clash_craft.bone_pit": "Bone Pit",
       "entity.clash_craft.archer": "Archer",
       "entity.clash_craft.tombstone": "Tombstone",

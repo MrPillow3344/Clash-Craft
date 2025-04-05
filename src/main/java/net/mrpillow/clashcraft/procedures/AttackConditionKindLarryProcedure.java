@@ -1,8 +1,6 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.bus.api.Event;
 
 public class AttackConditionKindLarryProcedure {
 	public static boolean execute(Entity entity) {
