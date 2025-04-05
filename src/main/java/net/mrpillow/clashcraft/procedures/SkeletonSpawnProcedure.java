@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		double skeletonsToSpawn = 20;
+		int skeletonsToSpawn = 20;
 		ParticlesSpawnProcedure.execute(world, x, z);
 		/*
 		ClashCraftMod.queueServerWork(10, () -> {
