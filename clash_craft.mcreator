@@ -1411,6 +1411,26 @@
         ]
       },
       "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "AttackConditionKindLarry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_condition_kind_larry",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/AttackConditionKindLarryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
     }
   ],
   "variable_elements": [
@@ -1442,6 +1462,9 @@
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:LarrysBone",
       "~CUSTOM:Pancake"
+    ],
+    "ENTITIES:minecraft:raiders": [
+      "~CUSTOM:KindLarry"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:KnightsSword"
