@@ -1381,6 +1381,36 @@
         ]
       },
       "path": "~/Arena-11/Graveyard"
+    },
+    {
+      "name": "BarbarianbowlMainStruc",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbarianbowl_main_struc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/barbarianbowl_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/barbarianbowl_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/barbarianbowl_main_struc.json"
+        ]
+      },
+      "path": "~/Arena-3"
+    },
+    {
+      "name": "SpellValleyMainStruc",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spell_valley_main_struc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/spell_valley_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/spell_valley_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/spell_valley_main_struc.json"
+        ]
+      },
+      "path": "~/Arena-4"
     }
   ],
   "variable_elements": [
@@ -1582,6 +1612,28 @@
         "children": []
       },
       {
+        "name": "Arena-11",
+        "children": [
+          {
+            "name": "Graveyard",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Arena-10",
+        "children": [
+          {
+            "name": "Tesla",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
         "name": "Arena-5",
         "children": []
       },
@@ -1596,15 +1648,6 @@
       {
         "name": "Arena-4",
         "children": []
-      },
-      {
-        "name": "Arena-10",
-        "children": [
-          {
-            "name": "Tesla",
-            "children": []
-          }
-        ]
       },
       {
         "name": "Arena-1",
@@ -1635,19 +1678,6 @@
       {
         "name": "ClashDimension",
         "children": []
-      },
-      {
-        "name": "Particles",
-        "children": []
-      },
-      {
-        "name": "Arena-11",
-        "children": [
-          {
-            "name": "Graveyard",
-            "children": []
-          }
-        ]
       }
     ]
   },
