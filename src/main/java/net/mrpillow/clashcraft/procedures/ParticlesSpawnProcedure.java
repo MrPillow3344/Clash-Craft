@@ -25,7 +25,7 @@ public class ParticlesSpawnProcedure {
 				if (dFromZ(i, j) <= r*r) {
 					world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get()), 
 					(x + i), 
-					world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), 
+					world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) (x+i), (int) (z+j)), 
 					(z + j), 
 					0, 1, 0);
 				}
