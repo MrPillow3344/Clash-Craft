@@ -85,6 +85,17 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = KindLarryEntity.this.getX();
+				double y = KindLarryEntity.this.getY();
+				double z = KindLarryEntity.this.getZ();
+				Entity entity = KindLarryEntity.this;
+				Level world = KindLarryEntity.this.level();
+				return super.canContinueToUse() && true;
+			}
+
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
