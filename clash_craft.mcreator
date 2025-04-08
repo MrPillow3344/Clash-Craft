@@ -1431,6 +1431,21 @@
         ]
       },
       "path": "~/Arena-2/Tombstone"
+    },
+    {
+      "name": "BuildersWorkshopMainStruc",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_workshop_main_struc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure/builders_workshop_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/builders_workshop_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/builders_workshop_main_struc.json"
+        ]
+      },
+      "path": "~/Arena-5"
     }
   ],
   "variable_elements": [

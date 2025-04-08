@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "clash_craft:builders_workshop_main_struc",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 15,
+    "separation": 10,
+    "salt": 813913282
+  }
+}
