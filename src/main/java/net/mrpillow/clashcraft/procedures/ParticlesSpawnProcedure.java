@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.Blocks;
 
 
 public class ParticlesSpawnProcedure {
-	public static void execute(LevelAccessor world, double x, double z) {
+	public static void spawn(LevelAccessor world, double x, double z) {
 		double r = 4;
 		double particlePerBlock = 3;
 		particlePerBlock = 1 / particlePerBlock;
