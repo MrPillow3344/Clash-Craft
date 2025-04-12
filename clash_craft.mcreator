@@ -1411,6 +1411,41 @@
         ]
       },
       "path": "~/Arena-4"
+    },
+    {
+      "name": "BuildersWorkshopMainStruc",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_workshop_main_struc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/builders_workshop_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/builders_workshop_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/builders_workshop_main_struc.json"
+        ]
+      },
+      "path": "~/Arena-5"
+    },
+    {
+      "name": "AttackConditionKindLarry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_condition_kind_larry",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/AttackConditionKindLarryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arena-2/Tombstone"
     }
   ],
   "variable_elements": [
@@ -1513,15 +1548,15 @@
       "item.clash_craft.minions_iron_ball_item": "Iron Ball"
     },
     "he_il": {
-      "entity.clash_craft.larry": "לארי",
       "entity.clash_craft.tesla": "טסלה",
+      "entity.clash_craft.larry": "לארי",
       "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "item.clash_craft.kind_larry_spawn_egg": "ביצת זימון של לארי הנחמד",
       "entity.clash_craft.spear_goblin": "גובלין חניתות",
       "entity.clash_craft.kind_larry": "לארי נחמד",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
-      "item.clash_craft.spear": "חנית",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
+      "item.clash_craft.spear": "חנית",
       "biome.clash_craft.bone_pit": "זירת העצמות",
       "entity.clash_craft.archer": "צלפת",
       "entity.clash_craft.tombstone": "מצבה",
