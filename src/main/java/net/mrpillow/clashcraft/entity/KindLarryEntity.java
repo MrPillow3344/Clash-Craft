@@ -11,13 +11,8 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.fml.common.asm.enumextension.EnumProxy;
-
-import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.raid.Raider;
-import net.minecraft.world.entity.raid.Raid;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -25,17 +20,15 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -43,11 +36,11 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-public class KindLarryEntity extends Raider implements GeoEntity {
+public class KindLarryEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(KindLarryEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(KindLarryEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(KindLarryEntity.class, EntityDataSerializers.STRING);
-	public static final EnumProxy<Raid.RaiderType> RAIDER_TYPE = new EnumProxy<>(Raid.RaiderType.class, ClashCraftModEntities.KIND_LARRY, new int[]{0, 4, 3, 3, 4, 4, 4, 2});
+	public static final EntityDataAccessor<Boolean> DATA_IsKindLarry = SynchedEntityData.defineId(KindLarryEntity.class, EntityDataSerializers.BOOLEAN);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -67,6 +60,7 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "larry");
+		builder.define(DATA_IsKindLarry, false);
 	}
 
 	public void setTexture(String texture) {
@@ -85,32 +79,11 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
-
-			@Override
-			public boolean canContinueToUse() {
-				double x = KindLarryEntity.this.getX();
-				double y = KindLarryEntity.this.getY();
-				double z = KindLarryEntity.this.getZ();
-				Entity entity = KindLarryEntity.this;
-				Level world = KindLarryEntity.this.level();
-				return super.canContinueToUse() && true;
-			}
-
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PathfinderMob.class, false, false) {
-			@Override
-			public boolean canContinueToUse() {
-				double x = KindLarryEntity.this.getX();
-				double y = KindLarryEntity.this.getY();
-				double z = KindLarryEntity.this.getZ();
-				Entity entity = KindLarryEntity.this;
-				Level world = KindLarryEntity.this.level();
-				return super.canContinueToUse() && true;
-			}
-		});
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, TamableAnimal.class, false, false));
 	}
 
 	@Override
@@ -129,14 +102,10 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 	}
 
 	@Override
-	public SoundEvent getCelebrateSound() {
-		return SoundEvents.EMPTY;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
+		compound.putBoolean("DataIsKindLarry", this.entityData.get(DATA_IsKindLarry));
 	}
 
 	@Override
@@ -144,6 +113,8 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("DataIsKindLarry"))
+			this.entityData.set(DATA_IsKindLarry, compound.getBoolean("DataIsKindLarry"));
 	}
 
 	@Override
@@ -164,10 +135,6 @@ public class KindLarryEntity extends Raider implements GeoEntity {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-	}
-
-	@Override
-	public void applyRaidBuffs(ServerLevel serverLevel, int num, boolean logic) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
