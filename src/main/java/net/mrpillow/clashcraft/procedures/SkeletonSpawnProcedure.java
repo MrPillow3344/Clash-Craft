@@ -50,8 +50,8 @@ public class SkeletonSpawnProcedure {
 			ClashCraftMod.queueServerWork((int) i*20, () -> {
 
 			final float theta1 = Mth.nextFloat(RandomSource.create(), -180, 180);
-			final double spawnX1 = x + Mth.cos(theta1)*r;
-			final double spawnZ1 = z + Mth.sin(theta1)*r;
+			final double spawnX1 = x + Mth.cos(theta1)*4;
+			final double spawnZ1 = z + Mth.sin(theta1)*4;
 
 			if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
