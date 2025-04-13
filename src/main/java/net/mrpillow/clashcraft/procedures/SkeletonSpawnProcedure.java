@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		int skeletonsToSpawn = 20;
-		spawnParticles(world, x, z);
+		spawnParticles(world, x, y, z);
 		/*
 		ClashCraftMod.queueServerWork(10, () -> {
 		for (int i = 0; i < (int) skeletonsToSpawn; i ++) {
@@ -49,20 +49,20 @@ public class SkeletonSpawnProcedure {
 	*/
 	}
 
-	public static void spawnParticles(LevelAccessor world, double x, double z) {
+	public static void spawnParticles(LevelAccessor world, double x,double y, double z) {
 		double r = 4;
-		double particlePerBlock = 3;
+		double particlePerBlock = 1;
 		particlePerBlock = 1 / particlePerBlock;
 		
 		for (double i = -r; i < r; i += particlePerBlock) {
 			for (double j = -r; j < r; j += particlePerBlock) {
 	
 				if (dFromZ(i, j) <= r*r) {
-					double y = getHeight(world, x, z) + 0.2;
+					//double y = getHeight(world, x+i, z+j) + 0.2;
 					
 					world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get()), 
 					(x + i), 
-					y, 
+					y, //world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) (x+i), (int) (z+j)), 
 					(z + j), 
 					0, 1, 0);
 				}
