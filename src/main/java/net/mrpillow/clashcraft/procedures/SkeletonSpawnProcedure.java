@@ -20,23 +20,18 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.util.datafix.fixes.LeavesFix.LeavesSection;
 
-
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		int skeletonsToSpawn = 20;
-		
+	
 		spawnParticles(world, x, z);
 		
-		ClashCraftMod.queueServerWork(10, () -> {
-		for (int i = 0; i < skeletonsToSpawn; i ++) {
-		
+		ClashCraftMod.queueServerWork(44, () -> {
 			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
 			final double d = Mth.nextDouble(RandomSource.create(), 0, 4);
-
 			final double spawnX = x + Mth.cos(theta)*d;
 			final double spawnZ = z + Mth.sin(theta)*d;
 			
-			ClashCraftMod.queueServerWork(1, () -> {
+			ClashCraftMod.queueServerWork(44, () -> {
 			
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
@@ -50,8 +45,29 @@ public class SkeletonSpawnProcedure {
 					}
 				}
 			});
+			
+		for (float i=0.5f; i<=9f; i+=0.5f) {
+			ClashCraftMod.queueServerWork((int) i*20, () -> {
+
+			final float theta1 = Mth.nextFloat(RandomSource.create(), -180, 180);
+			final double spawnX1 = x + Mth.cos(theta1)*r;
+			final double spawnZ1 = z + Mth.sin(theta1)*r;
+
+			if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
+					spawnX1,
+					getHeight(world, spawnX1, spawnZ1)+1,
+					spawnZ1
+					),
+					MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
+				}
+
+			});
 		}
-		});
+	});
 	}
 
 	public static void spawnParticles(LevelAccessor world, double x, double z) {
