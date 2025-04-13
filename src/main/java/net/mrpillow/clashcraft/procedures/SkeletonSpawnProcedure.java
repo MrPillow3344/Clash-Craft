@@ -16,27 +16,32 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Blocks; 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.util.datafix.fixes.LeavesFix.LeavesSection;
 
 
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		int skeletonsToSpawn = 20;
-		spawnParticles(world, x, z);
-		/*
-		ClashCraftMod.queueServerWork(10, () -> {
-		for (int i = 0; i < (int) skeletonsToSpawn; i ++) {
 		
-			final double spawnX = x + Mth.nextDouble(RandomSource.create(), -4, 4);
-			final double spawnZ = z + Mth.nextDouble(RandomSource.create(), -4, 4);
+		spawnParticles(world, x, z);
+		
+		ClashCraftMod.queueServerWork(10, () -> {
+		for (int i = 0; i < skeletonsToSpawn; i ++) {
+		
+			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
+			final double d = Mth.nextDouble(RandomSource.create(), 0, 4);
+
+			final double spawnX = x + Mth.cos(theta)*d;
+			final double spawnZ = z + Mth.sin(theta)*d;
 			
-			ClashCraftMod.queueServerWork((int) Math.abs((Mth.nextInt(RandomSource.create(), i, 23) - i)), () -> {
+			ClashCraftMod.queueServerWork(1, () -> {
 			
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
 					spawnX,
-					world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z),
+					getHeight(world, spawnX, spawnZ)+1,
 					spawnZ
 					),
 					MobSpawnType.MOB_SUMMONED);
@@ -47,7 +52,6 @@ public class SkeletonSpawnProcedure {
 			});
 		}
 		});
-	*/
 	}
 
 	public static void spawnParticles(LevelAccessor world, double x, double z) {
@@ -63,7 +67,7 @@ public class SkeletonSpawnProcedure {
 					
 					world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.GRAVEYARD_PARTICLE.get()), 
 					(x + i), 
-					y, //world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) (x+i), (int) (z+j)), 
+					y,
 					(z + j), 
 					0, 1, 0);
 				}
@@ -80,7 +84,7 @@ public class SkeletonSpawnProcedure {
 		for (int i = 319; i > -64; i--){
 			BlockState block = (world.getBlockState(BlockPos.containing(x, i, z)));
 			BlockPos pos = new BlockPos((int)x, i,(int) z);
-    		if (block.isSolid() && !world.isEmptyBlock(pos)) {
+    		if (block.isSolid() && !((world.getBlockState(BlockPos.containing(x, i, z))).getBlock() == Blocks.OAK_LEAVES) && !world.isWaterAt(pos)) {
         		return (double) i;
     			}
 			}
