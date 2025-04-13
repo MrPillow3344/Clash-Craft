@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "clash_craft:kind_larry",
     "clash_craft:larry"
   ]
 }

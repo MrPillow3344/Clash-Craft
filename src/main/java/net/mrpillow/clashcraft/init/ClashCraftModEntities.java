@@ -89,7 +89,7 @@ public class ClashCraftModEntities {
 
 					.sized(0.8f, 3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<KindLarryEntity>> KIND_LARRY = register("kind_larry",
-			EntityType.Builder.<KindLarryEntity>of(KindLarryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<KindLarryEntity>of(KindLarryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 0.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GraveyardProjectileEntity>> GRAVEYARD_PROJECTILE = register("graveyard_projectile",

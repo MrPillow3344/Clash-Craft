@@ -1,6 +1,7 @@
 package net.mrpillow.clashcraft.procedures;
 
 import net.mrpillow.clashcraft.entity.TeslaEntity;
+import net.mrpillow.clashcraft.entity.KindLarryEntity;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -12,7 +13,7 @@ public class EntityCloseToTeslaProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return false;
-		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
+		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty() || !world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
 			if (entity instanceof TeslaEntity) {
 				((TeslaEntity) entity).setAnimation("2");
 			}
