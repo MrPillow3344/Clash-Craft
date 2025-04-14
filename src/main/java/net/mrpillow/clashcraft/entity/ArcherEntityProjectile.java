@@ -4,9 +4,8 @@ package net.mrpillow.clashcraft.entity;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
-import net.mrpillow.clashcraft.init.ClashCraftModItems;
-
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -15,7 +14,7 @@ import net.minecraft.world.entity.EntityType;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ArcherEntityProjectile extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ClashCraftModItems.ARROWS.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.ARROW);
 
 	public ArcherEntityProjectile(EntityType<? extends ArcherEntityProjectile> type, Level world) {
 		super(type, world);
@@ -43,6 +42,6 @@ public class ArcherEntityProjectile extends AbstractArrow implements ItemSupplie
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(ClashCraftModItems.ARROWS.get());
+		return new ItemStack(Items.ARROW);
 	}
 }

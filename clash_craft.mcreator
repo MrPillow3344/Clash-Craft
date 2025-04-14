@@ -75,11 +75,11 @@
       "registry_name": "giant",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/giant_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/giant_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GiantEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GiantRenderer.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/GiantModel.java"
         ]
       },
       "path": "~/TrainingCamp/Giant"
@@ -130,10 +130,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mrpillow/clashcraft/entity/model/KnightModel.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/knight_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/KnightEntity.java"
+          "src/main/resources/assets/clash_craft/models/item/knight_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KnightRenderer.java"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -196,9 +196,9 @@
       "registry_name": "minion",
       "metadata": {
         "files": [
+          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/MinionRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MinionModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/MinionEntity.java",
           "src/main/resources/assets/clash_craft/models/item/minion_spawn_egg.json"
         ]
       },
@@ -256,6 +256,10 @@
           "src/main/java/net/mrpillow/clashcraft/procedures/FireballProjectileProjectileHitsBlockProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -446,10 +450,10 @@
       "registry_name": "mini_pekka",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/mini_pekka_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/entity/MiniPekkaEntity.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/MiniPekkaRenderer.java",
+          "src/main/resources/assets/clash_craft/models/item/mini_pekka_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/mini_pekka_biome_modifier.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/MiniPekkaRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/MiniPekkaModel.java"
         ]
       },
@@ -595,12 +599,12 @@
       "registry_name": "archer",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntityProjectile.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/archer_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java"
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/ArcherRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/model/ArcherModel.java",
+          "src/main/resources/assets/clash_craft/models/item/archer_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/ArcherEntity.java"
         ]
       },
       "path": "~/TrainingCamp/Archers"
@@ -679,11 +683,11 @@
       "registry_name": "spear_goblin",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/model/SpearGoblinModel.java",
-          "src/main/resources/assets/clash_craft/models/item/spear_goblin_spawn_egg.json",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/spear_goblin_biome_modifier.json",
-          "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java"
+          "src/main/java/net/mrpillow/clashcraft/entity/model/SpearGoblinModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/SpearGoblinEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/spear_goblin_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/SpearGoblinRenderer.java"
         ]
       },
       "path": "~/Arena-1/SpearGoblin"
@@ -899,10 +903,10 @@
       "registry_name": "larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/LarryModel.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json"
+          "src/main/resources/assets/clash_craft/models/item/larry_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/LarryRenderer.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/LarryEntity.java"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -915,10 +919,10 @@
       "registry_name": "goblin_hut",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json"
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
         ]
       },
       "path": "~/Arena-1/GoblinHut"
@@ -931,9 +935,9 @@
       "registry_name": "tombstone",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/TombstoneRenderer.java",
-          "src/main/java/net/mrpillow/clashcraft/entity/TombstoneEntity.java",
           "src/main/resources/assets/clash_craft/models/item/tombstone_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/entity/TombstoneEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/TombstoneRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/TombstoneModel.java"
         ]
       },
@@ -978,8 +982,8 @@
       "registry_name": "tesla",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/TeslaModel.java",
+          "src/main/java/net/mrpillow/clashcraft/entity/TeslaEntity.java",
           "src/main/java/net/mrpillow/clashcraft/client/renderer/TeslaRenderer.java",
           "src/main/resources/assets/clash_craft/models/item/tesla_spawn_egg.json",
           "src/main/resources/data/clash_craft/neoforge/biome_modifier/tesla_biome_modifier.json"
@@ -1156,11 +1160,11 @@
       "registry_name": "kind_larry",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/entity/KindLarryEntity.java",
+          "src/main/resources/assets/clash_craft/models/item/kind_larry_spawn_egg.json",
           "src/main/java/net/mrpillow/clashcraft/entity/layer/KindLarryLayer.java",
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/KindLarryRenderer.java",
           "src/main/java/net/mrpillow/clashcraft/entity/model/KindLarryModel.java",
-          "src/main/resources/assets/clash_craft/models/item/kind_larry_spawn_egg.json"
+          "src/main/java/net/mrpillow/clashcraft/entity/KindLarryEntity.java",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/KindLarryRenderer.java"
         ]
       },
       "path": "~/Arena-2/Tombstone"
@@ -1251,7 +1255,7 @@
           "src/main/java/net/mrpillow/clashcraft/entity/GraveyardProjectileEntity.java"
         ]
       },
-      "path": "~/Arena-11/Graveyard"
+      "path": "~/Arena-12/Graveyard"
     },
     {
       "name": "GraveyardItemRightclicked",
@@ -1278,7 +1282,7 @@
           }
         ]
       },
-      "path": "~/Arena-11/Graveyard"
+      "path": "~/Arena-12/Graveyard"
     },
     {
       "name": "SkeletonSpawn",
@@ -1309,7 +1313,7 @@
           }
         ]
       },
-      "path": "~/Arena-11/Graveyard"
+      "path": "~/Arena-12/Graveyard"
     },
     {
       "name": "GraveyardItem",
@@ -1323,7 +1327,7 @@
           "src/main/resources/assets/clash_craft/models/item/graveyard_item.json"
         ]
       },
-      "path": "~/Arena-11/Graveyard"
+      "path": "~/Arena-12/Graveyard"
     },
     {
       "name": "BarbarianbowlMainStruc",
@@ -1570,7 +1574,7 @@
         "children": []
       },
       {
-        "name": "Arena-11",
+        "name": "Arena-12",
         "children": [
           {
             "name": "Graveyard",
@@ -1642,7 +1646,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.140425b",
+    "version": "0.0.140425c",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

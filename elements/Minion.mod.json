@@ -144,7 +144,7 @@
       "value": ""
     },
     "rangedItemType": "MinionsIronBall",
-    "rangedAttackInterval": 40,
+    "rangedAttackInterval": 20,
     "rangedAttackRadius": 5.0,
     "height": 1.0,
     "attackRate": 7,

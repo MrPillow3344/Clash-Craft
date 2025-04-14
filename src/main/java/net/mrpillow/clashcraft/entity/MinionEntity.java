@@ -119,7 +119,7 @@ public class MinionEntity extends TamableAnimal implements RangedAttackMob, GeoE
 			}
 		});
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 40, 5f) {
+		this.goalSelector.addGoal(1, new MinionEntity.RangedAttackGoal(this, 1.25, 20, 5f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
