@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 public class PoisonEffectMobEffect extends MobEffect {
 	public PoisonEffectMobEffect() {
 		super(MobEffectCategory.HARMFUL, -3394816);
-		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(ClashCraftMod.MODID, "effect.poison_effect_0"), -0.15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(ClashCraftMod.MODID, "effect.poison_effect_0"), -0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 	}
 
 	@Override
