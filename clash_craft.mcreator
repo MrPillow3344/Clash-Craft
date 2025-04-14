@@ -1094,36 +1094,6 @@
       "path": "~/Arena-10/Tesla"
     },
     {
-      "name": "Baluta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baluta",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/procedures/BalutaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ShaharRatsabi",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shahar_ratsabi",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mrpillow/clashcraft/command/ShaharRatsabiCommand.java"
-        ]
-      }
-    },
-    {
       "name": "Electricity",
       "type": "particle",
       "compiles": true,
