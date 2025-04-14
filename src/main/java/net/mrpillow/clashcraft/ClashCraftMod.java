@@ -16,6 +16,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.mrpillow.clashcraft.network.ClashCraftModVariables;
 import net.mrpillow.clashcraft.init.ClashCraftModTabs;
 import net.mrpillow.clashcraft.init.ClashCraftModParticleTypes;
+import net.mrpillow.clashcraft.init.ClashCraftModMobEffects;
 import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 import net.mrpillow.clashcraft.init.ClashCraftModBlocks;
@@ -49,6 +50,8 @@ public class ClashCraftMod {
 		ClashCraftModEntities.REGISTRY.register(modEventBus);
 		ClashCraftModTabs.REGISTRY.register(modEventBus);
 		ClashCraftModVariables.ATTACHMENT_TYPES.register(modEventBus);
+
+		ClashCraftModMobEffects.REGISTRY.register(modEventBus);
 
 		ClashCraftModParticleTypes.REGISTRY.register(modEventBus);
 

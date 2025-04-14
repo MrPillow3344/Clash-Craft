@@ -55,14 +55,14 @@
     },
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 0,
+    "attackStrength": 2,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
-    "armorBaseValue": 0.0,
+    "armorBaseValue": 1.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 10,
+    "health": 6,
     "xpAmount": 5,
     "waterMob": false,
     "flyingMob": false,
@@ -138,7 +138,7 @@
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": "CUSTOM:Arrows"
+      "value": "Items.ARROW"
     },
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
