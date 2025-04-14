@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.util.datafix.fixes.LeavesFix.LeavesSection;
 
-import java.util.Comparator
+import java.util.Comparator;
 
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
