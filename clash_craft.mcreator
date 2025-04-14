@@ -1481,15 +1481,13 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "entity.clash_craft.larry": "Larry",
       "entity.clash_craft.tesla": "Tesla",
+      "entity.clash_craft.larry": "Larry",
       "item.clash_craft.minion_spawn_egg": "Minion Spawn Egg",
       "item.clash_craft.kind_larry_spawn_egg": "Kind Larry Spawn Egg",
       "entity.clash_craft.spear_goblin": "Spear Goblin",
-      "item.minecraft.lingering_potion.effect.poison_potion": "Lingering Potion of Poison",
       "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
-      "effect.clash_craft.poison_effect": "Poison Spell",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
       "item.clash_craft.spear": "Spear",
       "biome.clash_craft.bone_pit": "Bone Pit",
@@ -1502,7 +1500,6 @@
       "biome.clash_craft.barbarian_bowl": "Barbarian Bowl",
       "entity.clash_craft.minion": "Minion",
       "biome.clash_craft.spell_valley": "Spell Valley",
-      "item.minecraft.splash_potion.effect.poison_potion": "Splash Potion of Poison",
       "item.clash_craft.larry_spawner": "Larry Spawner",
       "item.clash_craft.pancake": "Pancake",
       "item.clash_craft.knights_sword": "Knight\u0027s Sword",
@@ -1512,12 +1509,10 @@
       "item.clash_craft.knight_spawn_egg": "Knight Spawn Egg",
       "item.clash_craft.clash_dimension": "Clash Ticket",
       "item.clash_craft.minions_iron_ball_item": "Iron Ball",
-      "item.minecraft.potion.effect.poison_potion": "Potion of Poison",
       "item.clash_craft.graveyard_item": "Graveyard Spawn",
       "item.clash_craft.spear_goblin_spawn_egg": "Spear Goblin Spawn Egg",
       "biome.clash_craft.builders_workshop": "Builder\u0027s Workshop",
       "item.clash_craft.goblin_hut_spawn_egg": "Goblin Hut Spawn Egg",
-      "item.minecraft.tipped_arrow.effect.poison_potion": "Poisoned Arrow",
       "item.clash_craft.tesla_spawn_egg": "Tesla Spawn Egg",
       "biome.clash_craft.hog_mountain": "Hog Mountain",
       "item.clash_craft.tombstone_spawn_egg": "Tombstone Spawn Egg",
@@ -1634,14 +1629,6 @@
         ]
       },
       {
-        "name": "Arena-7",
-        "children": []
-      },
-      {
-        "name": "Arena-8",
-        "children": []
-      },
-      {
         "name": "Arena-12",
         "children": [
           {
@@ -1649,6 +1636,14 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Arena-7",
+        "children": []
+      },
+      {
+        "name": "Arena-8",
+        "children": []
       },
       {
         "name": "Arena-10",
