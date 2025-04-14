@@ -36,7 +36,7 @@ public class SkeletonSpawnProcedure {
 				t=44;
 			}
 			else {
-				t = (int) (20f * i);
+				t = (int) (20f * i+44f);
 			}
 			
 			ClashCraftMod.queueServerWork(t, () -> {
