@@ -3,7 +3,10 @@ package net.mrpillow.clashcraft.procedures;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 import net.mrpillow.clashcraft.ClashCraftMod;
 import net.mrpillow.clashcraft.init.ClashCraftModParticleTypes;
+import net.mrpillow.clashcraft.entity.KindLarryEntity;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
@@ -20,23 +23,35 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.util.datafix.fixes.LeavesFix.LeavesSection;
 
+import java.util.Comparator;
+
 public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 	
 		spawnParticles(world, x, z);
 		
-		ClashCraftMod.queueServerWork(44, () -> {
-			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
+		ClashCraftMod.queueServerWork(44, () -> {		
+		for (float i=0f; i<=9f; i+=0.5f) {
+			if (i==0f) {
+			int t=44;
 			final double d = Mth.nextDouble(RandomSource.create(), 0, 4);
-			final double spawnX = x + Mth.cos(theta)*d;
-			final double spawnZ = z + Mth.sin(theta)*d;
+				}
+			else {
+			int t=20*i;
+			final double d=4;
+				}
 			
-			ClashCraftMod.queueServerWork(44, () -> {
-			
-				if (world instanceof ServerLevel _level) {
+			ClashCraftMod.queueServerWork(t, () -> {
+
+			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
+			final double spawnX = x + Mth.cos(theta1)*d;
+			final double spawnZ = z + Mth.sin(theta1)*d;
+			final double spawnY = getHeight(world, spawnX1, spawnZ1)+1;
+
+			if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
 					spawnX,
-					getHeight(world, spawnX, spawnZ)+1,
+					spawnY,
 					spawnZ
 					),
 					MobSpawnType.MOB_SUMMONED);
@@ -44,27 +59,15 @@ public class SkeletonSpawnProcedure {
 						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 					}
 				}
-			});
-			
-		for (float i=0.5f; i<=9f; i+=0.5f) {
-			ClashCraftMod.queueServerWork((int) i*20, () -> {
 
-			final float theta1 = Mth.nextFloat(RandomSource.create(), -180, 180);
-			final double spawnX1 = x + Mth.cos(theta1)*4;
-			final double spawnZ1 = z + Mth.sin(theta1)*4;
-
-			if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
-					spawnX1,
-					getHeight(world, spawnX1, spawnZ1)+1,
-					spawnZ1
-					),
-					MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}
-				}
-
+			final Entity e = (Entity) world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(spawnX, spawnY, spawnZ), 0.2, 0.2, 0.2)).stream().sorted(new Object() {
+			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+			}
+		}.compareDistOf(spawnX, spawnY, spawnZ)).findFirst().orElse(null);
+		if (e instanceof KindLarryEntity) {
+			((KindLarryEntity) e).setAnimation("GraveyardAppears");
+		}
 			});
 		}
 	});
