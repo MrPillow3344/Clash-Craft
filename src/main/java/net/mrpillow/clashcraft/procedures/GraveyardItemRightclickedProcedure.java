@@ -23,6 +23,7 @@ public class GraveyardItemRightclickedProcedure {
 		double fromZ = 0;
 		double fromX = 0;
 		double fromY = 0;
+		Entity e = null;
 		if (!(entity instanceof Player _plrCldCheck1 && _plrCldCheck1.getCooldowns().isOnCooldown(itemstack.getItem()))) {
 			{
 				Entity _shootFrom = entity;
