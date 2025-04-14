@@ -29,24 +29,28 @@ public class SkeletonSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 	
 		spawnParticles(world, x, z);
-		
-		ClashCraftMod.queueServerWork(44, () -> {		
+			
 		for (float i=0f; i<=9f; i+=0.5f) {
+			int t;
 			if (i==0f) {
-			int t=44;
-			final double d = Mth.nextDouble(RandomSource.create(), 0, 4);
-				}
+				t=44;
+			}
 			else {
-			int t=20*i;
-			final double d=4;
-				}
+				t = (int) (20f * i);
+			}
 			
 			ClashCraftMod.queueServerWork(t, () -> {
+				double d;
+			if (t==44) {
+				d = Mth.nextDouble(RandomSource.create(), 0, 4);
+			} else {
+				d=4;
+			}
 
 			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
-			final double spawnX = x + Mth.cos(theta1)*d;
-			final double spawnZ = z + Mth.sin(theta1)*d;
-			final double spawnY = getHeight(world, spawnX1, spawnZ1)+1;
+			final double spawnX = x + Mth.cos(theta)*d;
+			final double spawnZ = z + Mth.sin(theta)*d;
+			final double spawnY = getHeight(world, spawnX, spawnZ)+1;
 
 			if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
@@ -70,7 +74,6 @@ public class SkeletonSpawnProcedure {
 		}
 			});
 		}
-	});
 	}
 
 	public static void spawnParticles(LevelAccessor world, double x, double z) {
