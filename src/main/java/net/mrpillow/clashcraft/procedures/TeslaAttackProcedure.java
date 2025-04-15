@@ -3,7 +3,6 @@ package net.mrpillow.clashcraft.procedures;
 import net.mrpillow.clashcraft.init.ClashCraftModParticleTypes;
 import net.mrpillow.clashcraft.entity.TeslaEntity;
 import net.mrpillow.clashcraft.entity.KindLarryEntity;
-import net.mrpillow.clashcraft.entity.GiantEntity;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -26,20 +25,14 @@ public class TeslaAttackProcedure {
 			return;
 		Entity enemy = null;
 		if (0 >= (entity instanceof TeslaEntity _datEntI ? _datEntI.getEntityData().get(TeslaEntity.DATA_attackCooldown) : 0) && EntityCloseToTeslaProcedure.execute(world, x, y, z, entity)) {
-			if (!world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
+			if (!world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty() || !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
 				enemy = (Entity) world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null);
-			} else if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
+			} else {
 				enemy = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null);
-			} else if (!world.getEntitiesOfClass(GiantEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).isEmpty()) {
-				enemy = (Entity) world.getEntitiesOfClass(GiantEntity.class, AABB.ofSize(new Vec3(x, y, z), 14, 14, 14), e -> true).stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
@@ -61,7 +54,7 @@ public class TeslaAttackProcedure {
 			if (entity instanceof TeslaEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 30);
 		}
-		if (!(entity instanceof TeslaEntity _datEntL30 && _datEntL30.getEntityData().get(TeslaEntity.DATA_isItUp))) {
+		if (!(entity instanceof TeslaEntity _datEntL28 && _datEntL28.getEntityData().get(TeslaEntity.DATA_isItUp))) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3, 255, false, false));
 		}
