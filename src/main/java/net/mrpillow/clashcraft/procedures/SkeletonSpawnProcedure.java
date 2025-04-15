@@ -41,37 +41,36 @@ public class SkeletonSpawnProcedure {
 			
 			ClashCraftMod.queueServerWork(t, () -> {
 				double d;
-			if (t==44) {
-				d = Mth.nextDouble(RandomSource.create(), 0, 4);
-			} else {
-				d=4;
-			}
-
-			final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
-			final double spawnX = x + Mth.cos(theta)*d;
-			final double spawnZ = z + Mth.sin(theta)*d;
-			final double spawnY = getHeight(world, spawnX, spawnZ)+1;
-
-			if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
-					spawnX,
-					spawnY,
-					spawnZ
-					),
-					MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}
+				if (t==44) {
+					d = Mth.nextDouble(RandomSource.create(), 0, 4);
+				} else {
+					d=4;
 				}
+	
+				final float theta = Mth.nextFloat(RandomSource.create(), -180, 180);
+				final double spawnX = x + Mth.cos(theta)*d;
+				final double spawnZ = z + Mth.sin(theta)*d;
+				final double spawnY = getHeight(world, spawnX, spawnZ)+1;
 
-			final Entity e = (Entity) world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(spawnX, spawnY, spawnZ), 0.2, 0.2, 0.2)).stream().sorted(new Object() {
-			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-			}
-		}.compareDistOf(spawnX, spawnY, spawnZ)).findFirst().orElse(null);
-		if (e instanceof KindLarryEntity) {
-			((KindLarryEntity) e).setAnimation("GraveyardAppears");
-		}
+				if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = ClashCraftModEntities.KIND_LARRY.get().spawn(_level, BlockPos.containing(
+						spawnX,
+						spawnY,
+						spawnZ
+						),
+						MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+				}
+	
+				final Entity e = (Entity) world.getEntitiesOfClass(KindLarryEntity.class, AABB.ofSize(new Vec3(spawnX, spawnY, spawnZ), 0.2, 0.2, 0.2)).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}}.compareDistOf(spawnX, spawnY, spawnZ)).findFirst().orElse(null);
+				if (e instanceof KindLarryEntity) {
+					((KindLarryEntity) e).setAnimation("GraveyardAppears");
+				}
 			});
 		}
 	}
