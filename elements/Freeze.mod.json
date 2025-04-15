@@ -1,0 +1,22 @@
+{
+  "_fv": 73,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Freeze",
+    "splashName": "Splash Potion of Freeze",
+    "lingeringName": "Freeze Spell",
+    "arrowName": "Freezing Arrow",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:FreezeEffect"
+        },
+        "duration": 320,
+        "infinite": false,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

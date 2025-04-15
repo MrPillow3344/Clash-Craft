@@ -919,10 +919,10 @@
       "registry_name": "goblin_hut",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java",
-          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json",
           "src/main/java/net/mrpillow/clashcraft/entity/GoblinHutEntity.java",
-          "src/main/resources/data/clash_craft/neoforge/biome_modifier/goblin_hut_biome_modifier.json"
+          "src/main/resources/assets/clash_craft/models/item/goblin_hut_spawn_egg.json",
+          "src/main/java/net/mrpillow/clashcraft/client/renderer/GoblinHutRenderer.java"
         ]
       },
       "path": "~/Arena-1/GoblinHut"
@@ -1433,6 +1433,40 @@
         ]
       },
       "path": "~/Arena-8/Freeze"
+    },
+    {
+      "name": "FreezeEffectStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_effect_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/FreezeEffectStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arena-8/Freeze"
+    },
+    {
+      "name": "Freeze",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Arena-8/Freeze"
     }
   ],
   "variable_elements": [
@@ -1540,12 +1574,16 @@
       "entity.clash_craft.knight": "Knight",
       "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
       "biome.clash_craft.training_camp": "Training Camp",
+      "item.minecraft.lingering_potion.effect.freeze": "Freeze Spell",
       "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
       "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
       "biome.clash_craft.royale_arena": "Royale Arena",
+      "item.minecraft.potion.effect.freeze": "Potion of Freeze",
       "item.clash_craft.fireball_item": "Fireball",
       "biome.clash_craft.jungle_arena": "Jungle Arena",
-      "biome.clash_craft.goblin_stadium": "Goblin Stadium"
+      "biome.clash_craft.goblin_stadium": "Goblin Stadium",
+      "item.minecraft.splash_potion.effect.freeze": "Splash Potion of Freeze",
+      "item.minecraft.tipped_arrow.effect.freeze": "Freezing Arrow"
     },
     "he_il": {
       "entity.clash_craft.tesla": "טסלה",
@@ -1594,13 +1632,17 @@
       "entity.clash_craft.knight": "אביר",
       "item.clash_craft.larry_spawn_egg": "ביצת זימון לארי",
       "biome.clash_craft.training_camp": "מחנה אימונים",
+      "item.minecraft.lingering_potion.effect.freeze": "Freeze Spell",
       "item.clash_craft.archer_spawn_egg": "ביצת צלפת",
       "biome.clash_craft.pekk_as_playhouse": "חצר המשחקים של פקה",
       "biome.clash_craft.royale_arena": "הארנה המלכותית",
+      "item.minecraft.potion.effect.freeze": "Potion of Freeze",
       "item.clash_craft.fireball_item": "כדור אש",
       "biome.clash_craft.jungle_arena": "ארנת הג\u0027ונגל",
       "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
-      "biome.clash_craft.arena_1": "איצטדיון הגובלינים"
+      "item.minecraft.splash_potion.effect.freeze": "Splash Potion of Freeze",
+      "biome.clash_craft.arena_1": "איצטדיון הגובלינים",
+      "item.minecraft.tipped_arrow.effect.freeze": "Freezing Arrow"
     }
   },
   "foldersRoot": {
@@ -1734,7 +1776,7 @@
   "workspaceSettings": {
     "modid": "clash_craft",
     "modName": "Clash Craft",
-    "version": "0.0.140425a",
+    "version": "0.0.150425a",
     "author": "MrPillow3344, MRshoony",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

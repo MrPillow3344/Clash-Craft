@@ -45,11 +45,15 @@
   "entity.clash_craft.knight": "אביר",
   "item.clash_craft.larry_spawn_egg": "ביצת זימון לארי",
   "biome.clash_craft.training_camp": "מחנה אימונים",
+  "item.minecraft.lingering_potion.effect.freeze": "Freeze Spell",
   "item.clash_craft.archer_spawn_egg": "ביצת צלפת",
   "biome.clash_craft.pekk_as_playhouse": "חצר המשחקים של פקה",
   "biome.clash_craft.royale_arena": "הארנה המלכותית",
+  "item.minecraft.potion.effect.freeze": "Potion of Freeze",
   "item.clash_craft.fireball_item": "כדור אש",
   "biome.clash_craft.jungle_arena": "ארנת הג\u0027ונגל",
   "biome.clash_craft.goblin_stadium": "איצטדיון הגובלינים",
-  "biome.clash_craft.arena_1": "איצטדיון הגובלינים"
+  "item.minecraft.splash_potion.effect.freeze": "Splash Potion of Freeze",
+  "biome.clash_craft.arena_1": "איצטדיון הגובלינים",
+  "item.minecraft.tipped_arrow.effect.freeze": "Freezing Arrow"
 }

@@ -20,30 +20,33 @@
         "attribute": {
           "value": "MOVEMENT_SPEED"
         },
-        "amount": 0.0,
-        "operation": "ADD_MULTIPLIED_TOTAL"
+        "amount": -999.0,
+        "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "JUMP_STRENGTH"
         },
-        "amount": 0.0,
-        "operation": "ADD_MULTIPLIED_TOTAL"
+        "amount": -999.0,
+        "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "BLOCK_BREAK_SPEED"
         },
-        "amount": 0.0,
-        "operation": "ADD_MULTIPLIED_TOTAL"
+        "amount": -999.0,
+        "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "ATTACK_SPEED"
         },
-        "amount": 0.0,
-        "operation": "ADD_MULTIPLIED_TOTAL"
+        "amount": -999.0,
+        "operation": "ADD_VALUE"
       }
-    ]
+    ],
+    "onStarted": {
+      "name": "FreezeEffectStart"
+    }
   }
 }
