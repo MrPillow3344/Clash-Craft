@@ -24,8 +24,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/clash_craft/worldgen/structure/target.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json"
+          "src/main/resources/data/clash_craft/worldgen/structure_set/target.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/target.json"
         ]
       },
       "path": "~/TrainingCamp"
@@ -38,16 +38,16 @@
       "registry_name": "clash_dimension",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
           "src/main/java/net/mrpillow/clashcraft/block/ClashDimensionPortalBlock.java",
-          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ew.json",
+          "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionTeleporter.java",
+          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java",
           "src/main/resources/assets/clash_craft/models/item/clash_dimension.json",
           "src/main/java/net/mrpillow/clashcraft/world/teleporter/ClashDimensionPortalShape.java",
-          "src/main/resources/assets/clash_craft/models/block/clash_dimension_portal_ns.json",
-          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
           "src/main/resources/assets/clash_craft/blockstates/clash_dimension_portal.json",
-          "src/main/java/net/mrpillow/clashcraft/item/ClashDimensionItem.java"
+          "src/main/resources/data/clash_craft/dimension/clash_dimension.json",
+          "src/main/resources/data/clash_craft/dimension_type/clash_dimension.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -60,9 +60,9 @@
       "registry_name": "king_tower",
       "metadata": {
         "files": [
+          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/king_tower.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json",
-          "src/main/resources/data/clash_craft/worldgen/structure_set/king_tower.json"
+          "src/main/resources/data/clash_craft/worldgen/structure/king_tower.json"
         ]
       },
       "path": "~/ClashDimension"
@@ -115,8 +115,8 @@
       "registry_name": "giant_shirt",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java",
-          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json"
+          "src/main/resources/assets/clash_craft/models/item/giant_shirt_chestplate.json",
+          "src/main/java/net/mrpillow/clashcraft/item/GiantShirtItem.java"
         ]
       },
       "path": "~/TrainingCamp/Giant"
@@ -156,8 +156,8 @@
       "registry_name": "knights_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/knights_sword.json",
-          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/KnightsSwordItem.java",
+          "src/main/resources/assets/clash_craft/models/item/knights_sword.json"
         ]
       },
       "path": "~/TrainingCamp/Knight"
@@ -225,8 +225,8 @@
       "registry_name": "minions_iron_ball_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json",
-          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/MinionsIronBallItemItem.java",
+          "src/main/resources/assets/clash_craft/models/item/minions_iron_ball_item.json"
         ]
       },
       "path": "~/TrainingCamp/Minion"
@@ -256,6 +256,10 @@
           "src/main/java/net/mrpillow/clashcraft/procedures/FireballProjectileProjectileHitsBlockProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -348,8 +352,8 @@
       "registry_name": "arrows",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/ArrowsItem.java",
-          "src/main/resources/assets/clash_craft/models/item/arrows.json"
+          "src/main/resources/assets/clash_craft/models/item/arrows.json",
+          "src/main/java/net/mrpillow/clashcraft/item/ArrowsItem.java"
         ]
       },
       "path": "~/TrainingCamp/Arrows"
@@ -463,8 +467,8 @@
       "registry_name": "pancake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/models/item/pancake.json",
-          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java"
+          "src/main/java/net/mrpillow/clashcraft/item/PancakeItem.java",
+          "src/main/resources/assets/clash_craft/models/item/pancake.json"
         ]
       },
       "path": "~/TrainingCamp/Mini Pekka"
@@ -491,8 +495,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/clash_craft/worldgen/structure_set/fence_7_b.json",
-          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json"
+          "src/main/resources/data/clash_craft/worldgen/structure/fence_7_b.json",
+          "src/main/resources/data/clash_craft/worldgen/template_pool/fence_7_b.json"
         ]
       },
       "path": "~/Arena-1"
@@ -1115,8 +1119,8 @@
       "registry_name": "larrys_bone",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/LarrysBoneItem.java",
-          "src/main/resources/assets/clash_craft/models/item/larrys_bone.json"
+          "src/main/resources/assets/clash_craft/models/item/larrys_bone.json",
+          "src/main/java/net/mrpillow/clashcraft/item/LarrysBoneItem.java"
         ]
       },
       "path": "~/Arena-2/Skeletons"
@@ -1142,8 +1146,8 @@
       "registry_name": "larry_spawner",
       "metadata": {
         "files": [
-          "src/main/java/net/mrpillow/clashcraft/item/LarrySpawnerItem.java",
-          "src/main/resources/assets/clash_craft/models/item/larry_spawner.json"
+          "src/main/resources/assets/clash_craft/models/item/larry_spawner.json",
+          "src/main/java/net/mrpillow/clashcraft/item/LarrySpawnerItem.java"
         ]
       },
       "path": "~/Arena-2/Tombstone"
@@ -1234,8 +1238,8 @@
       "registry_name": "graveyard_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/clash_craft/particles/graveyard_particle.json",
-          "src/main/java/net/mrpillow/clashcraft/client/particle/GraveyardParticleParticle.java"
+          "src/main/java/net/mrpillow/clashcraft/client/particle/GraveyardParticleParticle.java",
+          "src/main/resources/assets/clash_craft/particles/graveyard_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1348,8 +1352,8 @@
       "registry_name": "spell_valley_main_struc",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/structure_set/spell_valley_main_struc.json",
           "src/main/resources/data/clash_craft/worldgen/structure/spell_valley_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure_set/spell_valley_main_struc.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/spell_valley_main_struc.json"
         ]
       },
@@ -1363,9 +1367,9 @@
       "registry_name": "builders_workshop_main_struc",
       "metadata": {
         "files": [
-          "src/main/resources/data/clash_craft/worldgen/structure_set/builders_workshop_main_struc.json",
+          "src/main/resources/data/clash_craft/worldgen/structure/builders_workshop_main_struc.json",
           "src/main/resources/data/clash_craft/worldgen/template_pool/builders_workshop_main_struc.json",
-          "src/main/resources/data/clash_craft/worldgen/structure/builders_workshop_main_struc.json"
+          "src/main/resources/data/clash_craft/worldgen/structure_set/builders_workshop_main_struc.json"
         ]
       },
       "path": "~/Arena-5"
@@ -1582,17 +1586,17 @@
       "item.minecraft.tipped_arrow.effect.freeze": "Freezing Arrow"
     },
     "he_il": {
-      "entity.clash_craft.tesla": "טסלה",
       "entity.clash_craft.larry": "לארי",
-      "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
+      "entity.clash_craft.tesla": "טסלה",
       "item.clash_craft.kind_larry_spawn_egg": "ביצת זימון של לארי הנחמד",
+      "item.clash_craft.minion_spawn_egg": "ביצת זימון מיניון",
       "entity.clash_craft.spear_goblin": "גובלין חניתות",
       "item.minecraft.lingering_potion.effect.poison_potion": "שיקוי רעל מעוכב",
       "entity.clash_craft.kind_larry": "לארי נחמד",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
-      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
-      "item.clash_craft.spear": "חנית",
       "effect.clash_craft.poison_effect": "כישוף רעל",
+      "item.clash_craft.spear": "חנית",
+      "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
       "biome.clash_craft.bone_pit": "זירת העצמות",
       "entity.clash_craft.archer": "צלפת",
       "entity.clash_craft.tombstone": "מצבה",
@@ -1602,8 +1606,8 @@
       "biome.clash_craft.frozen_peak": "הפסגה הקפואה",
       "biome.clash_craft.barbarian_bowl": "ארנת הברברים",
       "entity.clash_craft.minion": "מיניון",
-      "biome.clash_craft.spell_valley": "עמק השיקויים",
       "item.minecraft.splash_potion.effect.poison_potion": "שיקוי רעל נזרק",
+      "biome.clash_craft.spell_valley": "עמק השיקויים",
       "item.clash_craft.larry_spawner": "מזמן לארי",
       "item.clash_craft.pancake": "פנקייק",
       "item.clash_craft.knights_sword": "חרב האביר",
