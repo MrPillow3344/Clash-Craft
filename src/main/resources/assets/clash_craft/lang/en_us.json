@@ -45,14 +45,10 @@
   "entity.clash_craft.knight": "Knight",
   "item.clash_craft.larry_spawn_egg": "Larry Spawn Egg",
   "biome.clash_craft.training_camp": "Training Camp",
-  "item.minecraft.lingering_potion.effect.freeze": "Freeze Spell",
   "item.clash_craft.archer_spawn_egg": "Archer Spawn Egg",
   "biome.clash_craft.pekk_as_playhouse": "P.E.K.K.A\u0027s Playhouse",
   "biome.clash_craft.royale_arena": "Royale Arena",
-  "item.minecraft.potion.effect.freeze": "Potion of Freeze",
   "item.clash_craft.fireball_item": "Fireball",
   "biome.clash_craft.jungle_arena": "Jungle Arena",
-  "biome.clash_craft.goblin_stadium": "Goblin Stadium",
-  "item.minecraft.splash_potion.effect.freeze": "Splash Potion of Freeze",
-  "item.minecraft.tipped_arrow.effect.freeze": "Freezing Arrow"
+  "biome.clash_craft.goblin_stadium": "Goblin Stadium"
 }
