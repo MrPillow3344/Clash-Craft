@@ -1,0 +1,19 @@
+
+/*
+ *    MCreator note: This file will be REGENERATED on each build.
+ */
+package net.mrpillow.clashcraft.init;
+
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+
+import net.mrpillow.clashcraft.ClashCraftMod;
+
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.core.registries.Registries;
+
+public class ClashCraftModPotions {
+	public static final DeferredRegister<Potion> REGISTRY = DeferredRegister.create(Registries.POTION, ClashCraftMod.MODID);
+	public static final DeferredHolder<Potion, Potion> POISON_POTION = REGISTRY.register("poison_potion", () -> new Potion(new MobEffectInstance(ClashCraftModMobEffects.POISON_EFFECT, 640, 0, false, true)));
+}

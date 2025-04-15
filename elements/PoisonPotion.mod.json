@@ -1,0 +1,22 @@
+{
+  "_fv": 73,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Poison",
+    "splashName": "Splash Potion of Poison",
+    "lingeringName": "Poison Spell",
+    "arrowName": "Poisoned Arrow",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:PoisonEffect"
+        },
+        "duration": 640,
+        "infinite": false,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}
