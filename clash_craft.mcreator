@@ -1420,6 +1420,19 @@
         "files": []
       },
       "path": "~/Arena-9/Poison"
+    },
+    {
+      "name": "FreezeEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/potion/FreezeEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Arena-8/Freeze"
     }
   ],
   "variable_elements": [
@@ -1562,6 +1575,7 @@
       "entity.clash_craft.goblin_hut": "בקתת גובלינים",
       "entity.clash_craft.giant": "ענק",
       "item_group.clash_craft.clash_craft_items": "קלאש קראפט - פריטים",
+      "effect.clash_craft.freeze_effect": "הקפאה",
       "item.clash_craft.knight_spawn_egg": "ביצת זימון אביר",
       "item.clash_craft.clash_dimension": "כרטיס קלאש",
       "item.clash_craft.minions_iron_ball_item": "כדור ברזל",
@@ -1648,7 +1662,12 @@
       },
       {
         "name": "Arena-8",
-        "children": []
+        "children": [
+          {
+            "name": "Freeze",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Arena-10",

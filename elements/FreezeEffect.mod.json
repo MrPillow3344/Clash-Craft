@@ -1,0 +1,49 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Freeze",
+    "icon": "poison_effect",
+    "color": {
+      "value": -6684673,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": 0.0,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": 0.0,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "attribute": {
+          "value": "BLOCK_BREAK_SPEED"
+        },
+        "amount": 0.0,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "attribute": {
+          "value": "ATTACK_SPEED"
+        },
+        "amount": 0.0,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      }
+    ]
+  }
+}
