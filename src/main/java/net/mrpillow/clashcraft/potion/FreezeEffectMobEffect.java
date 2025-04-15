@@ -1,6 +1,14 @@
 
 package net.mrpillow.clashcraft.potion;
 
+import net.mrpillow.clashcraft.ClashCraftMod;
+
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.resources.ResourceLocation;
+
 public class FreezeEffectMobEffect extends MobEffect {
 	public FreezeEffectMobEffect() {
 		super(MobEffectCategory.HARMFUL, -6684673);
