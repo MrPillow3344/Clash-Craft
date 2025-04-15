@@ -1250,7 +1250,8 @@
         "files": [
           "src/main/java/net/mrpillow/clashcraft/entity/GraveyardProjectileEntity.java"
         ]
-      }
+      },
+      "path": "~/Arena-12"
     },
     {
       "name": "GraveyardItemRightclicked",
@@ -1276,7 +1277,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Arena-12"
     },
     {
       "name": "SkeletonSpawn",
@@ -1306,7 +1308,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Arena-12"
     },
     {
       "name": "GraveyardItem",
@@ -1319,7 +1322,8 @@
           "src/main/java/net/mrpillow/clashcraft/item/GraveyardItemItem.java",
           "src/main/resources/assets/clash_craft/models/item/graveyard_item.json"
         ]
-      }
+      },
+      "path": "~/Arena-12"
     },
     {
       "name": "BarbarianbowlMainStruc",
