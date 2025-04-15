@@ -21,7 +21,6 @@ import net.mrpillow.clashcraft.init.ClashCraftModMobEffects;
 import net.mrpillow.clashcraft.init.ClashCraftModItems;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 import net.mrpillow.clashcraft.init.ClashCraftModBlocks;
-import net.mrpillow.clashcraft.init.ClashCraftModAttributes;
 
 import net.minecraft.util.Tuple;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -58,7 +57,6 @@ public class ClashCraftMod {
 
 		ClashCraftModParticleTypes.REGISTRY.register(modEventBus);
 
-		ClashCraftModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
