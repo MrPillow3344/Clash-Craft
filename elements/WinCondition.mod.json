@@ -7,7 +7,7 @@
     "maxValue": 1.0,
     "defaultValue": 1.0,
     "addToAllEntities": false,
-    "addToPlayers": false,
+    "addToPlayers": true,
     "entities": [
       {
         "value": "CUSTOM:Giant"
