@@ -1,0 +1,23 @@
+{
+  "_fv": 73,
+  "_type": "attribute",
+  "definition": {
+    "name": "Building",
+    "minValue": 0.0,
+    "maxValue": 1.0,
+    "defaultValue": 1.0,
+    "addToAllEntities": false,
+    "addToPlayers": false,
+    "entities": [
+      {
+        "value": "CUSTOM:GoblinHut"
+      },
+      {
+        "value": "CUSTOM:Tombstone"
+      },
+      {
+        "value": "CUSTOM:Tesla"
+      }
+    ]
+  }
+}
