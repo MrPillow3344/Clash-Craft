@@ -150,11 +150,70 @@
 							"vector": [0, 0, 0]
 						}
 					}
+				},
+				"Head": {
+					"scale": {
+						"vector": [1, 1, 1]
+					}
 				}
 			}
 		},
 		"animation.giant.idle": {
 			"animation_length": 1
+		},
+		"animation.giant.attack": {
+			"animation_length": 1,
+			"bones": {
+				"Chest": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [0, 10, 0],
+							"easing": "linear"
+						},
+						"0.6667": {
+							"vector": [0, -5, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"RightHand": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [42.5, 0, 52.5],
+							"easing": "linear"
+						},
+						"0.6667": {
+							"vector": [-84.08801, 21.70119, 60.15523]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [-6, -15, 7],
+							"easing": "linear"
+						},
+						"0.6667": {
+							"vector": [-14, -13, -15]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2
