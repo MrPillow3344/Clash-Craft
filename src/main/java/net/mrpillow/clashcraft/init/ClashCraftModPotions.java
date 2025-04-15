@@ -15,6 +15,6 @@ import net.minecraft.core.registries.Registries;
 
 public class ClashCraftModPotions {
 	public static final DeferredRegister<Potion> REGISTRY = DeferredRegister.create(Registries.POTION, ClashCraftMod.MODID);
-	public static final DeferredHolder<Potion, Potion> POISON_POTION = REGISTRY.register("poison_potion", () -> new Potion(new MobEffectInstance(ClashCraftModMobEffects.POISON_EFFECT, 640, 0, false, true)));
+	public static final DeferredHolder<Potion, Potion> POISON_POTION = REGISTRY.register("poison_potion", () -> new Potion(new MobEffectInstance(ClashCraftModMobEffects.POISON_EFFECT, 15, 0, false, true)));
 	public static final DeferredHolder<Potion, Potion> FREEZE = REGISTRY.register("freeze", () -> new Potion(new MobEffectInstance(ClashCraftModMobEffects.FREEZE_EFFECT, 320, 0, false, true)));
 }

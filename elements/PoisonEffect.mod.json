@@ -8,7 +8,7 @@
       "value": -3394816,
       "falpha": 0.0
     },
-    "isInstant": false,
+    "isInstant": true,
     "mobEffectCategory": "HARMFUL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
@@ -24,7 +24,7 @@
         "operation": "ADD_MULTIPLIED_BASE"
       }
     ],
-    "onActiveTick": {
+    "onStarted": {
       "name": "PoisonEffectOnEffectActiveTick"
     }
   }
