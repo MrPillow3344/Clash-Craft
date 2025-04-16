@@ -51,7 +51,6 @@ public class KindLarryEntity extends PathfinderMob implements GeoEntity {
 		super(type, world);
 		xpReward = 1;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -84,11 +83,6 @@ public class KindLarryEntity extends PathfinderMob implements GeoEntity {
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, TamableAnimal.class, false, false));
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
