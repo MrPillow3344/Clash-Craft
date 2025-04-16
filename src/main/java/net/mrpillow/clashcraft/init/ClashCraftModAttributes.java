@@ -30,7 +30,8 @@ public class ClashCraftModAttributes {
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {
-		List.of(ClashCraftModEntities.GIANT.get()).stream().filter(DefaultAttributes::hasSupplier).map(entityType -> (EntityType<? extends LivingEntity>) entityType).collect(Collectors.toList()).forEach(entity -> event.add(entity, WIN_CONDITION));
+		List.of(ClashCraftModEntities.GIANT.get(), ClashCraftModEntities.KIND_LARRY.get()).stream().filter(DefaultAttributes::hasSupplier).map(entityType -> (EntityType<? extends LivingEntity>) entityType).collect(Collectors.toList())
+				.forEach(entity -> event.add(entity, WIN_CONDITION));
 		event.add(EntityType.PLAYER, WIN_CONDITION);
 		List.of(ClashCraftModEntities.GOBLIN_HUT.get(), ClashCraftModEntities.TOMBSTONE.get(), ClashCraftModEntities.TESLA.get()).stream().filter(DefaultAttributes::hasSupplier).map(entityType -> (EntityType<? extends LivingEntity>) entityType)
 				.collect(Collectors.toList()).forEach(entity -> event.add(entity, BUILDING));

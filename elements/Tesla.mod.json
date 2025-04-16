@@ -12,6 +12,9 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
+    "solidBoundingBox": {
+      "name": "EntityCloseToTesla"
+    },
     "entityDataEntries": [
       {
         "min": -2147483648,
@@ -84,7 +87,7 @@
     "inventoryStackSize": 64,
     "deathTime": 20,
     "lerp": 4,
-    "disableCollisions": true,
+    "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,

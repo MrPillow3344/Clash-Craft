@@ -14,6 +14,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.mrpillow.clashcraft.procedures.TeslaAttackProcedure;
+import net.mrpillow.clashcraft.procedures.EntityCloseToTeslaProcedure;
 import net.mrpillow.clashcraft.init.ClashCraftModEntities;
 
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -84,6 +85,21 @@ public class TeslaEntity extends TamableAnimal implements GeoEntity {
 
 	public String getTexture() {
 		return this.entityData.get(TEXTURE);
+	}
+
+	@Override
+	public boolean canCollideWith(Entity entity) {
+		return true;
+	}
+
+	@Override
+	public boolean canBeCollidedWith() {
+		Entity entity = this;
+		Level world = entity.level();
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+		return EntityCloseToTeslaProcedure.execute(world, x, y, z, entity);
 	}
 
 	@Override
@@ -195,19 +211,6 @@ public class TeslaEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public boolean isFood(ItemStack stack) {
 		return List.of().contains(stack.getItem());
-	}
-
-	@Override
-	public boolean isPushable() {
-		return false;
-	}
-
-	@Override
-	protected void doPush(Entity entityIn) {
-	}
-
-	@Override
-	protected void pushEntities() {
 	}
 
 	@Override

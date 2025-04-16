@@ -11,6 +11,9 @@
     "entities": [
       {
         "value": "CUSTOM:Giant"
+      },
+      {
+        "value": "CUSTOM:KindLarry"
       }
     ]
   }
