@@ -5,8 +5,8 @@
     "name": "Win Condition",
     "minValue": 0.0,
     "maxValue": 1.0,
-    "defaultValue": 1.0,
-    "addToAllEntities": false,
+    "defaultValue": 0.0,
+    "addToAllEntities": true,
     "addToPlayers": true,
     "entities": [
       {
