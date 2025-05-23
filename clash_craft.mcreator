@@ -1525,6 +1525,57 @@
           }
         ]
       }
+    },
+    {
+      "name": "SpookyTown",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spooky_town",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/clash_craft/worldgen/configured_feature/spooky_town_tree.json",
+          "src/main/resources/data/clash_craft/worldgen/biome/spooky_town.json",
+          "src/main/resources/data/clash_craft/worldgen/placed_feature/spooky_town_tree.json"
+        ]
+      },
+      "path": "~/Arena-12"
+    },
+    {
+      "name": "PlayerJoinsWorld",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_joins_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/PlayerJoinsWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AddWinCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_win_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mrpillow/clashcraft/procedures/AddWinConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1581,6 +1632,9 @@
       "~Blocks.SMOOTH_STONE",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
+    ],
+    "BIOMES:minecraft:has_structure/swamp_hut": [
+      "~CUSTOM:SpookyTown"
     ]
   },
   "tab_element_order": {},
@@ -1594,6 +1648,7 @@
       "item.minecraft.lingering_potion.effect.poison_potion": "Poison Spell",
       "entity.clash_craft.kind_larry": "Kind Larry",
       "item.clash_craft.mini_pekka_spawn_egg": "Mini Pekka Spawn Egg",
+      "biome.clash_craft.spooky_town": "Spooky Town",
       "effect.clash_craft.poison_effect": "Poison Spell",
       "item.clash_craft.spear": "Spear",
       "item.clash_craft.giant_spawn_egg": "Giant Spawn Egg",
@@ -1654,6 +1709,7 @@
       "item.minecraft.lingering_potion.effect.poison_potion": "שיקוי רעל מעוכב",
       "entity.clash_craft.kind_larry": "לארי נחמד",
       "item.clash_craft.mini_pekka_spawn_egg": "ביצת זימון מיני-פקה",
+      "biome.clash_craft.spooky_town": "Spooky Town",
       "effect.clash_craft.poison_effect": "כישוף רעל",
       "item.clash_craft.spear": "חנית",
       "item.clash_craft.giant_spawn_egg": "ביצת זימון ענק",
