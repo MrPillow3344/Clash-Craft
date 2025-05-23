@@ -147,18 +147,17 @@ public class TeslaAttackProcedure {
 		x1 *= scalar; y1 *= scalar; z1 *= scalar; x2 *= scalar; y2 *= scalar; z2 *= scalar;
 
 		List<List<Integer>> dots = Bresenham3D((int )x1, (int) y1, (int) z1, (int) x2, (int) y2, (int) z2);
-		for (List<Integer> temp1: dots) {
+		for (List<Integer> temp: dots) {
 
-			ArrayList<int> temp2 = new ArrayList<>();
-			for (Integer s: temp1) {
+			ArrayList<Integer> dot = new ArrayList<>();
+			for (Integer s: temp) {
 				s /= scalar;
-				temp2.add( (int) s);
 			}
-			int[] dot = temp2.toArray(new int[0]);
-			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ElectricityParticle.get()), 
-					dot[0], 
-					dot[1],
-					dot[2], 
+			
+			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), 
+					dot.get(0).intValue(), 
+					dot.get(1).intValue(),
+					dot.get(2).intValue(), 
 					0, 1, 0);
 		}
 		

@@ -1,6 +1,9 @@
 package net.mrpillow.clashcraft.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.mrpillow.clashcraft.init.ClashCraftModAttributes;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
 public class AddWinConditionProcedure {
 	public static void execute(Entity entity) {
