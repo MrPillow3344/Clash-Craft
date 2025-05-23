@@ -1065,8 +1065,8 @@
     {
       "name": "TeslaAttack",
       "type": "procedure",
-      "compiles": false,
-      "locked_code": false,
+      "compiles": true,
+      "locked_code": true,
       "registry_name": "tesla_attack",
       "metadata": {
         "files": [
