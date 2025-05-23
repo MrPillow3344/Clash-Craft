@@ -145,22 +145,22 @@ public class TeslaAttackProcedure {
 }
 
 	public static void plotLine(LevelAccessor world, double x1, double y1, double z1, double x2, double y2, double z2) {
-		int scalar = 100;
+		double scalar = 0.01;
 		x1 *= scalar; y1 *= scalar; z1 *= scalar; x2 *= scalar; y2 *= scalar; z2 *= scalar;
 
 		List<List<Integer>> dots = Bresenham3D((int )x1, (int) y1, (int) z1, (int) x2, (int) y2, (int) z2);
 		for (List<Integer> temp: dots) {
 
-			ArrayList<Integer> dot = new ArrayList<>();
+			ArrayList<Double> dot = new ArrayList<>();
 			for (Integer s: temp) {
-				s /= scalar;
-				dot.add(s);
+				Double d = new Double( (double) s) / new Double(scalar);
+				dot.add(d);
 			}
 			
 			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), 
-					dot.get(0).intValue(), 
-					dot.get(1).intValue(),
-					dot.get(2).intValue(), 
+					dot.get(0).doubleValue(), 
+					dot.get(1).doubleValue(),
+					dot.get(2).doubleValue(), 
 					0, 1, 0);
 		}
 		
