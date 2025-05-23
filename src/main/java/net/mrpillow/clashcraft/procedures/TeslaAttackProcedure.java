@@ -48,7 +48,7 @@ public class TeslaAttackProcedure {
 			}
 			if ((enemy instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ClashCraftModAttributes.WIN_CONDITION) ? _livingEntity7.getAttribute(ClashCraftModAttributes.WIN_CONDITION).getBaseValue() : 0) == 1) {
 				
-				for (int i=0; i< 16; i++) plotLine(world, x, y, z, enemy.getX(), enemy.getY(), enemy.getZ());
+				for (int i=0; i< 16; i++) plotLine(world, entity.getEyePosition().x, entity.getEyePosition().y, entity.getEyePosition().z, enemy.getX(), enemy.getY(), enemy.getZ());
 
 				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK)), 5);
 				if (entity instanceof TeslaEntity _datEntSetI)
