@@ -47,18 +47,7 @@ public class TeslaAttackProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null);
 			}
 			if ((enemy instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ClashCraftModAttributes.WIN_CONDITION) ? _livingEntity7.getAttribute(ClashCraftModAttributes.WIN_CONDITION).getBaseValue() : 0) == 1) {
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), x, (y + 3.25), z, 100, 0.1, 0.1, 0.1, 0);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (enemy.getX()), (enemy.getY() + 1.6), (enemy.getZ()), 100, 0.1, 0.1, 0.1, 0);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), ((x + enemy.getX()) / 2), ((y + 3.25 + enemy.getY() + 1.6) / 2), ((z + enemy.getZ()) / 2), 100, 0.1, 0.1, 0.1, 0);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (((x + enemy.getX()) / 2 + x) / 2), (((y + 3.25 + enemy.getY() + 1.6) / 2 + y + 3.25) / 2), (((z + enemy.getZ()) / 2 + z) / 2), 100, 0.1,
-							0.1, 0.15, 0);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), (((x + enemy.getX()) / 2 + enemy.getX()) / 2), (((y + 3.25 + enemy.getY() + 1.6) / 2 + enemy.getY() + 1.6) / 2),
-							(((z + enemy.getZ()) / 2 + enemy.getZ()) / 2), 100, 0.1, 0.1, 0.1, 0);
+				plotLine(world, x, y, z, enemy.getX(), enemy.getY(), enemy.getZ());
 				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK)), 5);
 				if (entity instanceof TeslaEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 30);
@@ -153,14 +142,25 @@ public class TeslaAttackProcedure {
     return ListOfPoints;
 }
 
-	public static void plotLine(double x1, double y1, double z1, double x2, double y2, double z2) {
+	public static void plotLine(LevelAccessor world, double x1, double y1, double z1, double x2, double y2, double z2) {
 		int scalar = 100;
 		x1 *= scalar; y1 *= scalar; z1 *= scalar; x2 *= scalar; y2 *= scalar; z2 *= scalar;
 
-		List<List<Integar> dots = Bresenham3D(x1, y1, z1, x2, y2, z2);
-		for (List<Integar> coords: dots) {
-			
+		List<List<Integer>> dots = Bresenham3D((int )x1, (int) y1, (int) z1, (int) x2, (int) y2, (int) z2);
+		for (List<Integer> temp1: dots) {
+
+			ArrayList<int> temp2 = new ArrayList<>();
+			for (Integer s: temp1) {
+				s /= scalar;
+				temp2.add( (int) s);
+			}
+			int[] dot = temp2.toArray(new int[0]);
+			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ElectricityParticle.get()), 
+					dot[0], 
+					dot[1],
+					dot[2], 
+					0, 1, 0);
 		}
 		
-		}
+	}
 }
