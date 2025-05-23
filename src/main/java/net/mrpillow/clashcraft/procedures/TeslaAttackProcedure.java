@@ -47,7 +47,9 @@ public class TeslaAttackProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null);
 			}
 			if ((enemy instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ClashCraftModAttributes.WIN_CONDITION) ? _livingEntity7.getAttribute(ClashCraftModAttributes.WIN_CONDITION).getBaseValue() : 0) == 1) {
-				plotLine(world, x, y, z, enemy.getX(), enemy.getY(), enemy.getZ());
+				
+				for (int i=0; i< 16; i++) plotLine(world, x, y, z, enemy.getX(), enemy.getY(), enemy.getZ());
+
 				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK)), 5);
 				if (entity instanceof TeslaEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(TeslaEntity.DATA_attackCooldown, 30);
@@ -152,6 +154,7 @@ public class TeslaAttackProcedure {
 			ArrayList<Integer> dot = new ArrayList<>();
 			for (Integer s: temp) {
 				s /= scalar;
+				dot.add(s);
 			}
 			
 			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), 
