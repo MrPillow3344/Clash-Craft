@@ -35,7 +35,7 @@ public class ElectricityParticle extends TextureSheetParticle {
 	protected ElectricityParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(0.2f, 0.2f);
+		this.setSize(0.3f, 0.3f);
 		this.quadSize *= 0.2f;
 		this.lifetime = 7;
 		this.gravity = 0f;

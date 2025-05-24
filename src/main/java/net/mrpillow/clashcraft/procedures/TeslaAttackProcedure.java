@@ -145,24 +145,33 @@ public class TeslaAttackProcedure {
 }
 
 	public static void plotLine(LevelAccessor world, double x1, double y1, double z1, double x2, double y2, double z2) {
-		double scalar = 0.01;
+		double scalar = 32;
 		x1 *= scalar; y1 *= scalar; z1 *= scalar; x2 *= scalar; y2 *= scalar; z2 *= scalar;
 
-		List<List<Integer>> dots = Bresenham3D((int )x1, (int) y1, (int) z1, (int) x2, (int) y2, (int) z2);
-		for (List<Integer> temp: dots) {
 
-			ArrayList<Double> dot = new ArrayList<>();
-			for (Integer s: temp) {
-				Double d = new Double( (double) s) / new Double(scalar);
-				dot.add(d);
-			}
+		for (double x=-1;x<1;x++) {
+			for (double y=-1;y<1;y++) {
+				for (double z=-0.01;z<0.01;z+=0.01) {
+
+					List<List<Integer>> dots = Bresenham3D( (int) x1, (int) y1, (int) z1, (int) x2, (int) y2, (int) z2);
+					for (List<Integer> temp: dots) {
 			
-			world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), 
-					dot.get(0).doubleValue(), 
-					dot.get(1).doubleValue(),
-					dot.get(2).doubleValue(), 
-					0, 1, 0);
+						ArrayList<Double> dot = new ArrayList<>();
+						for (Integer s: temp) {
+							Double d = new Double( (double) s) / new Double(scalar);
+							dot.add(d);
+						}
+						
+						world.addParticle((SimpleParticleType) (ClashCraftModParticleTypes.ELECTRICITY.get()), 
+								dot.get(0).doubleValue() +x/100, 
+								dot.get(1).doubleValue() +y/100,
+								dot.get(2).doubleValue() +z/100, 
+								0, 0, 0);
+					}	
+				}
+			}
 		}
+			
 		
 	}
 }

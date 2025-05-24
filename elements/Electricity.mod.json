@@ -5,8 +5,8 @@
     "texture": "electricity",
     "animate": false,
     "frameDuration": 10,
-    "width": 0.2,
-    "height": 0.2,
+    "width": 0.30000000000000004,
+    "height": 0.30000000000000004,
     "scale": {
       "fixedValue": 0.2
     },
