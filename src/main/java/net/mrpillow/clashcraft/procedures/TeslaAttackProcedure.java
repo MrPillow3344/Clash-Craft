@@ -5,6 +5,7 @@ import net.mrpillow.clashcraft.init.ClashCraftModAttributes;
 import net.mrpillow.clashcraft.entity.TeslaEntity;
 import net.mrpillow.clashcraft.entity.KindLarryEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
+import net.mrpillow.clashcraft.procedures.EntityCloseToTesla;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -47,8 +48,12 @@ public class TeslaAttackProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null);
 			}
 			if ((enemy instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ClashCraftModAttributes.WIN_CONDITION) ? _livingEntity7.getAttribute(ClashCraftModAttributes.WIN_CONDITION).getBaseValue() : 0) == 1) {
-				
-				for (int i=0; i< 16; i++) plotLine(world, entity.getEyePosition().x, entity.getEyePosition().y, entity.getEyePosition().z, enemy.getX(), enemy.getY(), enemy.getZ());
+
+				if (EntityCloseToEntity.execute(world, x, y, z, entity)) {
+					for (int i=0; i< 16; i++) {
+						plotLine(world, entity.getEyePosition().x, entity.getEyePosition().y, entity.getEyePosition().z, enemy.getX(), enemy.getY(), enemy.getZ());
+					}
+				}
 
 				enemy.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK)), 5);
 				if (entity instanceof TeslaEntity _datEntSetI)
