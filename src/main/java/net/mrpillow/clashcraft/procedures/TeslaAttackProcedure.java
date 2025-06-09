@@ -5,7 +5,7 @@ import net.mrpillow.clashcraft.init.ClashCraftModAttributes;
 import net.mrpillow.clashcraft.entity.TeslaEntity;
 import net.mrpillow.clashcraft.entity.KindLarryEntity;
 import net.mrpillow.clashcraft.entity.GiantEntity;
-import net.mrpillow.clashcraft.procedures.EntityCloseToTesla;
+import net.mrpillow.clashcraft.procedures.EntityCloseToTeslaProcedure;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -49,7 +49,7 @@ public class TeslaAttackProcedure {
 			}
 			if ((enemy instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ClashCraftModAttributes.WIN_CONDITION) ? _livingEntity7.getAttribute(ClashCraftModAttributes.WIN_CONDITION).getBaseValue() : 0) == 1) {
 
-				if (EntityCloseToEntity.execute(world, x, y, z, entity)) {
+				if (EntityCloseToTeslaProcedure.execute(world, x, y, z, entity)) {
 					for (int i=0; i< 16; i++) {
 						plotLine(world, entity.getEyePosition().x, entity.getEyePosition().y, entity.getEyePosition().z, enemy.getX(), enemy.getY(), enemy.getZ());
 					}
